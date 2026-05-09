@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+Allow: /blog/
+
+Sitemap: https://muzammil-safdar.com/sitemap.xml

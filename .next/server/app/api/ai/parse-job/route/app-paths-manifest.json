@@ -1,0 +1,3 @@
+{
+  "/api/ai/parse-job/route": "app/api/ai/parse-job/route.js"
+}
