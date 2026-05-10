@@ -12,12 +12,12 @@ import { ProjectDetail } from '@/types/Project';
 import { SanityImageType } from '@muzammil328/sanity';
 import PortfolioCard from '@/components/PortfolioCard';
 import PageViewTracker from '@/components/PageViewTracker';
-import { CloseIcon, GitHubIcon, LinkIcon, ClockIcon, ZoomInIcon } from '@muzammil328/icon';
+import { CloseIcon, GitHubIcon, ClockIcon, ZoomInIcon } from '@muzammil328/icon';
 import { UserIcon, Users, ChevronLeft, ChevronRight } from 'lucide-react';
 
 function Figma() {
   return (
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24" fill="#000000"><g fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5zM12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0a3.5 3.5 0 1 1-7 0zm-7 7A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0zm0-7A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></g></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#000000"><g fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5zM12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" /><path d="M12 12.5a3.5 3.5 0 1 1 7 0a3.5 3.5 0 1 1-7 0zm-7 7A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0zm0-7A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" /></g></svg>
   )
 }
 
@@ -410,10 +410,10 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-2.5 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors inline-flex items-center gap-2 font-medium"
+                    className="px-6 py-2.5 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 font-medium"
                   >
-                    <LinkIcon />
                     View Live Demo
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display:'block'}}><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
                   </a>
                 )}
                 {project.figmaDesign && project.figmaDesign !== '/' && (

@@ -203,7 +203,7 @@ export default function WhatIDo() {
                 if (el) cardRefs.current[index] = el;
               }}
               className={cn(
-                'rounded-3xl border p-2 sm:p-8 md:p-10 flex flex-col justify-between backdrop-blur-xl bg-linear-to-br overflow-hidden',
+                'rounded-3xl border p-2 sm:p-8 md:p-10 flex flex-col justify-between backdrop-blur-xl bg-linear-to-br',
                 isMobile ? 'relative w-full' : 'absolute top-0 left-0 w-full h-full',
                 colors.color,
                 colors.border,
@@ -278,12 +278,6 @@ export default function WhatIDo() {
                         </li>
                       ))}
                     </ul>
-                    <Link
-                      href={`/services/${service.slug.current}`}
-                      className="hidden md:flex w-14 h-14 rounded-full bg-foreground text-background flex items-center justify-center transform transition-transform hover:scale-110 hover:-rotate-45 cursor-pointer mt-auto pt-6"
-                    >
-                      <ArrowUpRight className="w-7 h-7" />
-                    </Link>
                   </div>
 
                   <div className="col-span-1 flex flex-col border-b md:border-b-0 md:border-r border-border/30 pb-2 md:pb-0 md:pr-6 order-last md:order-first">
@@ -305,7 +299,7 @@ export default function WhatIDo() {
                       </div>
                     )}
 
-                    <div className="flex flex-wrap gap-3 content-start overflow-visible max-h-none md:max-h-55 md:overflow-y-auto scrollbar-thin pr-0 md:pr-2 border-b md:border-b-0 md:border-r border-border/30 pb-3 md:pb-0 md:pr-6 md:mb-0 mb-3">
+                    <div className="flex flex-wrap gap-3 content-start pr-0 md:pr-6 border-b md:border-b-0 md:border-r border-border/30 pb-3 md:pb-0 md:mb-0 mb-3">
                       {categorySkills.map((skill, i) => (
                         <div
                           key={i}
