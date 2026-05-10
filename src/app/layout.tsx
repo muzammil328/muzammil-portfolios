@@ -2,7 +2,7 @@ import './global.css';
 import { Providers } from '@/components/Provider';
 
 export const metadata = {
-  metadataBase: new URL('https://muzammil-safdar.com'),
+  metadataBase: new URL('https://mmuzammil-portfolio.vercel.app'),
   title: {
     default: 'Muzammil Safdar | Full Stack Developer',
     template: '%s | Muzammil Safdar',
@@ -14,7 +14,7 @@ export const metadata = {
   },
   openGraph: {
     type: 'website',
-    url: 'https://muzammil-safdar.com',
+    url: 'https://mmuzammil-portfolio.vercel.app',
     title: 'Muzammil Safdar | Full Stack Developer',
     description:
       'Full Stack Developer building scalable MVPs, SaaS products, and real-time web applications.',

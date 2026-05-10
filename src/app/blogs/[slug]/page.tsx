@@ -80,11 +80,11 @@ export async function generateMetadata({
       images: imageUrl ? [imageUrl] : [],
     },
     robots: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
       googleBot: {
-        index: false,
-        follow: false,
+        index: true,
+        follow: true,
         'max-video-preview': -1,
         'max-image-preview': 'large',
         'max-snippet': -1,

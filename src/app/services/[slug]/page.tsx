@@ -137,7 +137,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     provider: {
       '@type': 'Person',
       name: 'Muzammil Safdar',
-      url: 'https://muzammil-safdar.com',
+      url: 'https://mmuzammil-portfolio.vercel.app',
     },
     areaServed: 'Worldwide',
     serviceType: service.name,
