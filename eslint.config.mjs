@@ -1,25 +1,18 @@
-import nextEslintPluginNext from '@next/eslint-plugin-next';
-import nx from '@nx/eslint-plugin';
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
 
-/** @type {import('eslint').Linter.Config[]} */
-const config = [
-  ...nx.configs['flat/base'],
-  ...nx.configs['flat/typescript'],
-  ...nx.configs['flat/javascript'],
-  { plugins: { '@next/next': nextEslintPluginNext } },
-  ...nx.configs['flat/react-typescript'],
-  {
-    ignores: ['**/dist', '**/out-tsc', '.next/**'],
-  },
-  {
-    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
-    rules: {
-      '@nx/enforce-module-boundaries': 'off',
-      '@next/next/no-html-link-for-pages': 'off',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'prefer-const': 'warn',
-    },
-  },
-];
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+  ]),
+]);
 
-export default config;
+export default eslintConfig;
