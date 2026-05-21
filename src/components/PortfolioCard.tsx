@@ -80,19 +80,19 @@ export default function PortfolioCard({ data, index = 0 }: { data: ProjectCard; 
         {/* Image Section */}
         <Link
           href={`/portfolio/${getDetailLink(data)}`}
-          className="relative aspect-video w-full block cursor-pointer"
+          className="relative aspect-video w-full block cursor-pointer overflow-hidden"
         >
           {/* Parent container — make sure this has a defined height */}
-          <div className="relative w-full h-64"> {/* or h-48, h-72, adjust as needed */}
+          <div className="relative w-full h-full"> {/* or h-48, h-72, adjust as needed */}
             <Image
               src={getImageSrc(data, 1200)}
               alt={data.title}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover transition-transform duration-500 group-hover:scale-105 z-0"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
             <span className="bg-black text-white dark:bg-background/90 px-4 py-2 rounded-full font-medium text-sm transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
               View Details
             </span>
@@ -111,7 +111,7 @@ export default function PortfolioCard({ data, index = 0 }: { data: ProjectCard; 
         </Link>
 
         {/* Content Section */}
-        <div className="flex flex-col md:p-6 p-3">
+        <div className="flex flex-col md:p-6 p-3 border-5 ">
           <div className="mb-4">
             {/* Role, Team Size, Duration badges */}
             <div className="flex flex-wrap gap-2 mb-3">

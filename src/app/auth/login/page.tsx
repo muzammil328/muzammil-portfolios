@@ -12,7 +12,7 @@ import {
   Button,
   toast,
 } from '@muzammil328/ui';
-import { FormEmail, FormPassword } from '@muzammil328/form';
+import { Input } from '@muzammil328/form';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -100,9 +100,14 @@ export default function LoginPage() {
               <label htmlFor="email" className="text-sm font-medium">
                 Email
               </label>
-              <FormEmail
+              <Input
+                id="email"
                 name="email"
+                type="email"
                 placeholder="your@email.com"
+                value={formData.email}
+                onChange={e => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                disabled={isLoading}
               />
             </div>
 
@@ -110,9 +115,14 @@ export default function LoginPage() {
               <label htmlFor="password" className="text-sm font-medium">
                 Password
               </label>
-              <FormPassword
+              <Input
+                id="password"
                 name="password"
+                type="password"
                 placeholder="••••••••"
+                value={formData.password}
+                onChange={e => setFormData(prev => ({ ...prev, password: e.target.value }))}
+                disabled={isLoading}
               />
             </div>
 

@@ -1,5 +1,7 @@
 import './global.css';
 import { Providers } from '@/components/Provider';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import ClarityInit from "@/components/ClarityInit";
 
 export const metadata = {
   metadataBase: new URL('https://mmuzammil-portfolio.vercel.app'),
@@ -36,6 +38,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <body>
         <Providers>{children}</Providers>
+        <GoogleAnalytics gaId="G-EQSBL2DGBM" />
+        <ClarityInit />
       </body>
     </html>
   );
