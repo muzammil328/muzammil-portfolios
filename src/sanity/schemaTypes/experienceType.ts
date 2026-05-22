@@ -57,9 +57,25 @@ export const experienceType = defineType({
     }),
     defineField({
       name: 'endDate',
-      type: 'date',
+      type: 'string',
       title: 'End Date',
       hidden: ({ parent }) => parent?.isCurrent,
+      validation: Rule =>
+        Rule.custom((value, context) => {
+          const parent = context.parent as { isCurrent?: boolean } | undefined;
+
+          if (parent?.isCurrent) {
+            return true;
+          }
+
+          if (!value) {
+            return true;
+          }
+
+          return /^\d{4}-\d{2}-\d{2}$/.test(value)
+            ? true
+            : 'Must be a valid ISO-8601 formatted date string';
+        }),
     }),
     defineField({ name: 'summary', type: 'text', title: 'Summary' }),
     defineField({
