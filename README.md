@@ -4,6 +4,7 @@ Next.js portfolio application with shared UI components.
 
 ## Features
 
+
 - Next.js 16 with TypeScript
 - Tailwind CSS for styling
 - Dark/Light theme support
