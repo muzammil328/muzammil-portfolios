@@ -11,8 +11,16 @@ import Footer from '@/components/Footer';
 import { ProjectDetail } from '@/types/Project';
 import { SanityImageType } from '@/types/sanity';
 import PortfolioCard from '@/components/PortfolioCard';
-import { CloseIcon, GitHubIcon, ClockIcon, ZoomInIcon } from '@/components/ui';
-import { UserIcon, Users, ChevronLeft, ChevronRight } from 'lucide-react';
+import {
+  CloseIcon,
+  GitHubIcon,
+  ClockIcon,
+  ZoomInIcon,
+  UserIcon,
+  UsersIcon,
+  ChevronIconLeft,
+  ChevronIconRight,
+} from '@/components/ui';
 
 function Figma() {
   return (
@@ -151,7 +159,7 @@ function Lightbox({
           onPrev();
         }}
       >
-        <ChevronLeft className="w-6 h-6 text-white" />
+        <ChevronIconLeft className="w-6 h-6 text-white" />
       </button>
       <div className="relative max-w-5xl max-h-[90vh] w-full mx-16">
         <Image
@@ -172,7 +180,7 @@ function Lightbox({
           onNext();
         }}
       >
-        <ChevronRight className="w-6 h-6 text-white" />
+        <ChevronIconRight className="w-6 h-6 text-white" />
       </button>
       <button
         className="absolute top-4 right-4 p-2 bg-white/10 hover:bg-white/20 rounded-full"
@@ -355,7 +363,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
                 )}
                 {project.teamSize && (
                   <div className="flex items-center gap-2 bg-muted/50 px-3 py-2 rounded-lg">
-                    <Users />
+                    <UsersIcon />
                     <span className="text-sm">{getTeamSizeLabel(project.teamSize)}</span>
                   </div>
                 )}

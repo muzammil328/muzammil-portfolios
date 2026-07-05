@@ -79,7 +79,7 @@ export default function FollowMeBox() {
               key={i}
               href={social.url || '#'}
               target="_blank"
-              aria-label={social.network}
+              aria-label={social.network || 'Social profile'}
               className="w-9 h-9 p-1 flex items-center justify-center rounded-full border border-border hover:border-primary transition-colors"
             >
               {getSocialIcon(social.network)}

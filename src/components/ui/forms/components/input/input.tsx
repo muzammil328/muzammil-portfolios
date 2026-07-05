@@ -4,16 +4,19 @@ import * as React from 'react';
 
 import type { FieldValues, Path } from 'react-hook-form';
 import { Controller, useFormContext } from 'react-hook-form';
-import { Eye, EyeOff, Loader2, X, AlertCircle, CheckCircle2, Mail, Lock } from 'lucide-react';
+import { Eye, EyeOff, AlertCircle } from 'lucide-react';
 
 import { cn } from '@/lib/cn';
+import { CloseIcon, LoaderCircle, CircleIcon, EmailIcon, LockIcon } from '../../../icons';
 import { Label, type LabelProps } from '../label';
 import { FormControl, FormDescription, FormItem, FormLabel, FormMessage } from '../form';
 
 // ─── Internal spinner ─────────────────────────────────────────────────────────
 
 function InputSpinner() {
-  return <Loader2 className="h-3.5 w-3.5 animate-spin text-muted-foreground" aria-hidden="true" />;
+  return (
+    <LoaderCircle className="h-3.5 w-3.5 animate-spin text-muted-foreground" aria-hidden="true" />
+  );
 }
 
 // ─── InputAdornment ───────────────────────────────────────────────────────────
@@ -163,7 +166,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
               {/* Validation state icon */}
               {hasValidationIcon &&
                 (validationState === 'valid' ? (
-                  <CheckCircle2 className="h-4 w-4 text-emerald-500" aria-hidden="true" />
+                  <CircleIcon className="h-4 w-4 text-emerald-500" aria-hidden="true" />
                 ) : (
                   <AlertCircle className="h-4 w-4 text-destructive" aria-hidden="true" />
                 ))}
@@ -431,7 +434,7 @@ export function FormEmail<T extends FieldValues>({
   labelVariant,
   labelSize,
   labelLoading,
-  leftIcon = <Mail className="h-4 w-4" />,
+  leftIcon = <EmailIcon className="h-4 w-4" />,
   rightIcon,
 }: BaseFieldProps<T>) {
   const {
@@ -601,7 +604,7 @@ export function FormPassword<T extends FieldValues>({
   labelVariant,
   labelSize,
   labelLoading,
-  leftIcon = <Lock className="h-4 w-4" />,
+  leftIcon = <LockIcon className="h-4 w-4" />,
   showPasswordToggle = true,
 }: FormPasswordProps<T>) {
   const {
@@ -1008,7 +1011,7 @@ export function FormTags<T extends FieldValues>({
                         aria-label={`Remove tag "${tag}"`}
                         className="ml-0.5 rounded-full text-primary/60 transition-colors hover:text-primary disabled:pointer-events-none"
                       >
-                        <X className="h-3 w-3" aria-hidden="true" />
+                        <CloseIcon className="h-3 w-3" aria-hidden="true" />
                       </button>
                     </span>
                   ))}

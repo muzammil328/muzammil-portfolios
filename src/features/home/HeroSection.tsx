@@ -131,7 +131,7 @@ export default function HeroSection({ profile }: HeroSectionProps) {
                       key={i}
                       href={social.url || '#'}
                       target="_blank"
-                      aria-label={social.network}
+                      aria-label={social.network || 'Social profile'}
                       className="w-9 h-9 p-1 flex items-center justify-center rounded-full border border-border"
                     >
                       {lower.includes('linkedin') ? <LinkedInIcon /> : <GitHubIcon />}
@@ -153,6 +153,7 @@ export default function HeroSection({ profile }: HeroSectionProps) {
               alt={displayProfile.name}
               width={480}
               height={480}
+              sizes="(max-width: 640px) 280px, (max-width: 1024px) 360px, 480px"
               className="w-full max-w-70 sm:max-w-90 lg:max-w-120 h-auto aspect-square object-cover rounded-2xl"
               priority
               fetchPriority="high"
@@ -164,6 +165,7 @@ export default function HeroSection({ profile }: HeroSectionProps) {
               alt="Portrait"
               width={480}
               height={480}
+              sizes="(max-width: 640px) 280px, (max-width: 1024px) 360px, 480px"
               className="w-full max-w-70 sm:max-w-90 lg:max-w-120 h-auto aspect-square object-cover rounded-2xl"
               priority
               fetchPriority="high"

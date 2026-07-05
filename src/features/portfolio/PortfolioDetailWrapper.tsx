@@ -1,6 +1,12 @@
 'use client';
-import { ExternalLink } from 'lucide-react';
-import { ChevronIconRight, ClockIcon, GitHubIcon, StarIcon, UserIcon } from '@/components/ui';
+import {
+  ChevronIconRight,
+  ClockIcon,
+  GitHubIcon,
+  StarIcon,
+  UserIcon,
+  ExternalLinkIcon,
+} from '@/components/ui';
 import { Badge } from '@/components/ui';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -234,7 +240,7 @@ export default function PortfolioDetailWrapper({
                     className="flex items-center justify-between p-3 rounded-lg border border-border hover:border-primary hover:bg-primary/5 transition-all duration-200 group"
                   >
                     <div className="flex items-center space-x-3">
-                      <ExternalLink className="w-5 h-5 text-primary" />
+                      <ExternalLinkIcon className="w-5 h-5 text-primary" />
                       <span className="font-medium text-foreground">Live Demo</span>
                     </div>
                     <ChevronIconRight className="w-4 h-4 text-muted-foreground group-hover:text-primary" />

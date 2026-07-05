@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/cn';
-import { X } from 'lucide-react';
+import { CloseIcon } from '../../icons';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -217,7 +217,7 @@ function Badge({
             'focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-current'
           )}
         >
-          <X className="size-3" />
+          <CloseIcon className="size-3" />
         </button>
       )}
     </Comp>

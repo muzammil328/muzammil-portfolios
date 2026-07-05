@@ -16,7 +16,7 @@ const CircleIcon = ({
     strokeWidth={strokeWidth}
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="lucide lucide-circle-icon lucide-circle"
+    {...props}
   >
     <circle cx="12" cy="12" r="10" />
   </svg>

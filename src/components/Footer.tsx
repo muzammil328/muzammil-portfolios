@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { GitHubIcon, LinkedInIcon } from '@/components/ui';
-import { ArrowUpRight, Mail, MapPin } from 'lucide-react';
+import { GitHubIcon, LinkedInIcon, EmailIcon } from '@/components/ui';
+import { ArrowUpRight, MapPin } from 'lucide-react';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
@@ -31,7 +31,7 @@ function FooterContent() {
     <div className="flex flex-col h-full">
       {/* ── Top CTA ── */}
       <div className="flex-1 flex flex-col items-center justify-center text-center px-6 pt-16 pb-12">
-        <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/40 mb-6">
+        <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/65 mb-6">
           <span className="w-4 h-px bg-white/30" />
           Available for freelance
           <span className="w-4 h-px bg-white/30" />
@@ -62,7 +62,7 @@ function FooterContent() {
             href="mailto:mmuzammilsafdar@gmail.com"
             className="flex items-center gap-2 border border-white/15 text-white/70 px-7 py-3.5 rounded-full font-semibold text-sm hover:border-white/40 hover:text-white transition-all duration-300"
           >
-            <Mail className="w-4 h-4" />
+            <EmailIcon className="w-4 h-4" />
             Send an Email
           </Link>
         </div>
@@ -76,7 +76,7 @@ function FooterContent() {
         {/* Brand */}
         <div className="flex flex-col items-center md:items-start gap-3">
           <span className="text-xl font-bold tracking-tight">Muzammil.</span>
-          <div className="flex items-center gap-1.5 text-xs text-white/40">
+          <div className="flex items-center gap-1.5 text-xs text-white/65">
             <MapPin className="w-3 h-3" />
             Lahore, Pakistan
           </div>
@@ -113,7 +113,7 @@ function FooterContent() {
       </div>
 
       {/* ── Bottom bar ── */}
-      <div className="mx-6 md:mx-12 border-t border-white/8 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/30">
+      <div className="mx-6 md:mx-12 border-t border-white/8 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/60">
         <span>&copy; {new Date().getFullYear()} Muzammil Safdar. All rights reserved.</span>
         <span className="flex items-center gap-1">
           Built with

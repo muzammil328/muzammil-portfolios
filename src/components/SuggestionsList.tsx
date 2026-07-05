@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from '@/components/ui';
-import { Check, X as XIcon } from 'lucide-react';
+import { Button, CheckIcon, CloseIcon } from '@/components/ui';
 
 export interface Suggestion {
   id?: string; // ✅ add unique id if possible
@@ -52,12 +51,12 @@ const SuggestionsList: React.FC<SuggestionsListProps> = ({
               className="text-green-600 border-green-200"
               onClick={() => onApplySuggestion(s)}
             >
-              <Check className="h-4 w-4 mr-1" />
+              <CheckIcon className="h-4 w-4 mr-1" />
               Apply
             </Button>
 
             <Button size="sm" variant="ghost" onClick={() => onDismissSuggestion(s)}>
-              <XIcon className="h-4 w-4 mr-1" />
+              <CloseIcon className="h-4 w-4 mr-1" />
               Dismiss
             </Button>
           </div>

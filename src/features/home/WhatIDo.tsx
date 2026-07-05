@@ -561,7 +561,11 @@ export default function WhatIDo() {
                     <Button
                       asChild
                     >
-                      <Link href={`/services/${service.slug.current}`} className="flex items-center gap-1.5 group">
+                      <Link
+                        href={`/services/${service.slug.current}`}
+                        aria-label={`View work for ${service.name}`}
+                        className="flex items-center gap-1.5 group"
+                      >
                         <span className="hidden sm:inline">View Work</span>
                         <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                       </Link>

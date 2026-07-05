@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { Slot } from '@radix-ui/react-slot';
-import { Loader2 } from 'lucide-react';
-
 import { cn } from '@/lib/cn';
+import { LoaderCircle } from '../../icons';
 
 const buttonVariants = cva(
   // Base styles
@@ -231,7 +230,7 @@ function Button({
         children
       ) : loading ? (
         <>
-          <Loader2 className="size-4 animate-spin shrink-0" aria-hidden />
+          <LoaderCircle className="size-4 animate-spin shrink-0" aria-hidden />
           <span>{loadingText ?? children}</span>
         </>
       ) : (

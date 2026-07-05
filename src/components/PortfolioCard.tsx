@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Users, Clock } from 'lucide-react';
-import { GitHubIcon } from '@/components/ui';
+import { GitHubIcon, UsersIcon, ClockIcon, ExternalLinkIcon } from '@/components/ui';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Badge } from '@/components/ui';
@@ -124,13 +123,13 @@ export default function PortfolioCard({ data, index = 0 }: { data: ProjectCard; 
               )}
               {teamSizeLabel && (
                 <span className="inline-flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-md bg-muted text-muted-foreground">
-                  <Users className="w-3 h-3" />
+                  <UsersIcon className="w-3 h-3" />
                   {teamSizeLabel}
                 </span>
               )}
               {durationLabel && (
                 <span className="inline-flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-md bg-muted text-muted-foreground">
-                  <Clock className="w-3 h-3" />
+                  <ClockIcon className="w-3 h-3" />
                   {durationLabel}
                 </span>
               )}
@@ -153,7 +152,7 @@ export default function PortfolioCard({ data, index = 0 }: { data: ProjectCard; 
                     aria-label={`View live demo of ${data.title}`}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    <ExternalLink className="w-5 h-5" />
+                    <ExternalLinkIcon className="w-5 h-5" />
                   </Link>
                 )}
                 {data.githubLink && data.githubLink !== '/' && (
