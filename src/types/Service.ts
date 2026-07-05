@@ -6,8 +6,8 @@ export interface ServiceTypes {
   slug: SanitySlugType;
   image: SanityImageType;
   summary?: string;
-  focus: string[];
-  deliverables?: string[];
+  focus: { title: string; description?: string; icon?: string }[];
+  deliverables?: { title: string; description?: string; icon?: string }[];
   processSteps?: {
     title: string;
     description?: string;
@@ -23,6 +23,7 @@ export interface ServiceTypes {
   proofPoints?: {
     label?: string;
     value?: string;
+    iconIdx?: number;
   }[];
   testimonials?: {
     quote?: string;
@@ -32,6 +33,10 @@ export interface ServiceTypes {
   skills: {
     name: string;
     icon: SanityImageType;
+    color?: string;
+    proficiency?: 'beginner' | 'intermediate' | 'advanced' | 'expert';
+    yearsUsed?: number;
+    featured?: boolean;
   }[];
 }
 

@@ -173,46 +173,11 @@ export const projectType = defineType({
     }),
 
     defineField({
-      name: 'problem',
-      title: 'Problem',
+      name: 'body',
+      title: 'Body',
       type: 'blockContent',
     }),
 
-    defineField({
-      name: 'solution',
-      title: 'Solution',
-      type: 'blockContent',
-    }),
-
-    defineField({
-      name: 'features',
-      title: 'Key Features',
-      type: 'blockContent',
-    }),
-
-
-    defineField({
-      name: 'outcome',
-      title: 'Outcome / Results',
-      type: 'blockContent',
-    }),
-
-    defineField({
-      name: 'takeaways',
-      title: 'Key Takeaways / Learnings',
-      type: 'blockContent',
-    }),
-    defineField({
-      name: 'techStack',
-      title: 'Tech Stack',
-      type: 'blockContent',
-    }),
-
-    defineField({
-      name: 'myRole',
-      title: 'My Role',
-      type: 'blockContent',
-    }),
     defineField({
       name: 'relatedProjects',
       title: 'Related Projects',

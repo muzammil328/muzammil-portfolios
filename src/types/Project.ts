@@ -39,14 +39,7 @@ export interface ProjectDetail {
     name: string;
     icon?: SanityImageType;
   }[];
-  features: PortableTextBlock[];
-  problem?: PortableTextBlock[];
-  solution?: PortableTextBlock[];
-  research?: PortableTextBlock[];
-  myRole?: PortableTextBlock[];
-  techStack?: PortableTextBlock[];
-  outcome?: PortableTextBlock[];
-  takeaways?: PortableTextBlock[];
+  body?: PortableTextBlock[];
   relatedProjects?: {
     category: string;
     description: string;

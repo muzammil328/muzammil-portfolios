@@ -43,14 +43,7 @@ export async function getProjectBySlug(slug: string) {
     figmaDesign,
     "category": category->name,
     "skills": skills[]->name,
-    features,
-    problem,
-    solution,
-    research,
-    userFlowImplementation,
-    implementation,
-    outcome,
-    takeaways
+    body
   }`,
     { slug }
   );
@@ -83,7 +76,6 @@ export async function getProjects() {
     liveLink,
     githubLink,
     role,
-    features,
     "category": category->name,
     "skills": skills[]->name
   }`);

@@ -23,7 +23,6 @@ export async function GET(req: NextRequest) {
             title,
             liveLink,
             githubLink,
-            features,
             "techStack": skills[]->name
           }
         }
@@ -39,7 +38,6 @@ export async function GET(req: NextRequest) {
           title,
           liveLink,
           githubLink,
-          features,
           "techStack": skills[]->name
         }
       `),
@@ -102,7 +100,6 @@ export async function GET(req: NextRequest) {
               title?: string;
               liveLink?: string;
               githubLink?: string;
-              features?: string[];
               techStack?: string[];
             }[];
           }) => ({
@@ -117,7 +114,7 @@ export async function GET(req: NextRequest) {
               name: p?.title || '',
               url: p?.liveLink || p?.githubLink || '',
               techStack: (p?.techStack || []).filter(Boolean),
-              highlights: p?.features || [],
+               highlights: [],
             })),
           })
         )
@@ -163,13 +160,12 @@ export async function GET(req: NextRequest) {
           title?: string;
           liveLink?: string;
           githubLink?: string;
-          features?: string[];
           techStack?: string[];
         }) => ({
           name: proj?.title || '',
           url: proj?.liveLink || proj?.githubLink || '',
           techStack: (proj?.techStack || []).filter(Boolean),
-          highlights: proj?.features || [],
+          highlights: [],
         })
       ),
     };

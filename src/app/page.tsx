@@ -9,7 +9,6 @@ import HeroSection from '@/features/home/HeroSection';
 import HorizontalProjects from '@/features/home/HorizontalProjects';
 import Navbar from '@/components/Navbar';
 import ProfessionalJourney from '@/features/home/ProfessionalJourney';
-import RecentlyLaunched from '@/features/home/RecentlyLaunched';
 import WhatIDo from '@/features/home/WhatIDo';
 import { fetchProfile } from '@/services/profileService';
 import { Suspense } from 'react';
@@ -51,12 +50,11 @@ export default async function page() {
       </div>
 
       <main>
-        <AboutMe />
+        {/* <AboutMe /> */}
         <div className="grid lg:grid-cols-2 gap-4 items-start">
           <ProfessionalJourney />
           <Education />
         </div>
-        <RecentlyLaunched />
         <WhatIDo />
         <HorizontalProjects />
             <Blog />

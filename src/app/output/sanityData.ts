@@ -28,13 +28,7 @@ export interface Project {
   githubLink: string;
   figmaDesign: string;
   skills: string[];
-  features: any;
-  problem: any;
-  solution: any;
-  outcome: any;
-  takeaways: any;
-  techStack: any;
-  myRole: any;
+  body: any;
 }
 
 export interface Skill {
@@ -210,13 +204,7 @@ function generateMarkdown(data: SanityData): string {
       lines.push(`| Live Link | ${p.liveLink ? `[Link](${p.liveLink})` : '—'} |`);
       lines.push(`| GitHub Link | ${p.githubLink ? `[Link](${p.githubLink})` : '—'} |`);
       lines.push(`| Figma Design | ${p.figmaDesign ? `[Link](${p.figmaDesign})` : '—'} |`);
-      lines.push(`| Features | ${fmt(p.features)} |`);
-      lines.push(`| Problem | ${fmt(p.problem)} |`);
-      lines.push(`| Solution | ${fmt(p.solution)} |`);
-      lines.push(`| Outcome | ${fmt(p.outcome)} |`);
-      lines.push(`| Takeaways | ${fmt(p.takeaways)} |`);
-      lines.push(`| Tech Stack | ${fmt(p.techStack)} |`);
-      lines.push(`| My Role | ${fmt(p.myRole)} |`);
+      lines.push(`| Body | ${fmt(p.body)} |`);
       lines.push(``);
     }
   } else {
@@ -344,13 +332,7 @@ export async function getAllSanityData(): Promise<SanityData> {
         githubLink,
         figmaDesign,
         "skills": skills[]->name,
-        features,
-        problem,
-        solution,
-        outcome,
-        takeaways,
-        techStack,
-        myRole
+        body
       }`),
       client.fetch(`*[_type == "skills"] | order(name asc) {
         _id,

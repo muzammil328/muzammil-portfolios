@@ -184,7 +184,7 @@ async function fetchProject(slug: string) {
     "category": category->name,
     "company": company->{company, "slug": slug.current},
     "skillNames": skills[]->{ name, icon },
-    features,
+    body,
     "relatedProjects": relatedProjects[]->{
       title,
       slug,
@@ -194,14 +194,7 @@ async function fetchProject(slug: string) {
       role,
       teamSize,
       duration
-    },
-    problem,
-    solution,
-    research,
-    myRole,
-    techStack,
-    outcome,
-    takeaways
+    }
   }`;
   return client.fetch(query, { slug });
 }
@@ -241,43 +234,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
     fetchData();
   }, [slug]);
 
-  const projectSections = [
-    {
-      id: 'problem',
-      title: 'Problem',
-      content: project?.problem,
-    },
-    {
-      id: 'solution',
-      title: 'Solution',
-      content: project?.solution,
-    },
-    {
-      id: 'research',
-      title: 'Research / Inspiration',
-      content: project?.research,
-    },
-    {
-      id: 'myRole',
-      title: 'My Role',
-      content: project?.myRole,
-    },
-    {
-      id: 'techStack',
-      title: 'Tech Stack',
-      content: project?.techStack,
-    },
-    {
-      id: 'outcome',
-      title: 'Outcome / Results',
-      content: project?.outcome,
-    },
-    {
-      id: 'takeaways',
-      title: 'Key Takeaways / Learnings',
-      content: project?.takeaways,
-    },
-  ].filter(section => Array.isArray(section.content) && section.content.length > 0);
+  const hasBody = Array.isArray(project?.body) && project.body.length > 0;
 
   if (loading) {
     return <SkeletonLoader />;
@@ -491,31 +448,10 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
         </div>
       </section>
 
-      {/* Key Features */}
-      <section className="container mx-auto px-4 py-12">
-        <div className="flex items-center gap-3 mb-6">
-          <div className="w-2 h-8 bg-primary rounded-full"></div>
-          <h2 className="text-2xl font-bold">Key Features</h2>
-        </div>
-        <PortableTextView value={project.features || []} />
-      </section>
-
-      {/* Project Sections - Plain display */}
-      {projectSections.length > 0 && (
-        <section className="container mx-auto px-4 py-8">
-          <div className="space-y-8">
-            {projectSections.map((section, index) => (
-              <article key={section.id} id={section.id}>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-2 h-8 bg-primary rounded-full"></div>
-                  <h2 className="text-2xl font-semibold text-foreground">{section.title}</h2>
-                </div>
-                <div className="pl-10">
-                  <PortableTextView value={section.content || []} />
-                </div>
-              </article>
-            ))}
-          </div>
+      {/* Body */}
+      {hasBody && (
+        <section className="container mx-auto px-4 py-12">
+          <PortableTextView value={project.body || []} />
         </section>
       )}
 

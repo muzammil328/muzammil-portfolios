@@ -57,7 +57,7 @@ export async function getServices(): Promise<ServiceTypes[]> {
     slug,
     image,
     focus,
-    "skills": skills[]->{name, icon}
+    "skills": skills[]->{name, icon, color, proficiency, yearsUsed, featured}
   }`;
 
   return client.fetch(query);
@@ -70,7 +70,7 @@ export async function getServiceBySlug(slug: string): Promise<ServiceTypes | nul
     slug,
     image,
     focus,
-    "skills": skills[]->{name, icon}
+    "skills": skills[]->{name, icon, color, proficiency, yearsUsed, featured}
   }`;
 
   return client.fetch(query, { slug });

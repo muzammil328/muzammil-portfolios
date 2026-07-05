@@ -4,7 +4,23 @@ import React, { useRef, useLayoutEffect, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { cn } from '@/lib/cn';
-import { ArrowUpRight } from 'lucide-react';
+import {
+  ArrowRight,
+  Layers, Clock, Users, Star, Zap,
+  Layout, Code, Code2, Shield, Globe, Smartphone, Server,
+  Database, Settings, Palette, Search, Monitor, GitBranch,
+  Lock, Cpu, Box, Rocket, FileText, CheckCircle,
+  type LucideIcon,
+} from 'lucide-react';
+
+const ICON_MAP: Record<string, LucideIcon> = {
+  layout: Layout, zap: Zap, code: Code, 'code-2': Code2, shield: Shield,
+  globe: Globe, layers: Layers, smartphone: Smartphone, server: Server,
+  database: Database, settings: Settings, star: Star, palette: Palette,
+  search: Search, monitor: Monitor, 'git-branch': GitBranch, lock: Lock,
+  cpu: Cpu, box: Box, rocket: Rocket, 'file-text': FileText,
+  'check-circle': CheckCircle,
+};
 import { getServices } from '@/services/portfolioService';
 import Image from 'next/image';
 import { getImageSrc } from '@/utils/getImageSrc';
@@ -13,21 +29,261 @@ import { ServiceTypes } from '@/types/Service';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const colorMap: Record<number, { color: string; border: string }> = {
-  0: { color: 'from-blue-500/10 to-blue-600/5', border: 'border-blue-500/20' },
+/* ─── Accent palette per card index ─── */
+const accentMap = {
+  0: {
+    dot: 'bg-blue-400',
+    focusBg: 'bg-blue-500/5 border-blue-400/20',
+    badge_fg: 'bg-blue-500/15 border-blue-400/50 text-blue-600 dark:text-blue-300',
+    badge_bg: 'bg-blue-500/6 border-blue-400/20 text-blue-400/70 dark:text-blue-400/50',
+    statCard: 'bg-blue-500/5 border-blue-400/15',
+    checkColor: 'text-blue-500',
+    ctaHover: 'hover:shadow-blue-500/20',
+  },
   1: {
-    color: 'from-emerald-500/10 to-emerald-600/5',
-    border: 'border-emerald-500/20',
+    dot: 'bg-emerald-400',
+    focusBg: 'bg-emerald-500/5 border-emerald-400/20',
+    badge_fg: 'bg-emerald-500/15 border-emerald-400/50 text-emerald-600 dark:text-emerald-300',
+    badge_bg: 'bg-emerald-500/6 border-emerald-400/20 text-emerald-400/70 dark:text-emerald-400/50',
+    statCard: 'bg-emerald-500/5 border-emerald-400/15',
+    checkColor: 'text-emerald-500',
+    ctaHover: 'hover:shadow-emerald-500/20',
   },
   2: {
-    color: 'from-amber-500/10 to-amber-600/5',
-    border: 'border-amber-500/20',
+    dot: 'bg-amber-400',
+    focusBg: 'bg-amber-500/5 border-amber-400/20',
+    badge_fg: 'bg-amber-500/15 border-amber-400/50 text-amber-600 dark:text-amber-300',
+    badge_bg: 'bg-amber-500/6 border-amber-400/20 text-amber-400/70 dark:text-amber-400/50',
+    statCard: 'bg-amber-500/5 border-amber-400/15',
+    checkColor: 'text-amber-500',
+    ctaHover: 'hover:shadow-amber-500/20',
   },
   3: {
-    color: 'from-purple-500/10 to-purple-600/5',
-    border: 'border-purple-500/20',
+    dot: 'bg-purple-400',
+    focusBg: 'bg-purple-500/5 border-purple-400/20',
+    badge_fg: 'bg-purple-500/15 border-purple-400/50 text-purple-600 dark:text-purple-300',
+    badge_bg: 'bg-purple-500/6 border-purple-400/20 text-purple-400/70 dark:text-purple-400/50',
+    statCard: 'bg-purple-500/5 border-purple-400/15',
+    checkColor: 'text-purple-500',
+    ctaHover: 'hover:shadow-purple-500/20',
   },
+} as const;
+type AccentKey = keyof typeof accentMap;
+
+/* ─── Stat icons ─── */
+const STAT_ICONS = [Layers, Clock, Star, Users, Zap];
+
+/* ─── Proficiency config ─── */
+const PROFICIENCY_ORDER = ['expert', 'advanced', 'intermediate', 'beginner', undefined];
+
+const PROFICIENCY_SIZE: Record<string, number> = {
+  expert:       72,
+  advanced:     60,
+  intermediate: 50,
+  beginner:     42,
 };
+
+/* Large pool of positions so every unique skill gets its own spot */
+const ALL_POSITIONS: [number, number, string][] = [
+  // [left%, top%, animDelay]
+  [6,   4,  '0s'],   [52,  3,  '0.7s'], [28,  14, '1.3s'], [70,  16, '0.3s'],
+  [10,  30, '1.0s'], [56,  32, '1.6s'], [22,  48, '0.5s'], [68,  50, '1.9s'],
+  [8,   65, '0.8s'], [48,  66, '0.2s'], [76,  76, '1.4s'], [30,  80, '1.1s'],
+  [18,  88, '0.6s'], [62,  86, '1.8s'], [40,  95, '0.4s'], [80,  90, '1.2s'],
+  [3,   50, '0.9s'], [44,  42, '1.5s'], [74,  35, '0.1s'], [16,  70, '1.7s'],
+];
+
+function hexToRgb(hex: string) {
+  const h = hex.replace('#', '');
+  const n = parseInt(h.length === 3 ? h.split('').map(c => c + c).join('') : h, 16);
+  return { r: (n >> 16) & 255, g: (n >> 8) & 255, b: n & 255 };
+}
+
+function FloatingBadges({
+  skills,
+  accentIndex,
+}: {
+  skills: ServiceTypes['skills'];
+  accentIndex: number;
+}) {
+  if (skills.length === 0) return null;
+
+  /* Deduplicate by name, then sort: expert → advanced → intermediate → beginner → undefined */
+  const seen = new Set<string>();
+  const unique = skills.filter(s => {
+    if (seen.has(s.name)) return false;
+    seen.add(s.name);
+    return true;
+  });
+  const sorted = [...unique].sort(
+    (a, b) =>
+      PROFICIENCY_ORDER.indexOf(a.proficiency) -
+      PROFICIENCY_ORDER.indexOf(b.proficiency)
+  );
+
+  /* Split: top half by proficiency = FG (sharp), rest = BG (blurred) */
+  const fgCount = Math.ceil(sorted.length / 2);
+  const fgSkills = sorted.slice(0, fgCount);
+  const bgSkills = sorted.slice(fgCount);
+
+  const iconCircle = (
+    skill: ServiceTypes['skills'][0],
+    layer: 'fg' | 'bg'
+  ) => {
+    const size = PROFICIENCY_SIZE[skill.proficiency ?? ''] ?? (layer === 'fg' ? 52 : 62);
+    const rgb = skill.color ? hexToRgb(skill.color) : null;
+    const bgStyle = rgb
+      ? {
+          backgroundColor: `rgba(${rgb.r},${rgb.g},${rgb.b},${layer === 'fg' ? 0.13 : 0.06})`,
+          borderColor: `rgba(${rgb.r},${rgb.g},${rgb.b},${layer === 'fg' ? 0.38 : 0.15})`,
+        }
+      : {};
+    const imgSize = Math.round(size * 0.52);
+    return (
+      <div
+        className={cn(
+          'rounded-2xl border flex items-center justify-center backdrop-blur-sm',
+          layer === 'fg'
+            ? 'border-border/30 bg-background/70 dark:bg-zinc-800/70'
+            : 'border-border/15 bg-background/40 dark:bg-zinc-800/40'
+        )}
+        style={{ width: size, height: size, ...bgStyle }}
+      >
+        {skill.icon ? (
+          <Image
+            src={getImageSrc(skill)}
+            alt={skill.name}
+            width={imgSize}
+            height={imgSize}
+            className={cn('object-contain rounded-sm', layer === 'bg' && 'opacity-55')}
+          />
+        ) : (
+          <span
+            className="font-bold text-[10px] uppercase tracking-wide opacity-60"
+            style={{ color: skill.color ?? undefined }}
+          >
+            {skill.name.slice(0, 2)}
+          </span>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <div className="absolute inset-0 overflow-hidden">
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(ellipse 90% 80% at 50% 50%, rgba(100,100,220,0.05) 0%, transparent 70%)',
+        }}
+      />
+
+      {/* BG layer */}
+      {bgSkills.map((skill, i) => {
+        const [left, top, delay] = ALL_POSITIONS[(fgSkills.length + i) % ALL_POSITIONS.length];
+        return (
+          <div
+            key={`bg-${skill.name}`}
+            className="absolute animate-float-bg"
+            style={{
+              left: `${left}%`,
+              top: `${top}%`,
+              filter: 'blur(1px)',
+              animationDelay: delay,
+              animationDuration: `${4.5 + (i % 4) * 0.8}s`,
+            }}
+          >
+            {iconCircle(skill, 'bg')}
+          </div>
+        );
+      })}
+
+      {/* FG layer */}
+      {fgSkills.map((skill, i) => {
+        const [left, top, delay] = ALL_POSITIONS[i % ALL_POSITIONS.length];
+        return (
+          <div
+            key={`fg-${skill.name}`}
+            className="absolute animate-float-fg"
+            style={{
+              left: `${left}%`,
+              top: `${top}%`,
+              animationDelay: delay,
+              animationDuration: `${3.0 + (i % 5) * 0.6}s`,
+            }}
+          >
+            {iconCircle(skill, 'fg')}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+type FocusItem = { title: string; description?: string; icon?: string };
+
+/* ─── Fallback data ─── */
+const FALLBACK_FOCUS: Record<number, FocusItem[]> = {
+  0: [
+    { title: 'Pixel Perfect Design',     description: 'Every detail crafted with precision',         icon: 'layout' },
+    { title: 'Performance Optimization', description: 'Lightning-fast loading and interactions',     icon: 'zap' },
+    { title: 'Component Architecture',   description: 'Scalable, maintainable code structure',       icon: 'code-2' },
+    { title: 'Responsive & Accessible',  description: 'Works beautifully on every device',           icon: 'smartphone' },
+  ],
+  1: [
+    { title: 'API Design',               description: 'Clean, documented REST & GraphQL endpoints',  icon: 'server' },
+    { title: 'Auth & Security',          description: 'JWT, OAuth2 & role-based access control',     icon: 'shield' },
+    { title: 'Database Modeling',        description: 'Efficient schemas for fast queries',           icon: 'database' },
+    { title: 'Scalable Architecture',    description: 'Built to handle growth from day one',         icon: 'layers' },
+  ],
+  2: [
+    { title: 'Schema Design',            description: 'Normalised, optimised data structures',       icon: 'database' },
+    { title: 'Query Optimization',       description: 'Indexes, caching & execution plans',          icon: 'zap' },
+    { title: 'Modern ORMs',              description: 'Prisma, Drizzle & raw SQL expertise',         icon: 'code' },
+    { title: 'Data Migrations',          description: 'Safe, reversible migration strategies',       icon: 'git-branch' },
+  ],
+  3: [
+    { title: 'CI/CD Pipelines',          description: 'Automated build, test & deploy workflows',   icon: 'rocket' },
+    { title: 'Containerisation',         description: 'Docker & Compose for consistent envs',        icon: 'box' },
+    { title: 'Cloud Deployment',         description: 'AWS, Vercel & cloud-native solutions',        icon: 'globe' },
+    { title: 'Monitoring & Alerts',      description: 'Observability from day one',                  icon: 'monitor' },
+  ],
+};
+
+const FALLBACK_DELIVERABLES: Record<number, FocusItem[]> = {
+  0: [
+    { title: 'Responsive UI',       description: 'Works on all screen sizes',          icon: 'smartphone' },
+    { title: 'Component Library',   description: 'Reusable, documented components',    icon: 'layers' },
+    { title: 'Performance Audit',   description: 'Lighthouse score 90+',               icon: 'zap' },
+    { title: 'SEO Setup',           description: 'Meta, sitemap & structured data',    icon: 'search' },
+  ],
+  1: [
+    { title: 'REST / GraphQL API',  description: 'Fully documented endpoints',         icon: 'server' },
+    { title: 'Auth System',         description: 'JWT & OAuth2 integration',           icon: 'lock' },
+    { title: 'Database Schema',     description: 'Optimised relational design',        icon: 'database' },
+    { title: 'Unit & E2E Tests',    description: 'Confidence in every release',        icon: 'check-circle' },
+  ],
+  2: [
+    { title: 'Schema Design',       description: 'Clean, normalised structure',        icon: 'database' },
+    { title: 'Migration Scripts',   description: 'Safe rollback-ready migrations',     icon: 'git-branch' },
+    { title: 'ORM Setup',           description: 'Prisma or Drizzle configured',       icon: 'code' },
+    { title: 'Backup Strategy',     description: 'Automated & tested backups',         icon: 'shield' },
+  ],
+  3: [
+    { title: 'CI/CD Pipeline',      description: 'GitHub Actions or GitLab CI',        icon: 'rocket' },
+    { title: 'Docker & Compose',    description: 'Containerised dev & prod envs',      icon: 'box' },
+    { title: 'Cloud Deployment',    description: 'AWS, GCP or Vercel',                 icon: 'globe' },
+    { title: 'SSL & DNS',           description: 'Secure, custom domain setup',        icon: 'lock' },
+  ],
+};
+
+const FALLBACK_STATS: { value: string; label: string; iconIdx: number }[] = [
+  { value: '50+', label: 'Projects',    iconIdx: 0 },
+  { value: '4+',  label: 'Yrs Exp',     iconIdx: 1 },
+  { value: '98%', label: 'Satisfaction',iconIdx: 2 },
+  { value: '20+', label: 'Clients',     iconIdx: 3 },
+];
 
 export default function WhatIDo() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -60,266 +316,219 @@ export default function WhatIDo() {
 
   useLayoutEffect(() => {
     if (isMobile) return;
-
     const ctx = gsap.context(() => {
       const cards = cardRefs.current.filter(Boolean) as HTMLDivElement[];
       if (cards.length === 0) return;
-
-      const isMobile = window.innerWidth < 768;
-      const totalScroll = isMobile 
-        ? window.innerHeight * (services.length + 1.5)
-        : window.innerHeight * (services.length + 2.5);
-
-      gsap.set(cards, {
-        y: isMobile ? window.innerHeight * 0.3 : window.innerHeight,
-        opacity: 0,
-        scale: 0.9,
-      });
-
+      const totalScroll = window.innerHeight * (services.length + 2.5);
+      gsap.set(cards, { y: window.innerHeight, opacity: 0, scale: 0.92 });
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
           end: `+=${totalScroll}`,
-          pin: !isMobile,
+          pin: true,
           scrub: 1,
         },
       });
-
       cards.forEach((card, i) => {
         if (i === 0) {
-          tl.to(card, {
-            y: 0,
-            opacity: 1,
-            scale: 1,
-            duration: 1,
-            ease: 'power3.out',
-          });
+          tl.to(card, { y: 0, opacity: 1, scale: 1, duration: 1, ease: 'power3.out' });
         } else {
-          tl.to(
-            card,
-            {
-              y: 0,
-              opacity: 1,
-              scale: 1,
-              duration: 1,
-              ease: 'power3.out',
-            },
-            '+=0.1'
-          ).to(
-            cards[i - 1],
-            {
-              opacity: 0,
-              scale: 0.95,
-              duration: 0.5,
-            },
-            '<'
+          tl.to(card, { y: 0, opacity: 1, scale: 1, duration: 1, ease: 'power3.out' }, '+=0.1').to(
+            cards[i - 1], { opacity: 0, scale: 0.95, duration: 0.5 }, '<'
           );
         }
       });
-
       tl.to({}, { duration: 1 });
     }, sectionRef);
-
-    const handleResize = () => {
-      ScrollTrigger.refresh();
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      ctx.revert();
-    };
+    const onResize = () => ScrollTrigger.refresh();
+    window.addEventListener('resize', onResize);
+    return () => { window.removeEventListener('resize', onResize); ctx.revert(); };
   }, [services.length, isMobile]);
 
   if (loading) {
     return (
       <section className="min-h-screen w-full flex items-center justify-center py-20">
-        <div className="container mx-auto px-6 w-full">
-          <div className="rounded-3xl border border-border/60 bg-card/80 backdrop-blur p-6 md:p-10 animate-pulse">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-border/60 pb-8 mb-8">
-              <div className="space-y-4 w-full md:max-w-2xl">
-                <div className="h-4 w-32 bg-muted rounded-full" />
-                <div className="h-16 w-full md:w-2/3 bg-muted rounded-2xl" />
-              </div>
-              <div className="h-6 w-full md:w-1/3 bg-muted rounded-full" />
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-              {[1, 2, 3, 4].map(i => (
-                <div
-                  key={i}
-                  className="rounded-3xl border border-border/60 bg-background/70 p-6 h-105"
-                >
-                  <div className="h-6 w-24 bg-muted rounded-full mb-5" />
-                  <div className="space-y-3 mb-8">
-                    <div className="h-5 w-3/4 bg-muted rounded-full" />
-                    <div className="h-5 w-1/2 bg-muted rounded-full" />
-                    <div className="h-5 w-2/3 bg-muted rounded-full" />
-                  </div>
-                  <div className="grid grid-cols-2 gap-3 mt-auto">
-                    <div className="h-10 bg-muted rounded-full" />
-                    <div className="h-10 bg-muted rounded-full" />
-                    <div className="h-10 bg-muted rounded-full" />
-                    <div className="h-10 bg-muted rounded-full" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+        <div className="container mx-auto px-6 w-full space-y-4">
+          {[1, 2].map(i => (
+            <div key={i} className="rounded-3xl border border-border/60 bg-card/80 backdrop-blur p-8 h-72 animate-pulse" />
+          ))}
         </div>
       </section>
     );
   }
-
-  const displayServices = services.length > 0 ? services : [];
 
   return (
     <section
       ref={sectionRef}
       className="min-h-screen w-full flex flex-col items-center justify-start bg-background relative md:py-20 sm:py-12 py-8"
     >
+      {/* Heading */}
       <div className="w-full container mx-auto md:px-6 px-3 mb-6 md:mb-12 z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:pb-8 pb-4">
           <h2 className="text-5xl md:text-8xl font-bold tracking-tighter">What I Do /</h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground md:max-w-xl w-auto leading-relaxed text-center md:text-left md:block hidden">
+          <p className="hidden md:block text-base sm:text-lg md:text-xl text-muted-foreground md:max-w-xl leading-relaxed">
             I specialize in building fast, reliable, and user-friendly full-stack web applications.
-            I help small businesses and startups turn ideas into high-quality websites and products
-            that actually work and scale.
+            I help small businesses and startups turn ideas into high-quality products that scale.
           </p>
         </div>
       </div>
 
-      <div id="skills" ref={containerRef} className={cn('w-full px-3 md:container md:mx-auto md:px-6', isMobile ? 'flex flex-col gap-6' : 'relative h-screen md:h-125')}>
-        {displayServices.map((service, index) => {
-          const categorySkills = service.skills?.length > 0 ? service.skills : [];
-
-          const colors = colorMap[index] || colorMap[0];
+      {/* Cards */}
+      <div
+        id="skills"
+        ref={containerRef}
+        className={cn(
+          'w-full px-3 md:container md:mx-auto md:px-6',
+          isMobile ? 'flex flex-col gap-6' : 'relative h-screen md:h-125'
+        )}
+      >
+        {services.map((service, index) => {
+          const accent = accentMap[(index as AccentKey)] || accentMap[0];
+          const skills = service.skills?.length > 0 ? service.skills : [];
+          /* normalise: Sanity may still return old plain strings */
+          const normaliseFocus = (arr: unknown[]): FocusItem[] =>
+            arr.map(v => typeof v === 'string' ? { title: v } : (v as FocusItem));
+          const focusItems: FocusItem[] =
+            (service.focus || []).length > 0
+              ? normaliseFocus(service.focus as unknown[])
+              : FALLBACK_FOCUS[index] || FALLBACK_FOCUS[0];
+          const deliverables: FocusItem[] =
+            (service.deliverables || []).length > 0
+              ? normaliseFocus(service.deliverables as unknown[])
+              : FALLBACK_DELIVERABLES[index] || FALLBACK_DELIVERABLES[0];
+          const stats =
+            (service.proofPoints || []).filter(p => p.value && p.label).length >= 2
+              ? (service.proofPoints as { value: string; label: string; iconIdx: number }[])
+              : FALLBACK_STATS;
 
           return (
             <div
               key={service._id || index}
-              ref={el => {
-                if (el) cardRefs.current[index] = el;
-              }}
+              ref={el => { if (el) cardRefs.current[index] = el; }}
               className={cn(
-                'rounded-3xl border p-2 sm:p-8 md:p-10 flex flex-col justify-between backdrop-blur-xl bg-linear-to-br',
-                isMobile ? 'relative w-full' : 'absolute top-0 left-0 w-full h-full',
-                colors.color,
-                colors.border,
-                'dark:bg-zinc-900/90 bg-white/90'
+                'rounded-3xl border border-border/25 backdrop-blur-xl overflow-hidden',
+                'dark:bg-zinc-900/92 bg-white/96 shadow-xl shadow-black/5',
+                isMobile ? 'relative w-full' : 'absolute top-0 left-0 w-full h-full'
               )}
               style={isMobile ? undefined : { zIndex: index + 1 }}
             >
+              {/* Dot grid */}
               <div
-                className="absolute inset-0 z-0 opacity-10 pointer-events-none"
+                className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
                 style={{
                   backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)',
-                  backgroundSize: '24px 24px',
+                  backgroundSize: '28px 28px',
                 }}
               />
 
-              <div className="flex flex-col h-full relative z-10">
-                <div className="w-full border-b border-border/50 pb-6 mb-6">
-                  <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                    <div className="flex items-center gap-2 md:gap-4">
-                      <span className="hidden sm:block text-xl md:text-2xl font-mono opacity-50">
-                        (0{index + 1})
-                      </span>
-                      <h3 className="text-3xl md:text-5xl font-bold whitespace-nowrap tracking-tight">
+              {/* 60 / 40 split */}
+              <div className="relative z-10 flex flex-col md:flex-row h-full">
+
+                {/* ── LEFT 60% ── */}
+                <div className="flex flex-col flex-1 min-w-0 p-5 md:p-7 md:pr-6 md:basis-[60%]">
+
+                  {/* Title row */}
+                  <div className="flex items-center justify-between gap-3 mb-2">
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      {service.image && (
+                        <div className="shrink-0 w-9 h-9 rounded-xl overflow-hidden border border-border/40 bg-muted/30 flex items-center justify-center">
+                          <Image src={getImageSrc({ icon: service.image })} alt={service.name} width={36} height={36} className="object-cover" />
+                        </div>
+                      )}
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight truncate">
                         {service.name}
                       </h3>
+                      {service.isFeatured && (
+                        <span className="shrink-0 hidden sm:inline-flex rounded-full border border-primary/40 bg-primary/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-primary">
+                          Featured
+                        </span>
+                      )}
                     </div>
-                    {service.isFeatured && (
-                      <span className="rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-                        Featured
-                      </span>
-                    )}
                     <Link
                       href={`/services/${service.slug.current}`}
-                      className="hidden md:flex w-14 h-14 rounded-full bg-black dark:bg-white text-white dark:text-black items-center justify-center transform transition-transform hover:scale-110 hover:-rotate-45 cursor-pointer"
+                      className={cn(
+                        'group shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-foreground/15 bg-foreground/5',
+                        'text-xs font-semibold text-foreground/80',
+                        'hover:bg-foreground hover:text-background hover:border-foreground',
+                        'hover:shadow-lg transition-all duration-300',
+                        accent.ctaHover
+                      )}
                     >
-                      <ArrowUpRight className="w-7 h-7" />
+                      <span className="hidden sm:inline">View Work</span>
+                      <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                     </Link>
+                  </div>
+
+                  {/* Description */}
+                  {service.summary && (
+                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed line-clamp-1 mb-3">
+                      {service.summary}
+                    </p>
+                  )}
+
+                  <div className="border-t border-border/20 mb-3" />
+
+                  {/* Key Focus mini-cards */}
+                  <div className="mb-3">
+                    <span className="text-[9px] uppercase tracking-widest font-bold opacity-40 mb-2 block">Key Focus</span>
+                    <div className="grid grid-cols-2 gap-2">
+                      {focusItems.slice(0, 4).map((item, i) => {
+                        const Icon = ICON_MAP[item.icon ?? ''] || Layers;
+                        return (
+                          <div key={i} className={cn('rounded-xl border p-2.5 flex flex-col gap-1.5 transition-all duration-200 hover:scale-[1.02]', accent.focusBg)}>
+                            <Icon className={cn('w-3.5 h-3.5', accent.checkColor)} />
+                            <span className="text-xs font-semibold leading-tight">{item.title}</span>
+                            {item.description && (
+                              <span className="text-[10px] text-muted-foreground leading-snug opacity-80 line-clamp-1">{item.description}</span>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* What You Get mini-cards */}
+                  <div className="mb-3">
+                    <span className="text-[9px] uppercase tracking-widest font-bold opacity-40 mb-2 block">What You Get</span>
+                    <div className="grid grid-cols-2 gap-2">
+                      {deliverables.slice(0, 4).map((item, i) => {
+                        const Icon = ICON_MAP[item.icon ?? ''] || CheckCircle;
+                        return (
+                          <div key={i} className="rounded-xl border border-border/20 bg-muted/10 p-2.5 flex flex-col gap-1.5 transition-all duration-200 hover:scale-[1.02]">
+                            <Icon className="w-3.5 h-3.5 text-muted-foreground" />
+                            <span className="text-xs font-semibold leading-tight">{item.title}</span>
+                            {item.description && (
+                              <span className="text-[10px] text-muted-foreground leading-snug opacity-80 line-clamp-1">{item.description}</span>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Stats — slim inline row */}
+                  <div className={cn('mt-auto pt-3 border-t border-border/20 flex items-center gap-5 flex-wrap')}>
+                    {stats.slice(0, 4).map((stat, i) => {
+                      const Icon = STAT_ICONS[stat.iconIdx ?? i] || Layers;
+                      return (
+                        <div key={i} className="flex items-center gap-1.5">
+                          <Icon className="w-3 h-3 opacity-35" />
+                          <span className="text-base font-bold tracking-tight">{stat.value}</span>
+                          <span className="text-[10px] text-muted-foreground font-medium">{stat.label}</span>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-8 h-full">
-                  <div className="col-span-1 md:col-span-2 flex flex-col order-first md:order-last">
-                    {service.summary && (
-                      <p className="text-sm leading-relaxed text-muted-foreground mb-4">
-                        {service.summary}
-                      </p>
-                    )}
-
-                    {(service.timeline || service.pricing?.startingAt) && (
-                      <div className="mb-5 space-y-1 text-sm text-muted-foreground">
-                        {service.timeline && <p>Timeline: {service.timeline}</p>}
-                        {service.pricing?.startingAt && (
-                          <p>
-                            Starting at {service.pricing.currency || 'USD'}{' '}
-                            {service.pricing.startingAt}
-                          </p>
-                        )}
-                      </div>
-                    )}
-
-                    <span className="text-sm uppercase tracking-widest opacity-50 mb-2 md:mb-4 font-semibold">
-                      Key Focus
-                    </span>
-                    <ul className="space-y-3">
-                      {(service.focus || []).map((item, i) => (
-                        <li
-                          key={i}
-                          className="flex items-center gap-2 text-lg font-medium opacity-90"
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-foreground/50" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="col-span-1 flex flex-col border-b md:border-b-0 md:border-r border-border/30 pb-2 md:pb-0 md:pr-6 order-last md:order-first">
-                    {(service.deliverables || []).length > 0 && (
-                      <div className="mb-4">
-                        <p className="text-xs uppercase tracking-[0.14em] text-muted-foreground mb-2">
-                          Deliverables
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                          {(service.deliverables || []).slice(0, 4).map((item, i) => (
-                            <span
-                              key={`deliverable-${i}`}
-                              className="px-3 py-1 rounded-full border border-border/60 text-xs text-foreground/90"
-                            >
-                              {item}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    <div className="flex flex-wrap gap-3 content-start pr-0 md:pr-6 border-b md:border-b-0 md:border-r border-border/30 pb-3 md:pb-0 md:mb-0 mb-3">
-                      {categorySkills.map((skill, i) => (
-                        <div
-                          key={i}
-                          className="px-4 py-2 rounded-full border border-primary/10 bg-primary/10 dark:bg-primary/30 text-sm font-medium text-foreground hover:bg-primary/10 hover:scale-105 transition-all duration-200 cursor-default"
-                        >
-                          {skill.icon && (
-                            <span>
-                              <Image
-                                src={getImageSrc(skill)}
-                                alt={skill.name}
-                                width={20}
-                                height={20}
-                                className="inline-block mr-2 rounded-sm"
-                              />
-                            </span>
-                          )}
-                          <span>{skill.name}</span>
-                        </div>
-                      ))}
-                    </div>
+                {/* ── RIGHT 40%: floating badge cloud ── */}
+                <div
+                  className="hidden md:block shrink-0 md:basis-[40%] border-l border-border/15 relative overflow-visible bg-gradient-to-br from-muted/10 via-transparent to-transparent self-stretch"
+                >
+                  {/* Slight overflow to overlap center divider */}
+                  <div className="absolute inset-0 -left-6">
+                    <FloatingBadges skills={skills} accentIndex={index} />
                   </div>
                 </div>
               </div>
@@ -327,6 +536,33 @@ export default function WhatIDo() {
           );
         })}
       </div>
+
+      <style jsx global>{`
+        @keyframes floatFg {
+          0%   { transform: translateY(0px)   scale(1);    opacity: 0.9;  }
+          38%  { transform: translateY(-10px) scale(1.05); opacity: 1;    }
+          68%  { transform: translateY(-5px)  scale(0.97); opacity: 0.92; }
+          100% { transform: translateY(0px)   scale(1);    opacity: 0.9;  }
+        }
+        @keyframes floatBg {
+          0%   { transform: translateY(0px)   scale(1);    opacity: 0.45; }
+          42%  { transform: translateY(-14px) scale(1.03); opacity: 0.6;  }
+          72%  { transform: translateY(-6px)  scale(0.98); opacity: 0.5;  }
+          100% { transform: translateY(0px)   scale(1);    opacity: 0.45; }
+        }
+        .animate-float-fg {
+          animation-name: floatFg;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          animation-fill-mode: both;
+        }
+        .animate-float-bg {
+          animation-name: floatBg;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          animation-fill-mode: both;
+        }
+      `}</style>
     </section>
   );
 }
