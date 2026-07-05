@@ -124,7 +124,7 @@ export default function HorizontalProjects() {
             href="/portfolio"
             className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground"
           >
-            See More
+            See All Projects
           </Link>
         </div>
       )}
