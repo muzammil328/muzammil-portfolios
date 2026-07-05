@@ -1,4 +1,4 @@
-import { SanityImageType, SanitySlugType } from '@muzammil328/sanity';
+import { SanityImageType, SanitySlugType } from '@/types/sanity';
 import { PortableTextBlock } from '@portabletext/react';
 
 export interface ProjectCard {

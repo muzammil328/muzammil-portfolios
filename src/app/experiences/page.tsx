@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { client } from '../../sanity/lib/client';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+import { client } from '@/sanity/lib/client';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 interface Experience {
   _id: string;
@@ -55,7 +55,7 @@ export default async function Page({
   const normalizedCompany = selectedCompany.toLowerCase();
 
   const filteredExperiences = experiences
-    .filter(exp => {
+    .filter((exp) => {
       if (!normalizedCompany) return true;
       return exp.company.trim().toLowerCase() === normalizedCompany;
     })
@@ -87,7 +87,7 @@ export default async function Page({
 
           {filteredExperiences.length > 0 ? (
             <div id="experience-results" className="space-y-6 scroll-mt-32">
-              {filteredExperiences.map(exp => {
+              {filteredExperiences.map((exp) => {
                 const expSlug = exp.slug?.current || exp._id;
                 const startDateText = formatDate(exp.startDate);
                 const endDateText = exp.isCurrent === true ? 'Present' : formatDate(exp.endDate);

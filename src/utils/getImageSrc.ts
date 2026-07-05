@@ -7,7 +7,7 @@ export function getImageSrc(
     mainImage?: SanityImageSource;
   },
   width = 800,
-  height?: number
+  height?: number,
 ): string {
   const imageSource = data.icon || data.mainImage;
   if (imageSource) {

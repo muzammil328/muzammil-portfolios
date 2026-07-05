@@ -2,10 +2,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Users, Clock } from 'lucide-react';
-import { GitHubIcon } from '@muzammil328/icon';
+import { GitHubIcon } from '@/components/ui';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Badge } from '@muzammil328/ui';
+import { Badge } from '@/components/ui';
 import { getImageSrc } from '@/utils/getImageSrc';
 import { ProjectCard } from '@/types/Project';
 
@@ -83,7 +83,9 @@ export default function PortfolioCard({ data, index = 0 }: { data: ProjectCard; 
           className="relative aspect-video w-full block cursor-pointer overflow-hidden"
         >
           {/* Parent container — make sure this has a defined height */}
-          <div className="relative w-full h-full"> {/* or h-48, h-72, adjust as needed */}
+          <div className="relative w-full h-full">
+            {' '}
+            {/* or h-48, h-72, adjust as needed */}
             <Image
               src={getImageSrc(data, 1200)}
               alt={data.title}
@@ -148,6 +150,7 @@ export default function PortfolioCard({ data, index = 0 }: { data: ProjectCard; 
                     href={data.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`View live demo of ${data.title}`}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     <ExternalLink className="w-5 h-5" />
@@ -158,6 +161,7 @@ export default function PortfolioCard({ data, index = 0 }: { data: ProjectCard; 
                     href={data.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`View source code of ${data.title} on GitHub`}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     <GitHubIcon className="w-5 h-5" />

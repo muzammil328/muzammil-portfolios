@@ -8,7 +8,7 @@ export const categoryType = defineType({
     defineField({
       name: 'name',
       type: 'string',
-      validation: Rule => Rule.required(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',

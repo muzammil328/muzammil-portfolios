@@ -2,15 +2,15 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { GitHubIcon, LinkedInIcon } from '@muzammil328/icon';
+import { GitHubIcon, LinkedInIcon } from '@/components/ui';
 import { ArrowUpRight, Mail, MapPin } from 'lucide-react';
 
 const NAV_LINKS = [
-  { label: 'Home',      href: '/' },
-  { label: 'Work',      href: '/portfolio' },
-  { label: 'Services',  href: '/services' },
-  { label: 'About',     href: '/about' },
-  { label: 'Contact',   href: '/contact' },
+  { label: 'Home', href: '/' },
+  { label: 'Work', href: '/portfolio' },
+  { label: 'Services', href: '/services' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const SOCIAL_LINKS = [
@@ -29,7 +29,6 @@ const SOCIAL_LINKS = [
 function FooterContent() {
   return (
     <div className="flex flex-col h-full">
-
       {/* ── Top CTA ── */}
       <div className="flex-1 flex flex-col items-center justify-center text-center px-6 pt-16 pb-12">
         <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/40 mb-6">
@@ -47,8 +46,8 @@ function FooterContent() {
         </h2>
 
         <p className="text-white/50 max-w-sm text-base leading-relaxed mb-10">
-          I craft fast, accessible, and beautiful web products.
-          If you have a project in mind — let&apos;s talk.
+          I craft fast, accessible, and beautiful web products. If you have a project in mind —
+          let&apos;s talk.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
@@ -74,7 +73,6 @@ function FooterContent() {
 
       {/* ── Middle row: nav + socials ── */}
       <div className="px-6 md:px-12 py-8 flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
-
         {/* Brand */}
         <div className="flex flex-col items-center md:items-start gap-3">
           <span className="text-xl font-bold tracking-tight">Muzammil.</span>
@@ -86,7 +84,7 @@ function FooterContent() {
 
         {/* Nav links */}
         <nav className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2">
-          {NAV_LINKS.map(link => (
+          {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -99,7 +97,7 @@ function FooterContent() {
 
         {/* Socials */}
         <div className="flex items-center gap-2">
-          {SOCIAL_LINKS.map(s => (
+          {SOCIAL_LINKS.map((s) => (
             <Link
               key={s.label}
               href={s.href}

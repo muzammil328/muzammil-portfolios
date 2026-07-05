@@ -47,7 +47,7 @@ export default async function Page() {
 
           {services.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map(service => {
+              {services.map((service) => {
                 const imageUrl = getImageUrl(service.image);
                 const serviceSlug = service.slug?.current || service._id;
 

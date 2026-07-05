@@ -72,7 +72,7 @@ export default function Blog() {
           <div className="relative max-h-auto overflow-y-auto ">
             {loading ? (
               <>
-                {[1, 2].map(i => (
+                {[1, 2].map((i) => (
                   <div key={i}>
                     <BlogCardSkeleton />
                   </div>
@@ -81,7 +81,7 @@ export default function Blog() {
             ) : posts.length === 0 ? (
               <p className="text-muted-foreground">No blog posts yet.</p>
             ) : (
-              posts.slice(0, 2).map(post => (
+              posts.slice(0, 2).map((post) => (
                 <article key={post._id}>
                   {(() => {
                     const firstCategory = post.categories?.[0] as
@@ -92,7 +92,7 @@ export default function Blog() {
                       typeof firstCategory === 'string' ? firstCategory : firstCategory?.name || '';
 
                     return (
-                      <div className='mb-4'>
+                      <div className="mb-4">
                         {getImageUrl(post.mainImage) ? (
                           <Image
                             src={getImageUrl(post.mainImage, 800, 500) || ''}

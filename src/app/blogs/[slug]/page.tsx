@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { PortableTextView } from '@muzammil328/ui';
+import { PortableText } from '@portabletext/react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { getImageUrl } from '@/sanity/lib/image';
@@ -183,7 +183,7 @@ export default async function BlogDetailPage({ params }: { params: { slug: strin
               </div>
             )}
 
-            <PortableTextView value={post.body} />
+            <PortableText value={post.body} />
           </div>
         </section>
       </main>

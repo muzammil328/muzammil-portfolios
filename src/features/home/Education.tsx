@@ -73,12 +73,14 @@ export default function Education() {
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 text-foreground">
             Educational Background
           </h3>
-          <p className="text-base md:text-lg text-muted-foreground">My academic journey and qualifications.</p>
+          <p className="text-base md:text-lg text-muted-foreground">
+            My academic journey and qualifications.
+          </p>
         </div>
 
         {loading ? (
           <div className="space-y-12">
-            {[1, 2].map(i => (
+            {[1, 2].map((i) => (
               <div key={i} className="relative pl-0 md:pl-10">
                 <div className="bg-card border rounded-2xl p-6 animate-pulse">
                   <div className="h-6 w-28 bg-muted rounded mb-4" />
@@ -124,13 +126,17 @@ export default function Education() {
                               <h4 className="text-2xl font-bold text-foreground mb-1">
                                 {item.studyType} in {item.area}
                               </h4>
-                              <p className="text-lg text-primary font-semibold">{item.institution}</p>
+                              <p className="text-lg text-primary font-semibold">
+                                {item.institution}
+                              </p>
                             </div>
                           </div>
 
                           {item.score && (
                             <div className="flex items-center gap-2 mb-4">
-                              <span className="text-sm text-muted-foreground">GPA: {item.score}</span>
+                              <span className="text-sm text-muted-foreground">
+                                GPA: {item.score}
+                              </span>
                             </div>
                           )}
                         </div>

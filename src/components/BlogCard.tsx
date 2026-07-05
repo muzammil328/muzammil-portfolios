@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Button } from '@muzammil328/ui';
+import { Button } from '@/components/ui';
 import { PostCardTypes } from '@/types/Post';
 import { getImageUrl } from '@/sanity/lib/image';
 

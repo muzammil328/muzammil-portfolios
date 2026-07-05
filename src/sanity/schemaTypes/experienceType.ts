@@ -60,7 +60,7 @@ export const experienceType = defineType({
       type: 'string',
       title: 'End Date',
       hidden: ({ parent }) => parent?.isCurrent,
-      validation: Rule =>
+      validation: (Rule) =>
         Rule.custom((value, context) => {
           const parent = context.parent as { isCurrent?: boolean } | undefined;
 
@@ -96,7 +96,7 @@ export const experienceType = defineType({
               name: 'title',
               type: 'string',
               title: 'Title',
-              validation: Rule => Rule.required(),
+              validation: (Rule) => Rule.required(),
             }),
             defineField({
               name: 'link',

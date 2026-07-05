@@ -62,7 +62,7 @@ const ContactFormSchema = new Schema<ContactFormRecord>(
   {
     versionKey: false,
     collection: 'contact_forms',
-  }
+  },
 );
 
 ContactFormSchema.index({ lead_priority: 1, created_at: -1 });

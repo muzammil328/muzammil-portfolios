@@ -6,7 +6,6 @@ import Footer from '@/components/Footer';
 import PortfolioCard from '@/components/PortfolioCard';
 import ExperienceMilestones from '@/components/ExperienceMilestones';
 import { ProjectCard } from '@/types/Project';
-import PageViewTracker from '@/components/PageViewTracker';
 
 interface RelatedService {
   _id: string;
@@ -169,8 +168,9 @@ export default async function ExperienceDetailPage({
               <h1 className="text-4xl md:text-6xl font-bold mb-2 tracking-tight">
                 {experience.company}
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-1">{experience.position}</p>
-              <PageViewTracker path={`/experiences/${slug}`} />
+              <p className="text-xl md:text-2xl text-muted-foreground mb-1">
+                {experience.position}
+              </p>
               <p className="text-sm text-muted-foreground mb-4">{duration}</p>
 
               {experience.summary && (
@@ -208,8 +208,6 @@ export default async function ExperienceDetailPage({
               </div>
             )}
           </div>
-
-
 
           {experience.milestones && experience.milestones.length > 0 && (
             <section className="mt-16">
@@ -252,7 +250,7 @@ export default async function ExperienceDetailPage({
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                {relatedServices.slice(0, 4).map(service => (
+                {relatedServices.slice(0, 4).map((service) => (
                   <Link
                     key={service._id}
                     href={`/services/${service.slug?.current}`}

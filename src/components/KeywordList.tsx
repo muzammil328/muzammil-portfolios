@@ -19,7 +19,7 @@ const KeywordList: React.FC<KeywordListProps> = ({
     <div>
       <h4>Matched Keywords</h4>
       <ul>
-        {matchedKeywords.map(kw => (
+        {matchedKeywords.map((kw) => (
           <li key={kw}>
             {kw}
             {pendingAdditions.includes(kw) ? (
@@ -34,7 +34,7 @@ const KeywordList: React.FC<KeywordListProps> = ({
     <div>
       <h4>Missing Keywords</h4>
       <ul>
-        {missingKeywords.map(kw => (
+        {missingKeywords.map((kw) => (
           <li key={kw}>
             {kw}
             {pendingAdditions.includes(kw) ? (

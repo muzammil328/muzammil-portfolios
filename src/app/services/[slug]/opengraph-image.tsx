@@ -14,7 +14,7 @@ async function fetchService(slug: string) {
       name,
       summary
     }`,
-    { slug }
+    { slug },
   );
 }
 
@@ -45,6 +45,6 @@ export default async function Image({ params }: { params: Promise<{ slug: string
     </div>,
     {
       ...size,
-    }
+    },
   );
 }

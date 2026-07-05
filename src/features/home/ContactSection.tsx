@@ -2,9 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { Input, Textarea, Label } from '@muzammil328/form';
-import { Button } from '@muzammil328/ui';
-import { submitContactForm } from '@/app/actions/contactForm';
+import { Input, Textarea, Label } from '@/components/ui';
+import { Button } from '@/components/ui';
 import { ContactLeadSource } from '@/types/Service';
 
 type ContactSectionProps = {
@@ -68,7 +67,7 @@ export default function ContactSection({
             ? `Hi Muzammil, I want a similar solution to "${project}".\n\nProject details:`
             : '';
 
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       leadSource,
       serviceInterested: prev.serviceInterested || service || '',
@@ -83,9 +82,9 @@ export default function ContactSection({
   }, [searchParams, defaultLeadSource]);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
   ) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
@@ -97,13 +96,15 @@ export default function ContactSection({
     setSubmitStatus({ type: null, message: '' });
 
     try {
-      const result = await submitContactForm(formData);
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const result = await res.json();
 
       if (result.success) {
-        setSubmitStatus({
-          type: 'success',
-          message: result.message || 'Message sent successfully!',
-        });
+        setSubmitStatus({ type: 'success', message: 'Message sent successfully!' });
         setFormData({
           fname: '',
           lname: '',
@@ -123,16 +124,10 @@ export default function ContactSection({
           message: '',
         });
       } else {
-        setSubmitStatus({
-          type: 'error',
-          message: result.message || 'Failed to send message',
-        });
+        setSubmitStatus({ type: 'error', message: result.message || 'Failed to send message' });
       }
-    } catch (error) {
-      setSubmitStatus({
-        type: 'error',
-        message: `An error occurred. Please try again.${error instanceof Error ? ` (${error.message})` : ''}`,
-      });
+    } catch {
+      setSubmitStatus({ type: 'error', message: 'An error occurred. Please try again.' });
     } finally {
       setIsSubmitting(false);
     }

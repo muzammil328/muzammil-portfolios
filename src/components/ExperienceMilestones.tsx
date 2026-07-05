@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { CloseIcon } from '@muzammil328/icon';
+import { CloseIcon } from '@/components/ui';
 
 interface Milestone {
   _key: string;
@@ -54,7 +54,7 @@ export default function ExperienceMilestones({ milestones }: ExperienceMilestone
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {milestones.map(milestone => {
+        {milestones.map((milestone) => {
           const formattedDate = formatMilestoneDate(milestone.date);
           const primaryImage = milestone.imageUrls?.[0];
 
@@ -79,7 +79,9 @@ export default function ExperienceMilestones({ milestones }: ExperienceMilestone
                   <span className="text-xs font-medium px-2 py-1 rounded-full bg-primary/10 text-primary capitalize">
                     {milestone.type}
                   </span>
-                  {formattedDate && <span className="text-xs text-muted-foreground">{formattedDate}</span>}
+                  {formattedDate && (
+                    <span className="text-xs text-muted-foreground">{formattedDate}</span>
+                  )}
                 </div>
                 <h3 className="text-lg font-semibold mb-2">
                   {milestone.link ? (
@@ -87,7 +89,7 @@ export default function ExperienceMilestones({ milestones }: ExperienceMilestone
                       href={milestone.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={event => event.stopPropagation()}
+                      onClick={(event) => event.stopPropagation()}
                       className="hover:text-primary hover:underline"
                     >
                       {milestone.title}
@@ -97,7 +99,9 @@ export default function ExperienceMilestones({ milestones }: ExperienceMilestone
                   )}
                 </h3>
                 {milestone.description && (
-                  <p className="text-sm text-muted-foreground line-clamp-3">{milestone.description}</p>
+                  <p className="text-sm text-muted-foreground line-clamp-3">
+                    {milestone.description}
+                  </p>
                 )}
               </div>
             </button>
@@ -107,11 +111,7 @@ export default function ExperienceMilestones({ milestones }: ExperienceMilestone
 
       {selectedMilestone && (
         <div className="fixed inset-0 z-200 flex items-center justify-center bg-black/65 px-4 py-6">
-          <div
-            className="absolute inset-0"
-            onClick={closeModal}
-            aria-hidden="true"
-          />
+          <div className="absolute inset-0" onClick={closeModal} aria-hidden="true" />
 
           <div className="relative z-10 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl border border-border/70 bg-card">
             <button
@@ -123,7 +123,11 @@ export default function ExperienceMilestones({ milestones }: ExperienceMilestone
               <CloseIcon className="w-4 h-4" />
             </button>
 
-            <div className={selectedMilestonePrimaryImage ? 'grid md:grid-cols-[1.1fr_0.9fr]' : 'block'}>
+            <div
+              className={
+                selectedMilestonePrimaryImage ? 'grid md:grid-cols-[1.1fr_0.9fr]' : 'block'
+              }
+            >
               {selectedMilestonePrimaryImage && (
                 <div className="min-h-70 md:min-h-140 bg-muted/20 flex items-center justify-center p-4 md:p-6">
                   <img

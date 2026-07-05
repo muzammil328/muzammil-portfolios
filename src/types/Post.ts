@@ -1,5 +1,5 @@
 import { PortableTextBlock } from '@portabletext/react';
-import { SanityImageType, SanitySlugType } from '@muzammil328/sanity';
+import { SanityImageType, SanitySlugType } from '@/types/sanity';
 
 export interface PostCardTypes {
   _id: string;

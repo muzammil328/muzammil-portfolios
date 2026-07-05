@@ -1,5 +1,5 @@
 import { createImageUrlBuilder, SanityImageSource } from '@sanity/image-url';
-import { SanityImageType } from '@muzammil328/sanity';
+import { SanityImageType } from '@/types/sanity';
 import { dataset, projectId } from '../env';
 
 // https://www.sanity.io/docs/image-url

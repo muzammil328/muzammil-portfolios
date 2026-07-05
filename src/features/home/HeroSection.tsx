@@ -7,7 +7,7 @@ import { CV_FILE } from '@/constants/index';
 import { downloadFile } from '@/utils/downloadFile';
 import { getImageUrl } from '@/sanity/lib/image';
 import { ProfileTypes } from '@/types/Profile';
-import { GitHubIcon, LinkedInIcon } from '@muzammil328/icon';
+import { GitHubIcon, LinkedInIcon } from '@/components/ui';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const TAGLINES = [
@@ -27,7 +27,7 @@ function Typewriter({ text }: { text: string }) {
   useEffect(() => {
     if (index < text.length) {
       const timeout = setTimeout(() => {
-        setDisplayText(prev => prev + text[index]);
+        setDisplayText((prev) => prev + text[index]);
         setIndex(index + 1);
       }, 50);
       return () => clearTimeout(timeout);
@@ -57,7 +57,7 @@ export default function HeroSection({ profile }: HeroSectionProps) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTaglineIndex(prev => (prev + 1) % TAGLINES.length);
+      setTaglineIndex((prev) => (prev + 1) % TAGLINES.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -89,22 +89,7 @@ export default function HeroSection({ profile }: HeroSectionProps) {
       id="home"
       className="container mx-auto md:py-16 sm:py-8 py-4 px-2 relative overflow-hidden"
     >
-      <div className="flex items-center justify-center text-left flex-col py-1 text-muted-foreground">
-        <span>We Build Unique</span>
-        <span className="pb-2">Strategy + Creativity = Impact</span>
-        <svg
-          width="180"
-          height="6"
-          viewBox="0 0 180 6"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM175 3.5L180 5.88675V0.113249L175 2.5V3.5ZM4.5 3.5H175.5V2.5H4.5V3.5Z"
-            fill="currentColor"
-          ></path>
-        </svg>
-      </div>
+
 
       <div className="flex flex-col lg:flex-row items-center lg:gap-24 gap-12">
         <motion.div style={{ y: textY }} className="w-full lg:w-2/3 md:mt-12 sm:mt-8 mt-4 z-10">
@@ -136,7 +121,7 @@ export default function HeroSection({ profile }: HeroSectionProps) {
             </button>
 
             <div className="lg:hidden block max-w-md">
-              <h4 className="text-base font-semibold flex flex-col gap-1">Follow Me</h4>
+              <span className="text-base font-semibold flex flex-col gap-1">Follow Me</span>
 
               <div className="flex items-center gap-3 my-2">
                 {displayProfile.profiles?.map((social, i) => {
@@ -168,8 +153,9 @@ export default function HeroSection({ profile }: HeroSectionProps) {
               alt={displayProfile.name}
               width={480}
               height={480}
-              className="w-120 h-120 object-cover rounded-2xl"
+              className="w-full max-w-70 sm:max-w-90 lg:max-w-120 h-auto aspect-square object-cover rounded-2xl"
               priority
+              fetchPriority="high"
             />
           )}
           {!profile?.image && (
@@ -178,8 +164,9 @@ export default function HeroSection({ profile }: HeroSectionProps) {
               alt="Portrait"
               width={480}
               height={480}
-              className="w-120 h-120 object-cover rounded-2xl"
+              className="w-full max-w-70 sm:max-w-90 lg:max-w-120 h-auto aspect-square object-cover rounded-2xl"
               priority
+              fetchPriority="high"
             />
           )}
         </motion.div>

@@ -42,7 +42,7 @@ export default function AboutMe() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {deliveryItems.map(item => (
+        {deliveryItems.map((item) => (
           <article
             key={item.title}
             className="rounded-2xl border border-border bg-card/40 p-4 md:p-5 transition-colors hover:border-primary/40"

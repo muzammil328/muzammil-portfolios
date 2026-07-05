@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@muzammil328/ui';
+import { Button } from '@/components/ui';
 import { Check, X as XIcon } from 'lucide-react';
 
 export interface Suggestion {

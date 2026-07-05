@@ -1,7 +1,7 @@
 'use client';
 import { ExternalLink } from 'lucide-react';
-import { ChevronIconRight, ClockIcon, GitHubIcon, StarIcon, UserIcon } from '@muzammil328/icon';
-import { Badge } from '@muzammil328/ui';
+import { ChevronIconRight, ClockIcon, GitHubIcon, StarIcon, UserIcon } from '@/components/ui';
+import { Badge } from '@/components/ui';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -237,9 +237,7 @@ export default function PortfolioDetailWrapper({
                       <ExternalLink className="w-5 h-5 text-primary" />
                       <span className="font-medium text-foreground">Live Demo</span>
                     </div>
-                    <ChevronIconRight
-                      className="w-4 h-4 text-muted-foreground group-hover:text-primary"
-                    />
+                    <ChevronIconRight className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
                   </Link>
                 </motion.div>
                 <motion.div
@@ -257,9 +255,7 @@ export default function PortfolioDetailWrapper({
                       <GitHubIcon className="w-5 h-5 text-primary" />
                       <span className="font-medium text-foreground">Source Code</span>
                     </div>
-                    <ChevronIconRight
-                      className="w-4 h-4 text-muted-foreground group-hover:text-primary"
-                    />
+                    <ChevronIconRight className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
                   </Link>
                 </motion.div>
               </div>

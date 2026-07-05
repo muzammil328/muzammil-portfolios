@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Button } from '@muzammil328/ui';
-import { ChevronIconTop } from '@muzammil328/icon';
+import { Button } from '@/components/ui';
+import { ChevronIconTop } from '@/components/ui';
 
 export default function ScrollToTop() {
   const scrollToTop = () => {
@@ -17,6 +17,7 @@ export default function ScrollToTop() {
       size="icon"
       variant="destructive"
       onClick={scrollToTop}
+      aria-label="Scroll to top"
     >
       <ChevronIconTop />
     </Button>

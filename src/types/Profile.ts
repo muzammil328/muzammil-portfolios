@@ -1,4 +1,4 @@
-import { SanityImageType } from '@muzammil328/sanity';
+import { SanityImageType } from '@/types/sanity';
 
 export interface ProfileTypes {
   name: string;

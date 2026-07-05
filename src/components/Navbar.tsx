@@ -3,7 +3,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { Logo } from './Logo';
 import ScrollToTop from './ScrollToTop';
-import { CloseIcon, MenuIcon } from '@muzammil328/icon';
+import { CloseIcon, MenuIcon } from '@/components/ui';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,7 +18,7 @@ export default function Navbar() {
       { label: 'Blog', id: '/blogs' },
       { label: 'Contact', id: '/contact' },
     ],
-    []
+    [],
   );
 
   const scrollToSection = (sectionId: string) => {
@@ -71,7 +71,7 @@ export default function Navbar() {
     window.addEventListener('hashchange', handleHashChange);
 
     const handleScroll = () => {
-      const sections = navItems.map(item => item.id).filter(id => !id.startsWith('/'));
+      const sections = navItems.map((item) => item.id).filter((id) => !id.startsWith('/'));
       const scrollPosition = window.scrollY + 150;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -106,22 +106,23 @@ export default function Navbar() {
         <Logo />
       </div>
       <ul className="lg:block hidden">
-        {navItems.map(item => (
-          <button
-            key={item.id}
-            className="inline-block mx-6 font-medium cursor-pointer relative group bg-transparent border-none p-0"
-            onClick={() => handleNavItemClick(item.id)}
-          >
-            <span
-              className={`relative z-10 transition-colors duration-300 ${
-                activeSection === item.id ? 'text-primary' : 'text-foreground hover:text-primary'
-              }`}
+        {navItems.map((item) => (
+          <li key={item.id} className="inline-block">
+            <button
+              className="inline-block mx-6 font-medium cursor-pointer relative group bg-transparent border-none p-0"
+              onClick={() => handleNavItemClick(item.id)}
             >
-              {item.label}
-            </span>
-            {/* Hover line animation - starts from center, expands left-right */}
-            <span className="absolute bottom-0 left-1/2 h-0.5 bg-primary transform -translate-x-1/2 w-0 group-hover:w-full transition-all duration-500 ease-out origin-center"></span>
-          </button>
+              <span
+                className={`relative z-10 transition-colors duration-300 ${
+                  activeSection === item.id ? 'text-primary' : 'text-foreground hover:text-primary'
+                }`}
+              >
+                {item.label}
+              </span>
+              {/* Hover line animation - starts from center, expands left-right */}
+              <span className="absolute bottom-0 left-1/2 h-0.5 bg-primary transform -translate-x-1/2 w-0 group-hover:w-full transition-all duration-500 ease-out origin-center"></span>
+            </button>
+          </li>
         ))}
       </ul>
       <div className="flex items-center gap-2">
@@ -129,7 +130,7 @@ export default function Navbar() {
           type="button"
           aria-label="Toggle mobile menu"
           aria-expanded={isMobileMenuOpen}
-          onClick={() => setIsMobileMenuOpen(prev => !prev)}
+          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
           className="cursor-pointer lg:hidden border border-border h-10 w-10 rounded-full transition-all duration-300 flex items-center justify-center"
         >
           {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
@@ -152,7 +153,7 @@ export default function Navbar() {
         }`}
       >
         <ul className="space-y-1">
-          {navItems.map(item => (
+          {navItems.map((item) => (
             <li key={`mobile-${item.id}`}>
               <button
                 type="button"

@@ -8,7 +8,7 @@ export const skillType = defineType({
     defineField({
       name: 'name',
       type: 'string',
-      validation: Rule => Rule.required(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',
@@ -31,7 +31,7 @@ export const skillType = defineType({
         ],
         layout: 'dropdown',
       },
-      validation: Rule => Rule.required(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'color',
@@ -64,7 +64,7 @@ export const skillType = defineType({
       title: 'Years Used',
       type: 'number',
       description: 'How many years you have used this skill',
-      validation: Rule => Rule.min(0).max(30),
+      validation: (Rule) => Rule.min(0).max(30),
     }),
     defineField({
       name: 'featured',

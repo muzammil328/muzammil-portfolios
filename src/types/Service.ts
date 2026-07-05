@@ -1,4 +1,4 @@
-import { SanitySlugType, SanityImageType } from '@muzammil328/sanity';
+import { SanitySlugType, SanityImageType } from '@/types/sanity';
 
 export interface ServiceTypes {
   _id: string;

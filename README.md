@@ -1,43 +1,71 @@
-# Portfolio App
+# Portfolio — Muzammil Safdar
 
-Next.js portfolio application with shared UI components.
+Full-stack portfolio built with Next.js 16, Sanity CMS, and MongoDB. Features a blog, project showcase, resume builder with AI job matching, and a task/daily-report dashboard.
 
-## Features
+## Tech Stack
 
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js 16, React 19, TypeScript |
+| Styling | Tailwind CSS v4, Sass |
+| CMS | Sanity (embedded Studio at `/studio`) |
+| Database | MongoDB via Mongoose |
+| Auth | Custom JWT (bcrypt, cookie-based sessions) |
+| AI | OpenAI API (keyword extraction, resume suggestions) |
+| Forms | React Hook Form + Zod |
+| Animations | Framer Motion, GSAP |
+| UI | Radix UI primitives, custom component library |
+| Icons | Lucide React |
 
-- Next.js 16 with TypeScript
-- Tailwind CSS for styling
-- Dark/Light theme support
-- TanStack Query for data fetching
-- React Hook Form with Zod validation
-- Sonner for toasts
-- Jest testing setup
-- Sass support
+## Getting Started
 
-## Blog Title Ideas for a Full Stack Developer
+```bash
+pnpm install
+pnpm dev
+```
 
-### Server and VPS Topics
+Open [http://localhost:3000](http://localhost:3000).
 
-- How to Add Syntax Highlighting to Your Dev Blog (Step-by-Step)
-- How to Set Up a Firewall on a VPS (UFW Guide)
-- How to Host Multiple Websites on One VPS (Nginx Virtual Hosts)
-- How to Set Up a Free Custom Email with Your Domain
-- How to Secure Your VPS in 10 Minutes (SSH Hardening)
-- How to Set Up Automatic Backups on a Linux VPS
+## Environment Variables
 
-### Web Dev and Portfolio Topics
+Copy `.env.example` to `.env.local` and fill in:
 
-- How to Add a Blog to Your Portfolio Website (No CMS Needed)
-- How to Add Dark Mode to Any Website (Pure CSS)
-- How to Make Your Website Load Faster (Beginner Checklist)
-- How to Add Copy-to-Clipboard to Code Blocks
-- How to Deploy a Static Site for Free (GitHub Pages Guide)
+| Variable | Description |
+|----------|-------------|
+| `MONGODB_URI` | MongoDB connection string |
+| `JWT_SECRET` | Secret for signing auth tokens |
+| `SANITY_PROJECT_ID` | Sanity project ID |
+| `SANITY_DATASET` | Sanity dataset name |
+| `SANITY_API_TOKEN` | Sanity API token |
+| `OPENAI_API_KEY` | OpenAI API key (for AI features) |
+| `ADMIN_DASHBOARD_TOKEN` | Token for legacy admin access |
 
-### Syntax Highlighting Topics
+## Scripts
 
-- How to Add Code Syntax Highlighting to Your Blog (Prism.js Guide)
-- How to Style Code Blocks Like VS Code on Your Website
-- How to Add a Copy Code Button to Your Blog Posts
+| Command | Description |
+|---------|-------------|
+| `pnpm dev` | Start dev server |
+| `pnpm build` | Production build |
+| `pnpm lint` | Run ESLint |
+| `pnpm typecheck` | Run TypeScript check |
+| `pnpm sanity` | Sanity CLI |
+| `pnpm sanity:dev` | Start Sanity Studio dev |
+
+## Project Structure
+
+```
+src/
+├── app/          # Next.js App Router pages & API routes
+├── components/   # Shared React components
+│   └── ui/       # UI component library (Radix-based)
+├── features/     # Feature-specific components (home sections)
+├── lib/          # Server utilities (auth, db, analytics)
+├── models/       # Mongoose models
+├── sanity/       # Sanity config, schemas, client
+├── services/     # Data fetching services
+├── types/        # TypeScript type definitions
+└── utils/        # Utility functions
+```
 
 ### More Full Stack Blog Titles
 

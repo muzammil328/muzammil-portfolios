@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { GitHubIcon, LinkedInIcon } from '@muzammil328/icon';
+import { GitHubIcon, LinkedInIcon } from '@/components/ui';
 import { getPortfolioSocialProfiles } from '@/services/portfolioService';
 import Link from 'next/link';
 
@@ -48,7 +48,7 @@ export default function FollowMeBox() {
 
   return (
     <div className="max-w-md lg:flex hidden flex-col items-center gap-6 absolute left-4 top-[20%] transform -translate-y-1/2">
-      <h4 className="text-base font-semibold rotate-90">Follow</h4>
+      <span className="text-base font-semibold rotate-90">Follow</span>
 
       <svg
         className=""
@@ -66,7 +66,7 @@ export default function FollowMeBox() {
 
       {loading ? (
         <div className="flex flex-col items-center gap-3">
-          {[1, 2, 3].map(i => (
+          {[1, 2, 3].map((i) => (
             <div key={i} className="w-9 h-9 rounded-full bg-muted animate-pulse" />
           ))}
         </div>

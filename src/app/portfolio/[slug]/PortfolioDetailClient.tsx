@@ -5,22 +5,37 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { client } from '@/sanity/lib/client';
 import { getImageUrl } from '@/sanity/lib/image';
-import { PortableTextView } from '@muzammil328/ui';
+import { PortableText } from '@portabletext/react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { ProjectDetail } from '@/types/Project';
-import { SanityImageType } from '@muzammil328/sanity';
+import { SanityImageType } from '@/types/sanity';
 import PortfolioCard from '@/components/PortfolioCard';
-import PageViewTracker from '@/components/PageViewTracker';
-import { CloseIcon, GitHubIcon, ClockIcon, ZoomInIcon } from '@muzammil328/icon';
+import { CloseIcon, GitHubIcon, ClockIcon, ZoomInIcon } from '@/components/ui';
 import { UserIcon, Users, ChevronLeft, ChevronRight } from 'lucide-react';
 
 function Figma() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#000000"><g fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5zM12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" /><path d="M12 12.5a3.5 3.5 0 1 1 7 0a3.5 3.5 0 1 1-7 0zm-7 7A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0zm0-7A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" /></g></svg>
-  )
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="#000000"
+    >
+      <g
+        fill="none"
+        stroke="#000000"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+      >
+        <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5zM12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
+        <path d="M12 12.5a3.5 3.5 0 1 1 7 0a3.5 3.5 0 1 1-7 0zm-7 7A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0zm0-7A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
+      </g>
+    </svg>
+  );
 }
-
 
 const roleMap: Record<string, string> = {
   frontend: 'Frontend Developer',
@@ -77,7 +92,7 @@ function SkeletonLoader() {
               <div className="h-6 w-24 bg-muted rounded-full" />
               <div className="h-12 w-3/4 bg-muted rounded" />
               <div className="flex gap-2">
-                {[1, 2, 3, 4].map(i => (
+                {[1, 2, 3, 4].map((i) => (
                   <div key={i} className="h-8 w-20 bg-muted rounded-full" />
                 ))}
               </div>
@@ -131,7 +146,7 @@ function Lightbox({
       />
       <button
         className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 hover:bg-white/20 rounded-full"
-        onClick={e => {
+        onClick={(e) => {
           e.stopPropagation();
           onPrev();
         }}
@@ -152,7 +167,7 @@ function Lightbox({
       </div>
       <button
         className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 hover:bg-white/20 rounded-full"
-        onClick={e => {
+        onClick={(e) => {
           e.stopPropagation();
           onNext();
         }}
@@ -260,11 +275,11 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
     .filter((image): image is SanityImageType => Boolean(image?.asset?._ref))
     .filter((image, index, images) => {
       // Keep first occurrence only to avoid duplicate screenshots in the grid.
-      return images.findIndex(candidate => candidate.asset._ref === image.asset._ref) === index;
+      return images.findIndex((candidate) => candidate.asset._ref === image.asset._ref) === index;
     });
 
   const sliderImageUrls = orderedSliderImages
-    .map(image => getImageUrl(image, 1200, 800))
+    .map((image) => getImageUrl(image, 1200, 800))
     .filter((url): url is string => Boolean(url));
   const projectContactHref = `/contact?${new URLSearchParams({
     service: project.category || 'Project Development',
@@ -277,7 +292,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
     imageIndex: number,
     colSpanClass: string,
     width = 1200,
-    height = 800
+    height = 800,
   ) => {
     const image = orderedSliderImages[imageIndex];
     const imageUrl = image ? getImageUrl(image, width, height) : null;
@@ -359,7 +374,6 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
 
               {/* Description */}
               <p className="text-lg text-muted-foreground">{project.description}</p>
-              <PageViewTracker path={`/portfolio/${slug}`} />
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-3 pt-2">
                 {project.liveLink && project.liveLink !== '/' && (
@@ -370,7 +384,20 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
                     className="px-6 py-2.5 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 font-medium"
                   >
                     View Live Demo
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display:'block'}}><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      style={{ display: 'block' }}
+                    >
+                      <path d="M7 17L17 7" />
+                      <path d="M7 7h10v10" />
+                    </svg>
                   </a>
                 )}
                 {project.figmaDesign && project.figmaDesign !== '/' && (
@@ -421,24 +448,23 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
                           {skill.name}
                         </span>
                       );
-                    }
+                    },
                   )}
                 </div>
               </div>
             </div>
 
             {/* Right Column - Main Image */}
-            <div className="relative w-full rounded-2xl h-full">
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
               {project.mainImage &&
                 (() => {
-                  const imageUrl = getImageUrl(project.mainImage, 800);
+                  const imageUrl = getImageUrl(project.mainImage, 800, 450);
                   return imageUrl ? (
                     <Image
                       src={imageUrl}
                       alt={project.title}
-                      width={800}
-                      height={400}
-                      className="w-full h-auto object-cover rounded-2xl shadow-lg border border-border/30"
+                      fill
+                      className="object-cover shadow-lg border border-border/30"
                       priority
                     />
                   ) : null;
@@ -451,7 +477,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
       {/* Body */}
       {hasBody && (
         <section className="container mx-auto px-4 py-12">
-          <PortableTextView value={project.body || []} />
+          <PortableText value={project.body || []} />
         </section>
       )}
 
@@ -555,10 +581,10 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
           currentIndex={lightboxIndex}
           onClose={() => setIsLightboxOpen(false)}
           onPrev={() =>
-            setLightboxIndex(prev => (prev === 0 ? lightboxImages.length - 1 : prev - 1))
+            setLightboxIndex((prev) => (prev === 0 ? lightboxImages.length - 1 : prev - 1))
           }
           onNext={() =>
-            setLightboxIndex(prev => (prev === lightboxImages.length - 1 ? 0 : prev + 1))
+            setLightboxIndex((prev) => (prev === lightboxImages.length - 1 ? 0 : prev + 1))
           }
         />
       )}

@@ -27,7 +27,7 @@ export function PortfolioCardSkeleton({ index = 0 }: { index?: number }) {
 
           {/* Skills/Tags */}
           <div className="flex flex-wrap gap-2 pt-2">
-            {[1, 2, 3].map(i => (
+            {[1, 2, 3].map((i) => (
               <div key={i} className="h-6 w-16 bg-slate-200 dark:bg-gray-800 rounded-full" />
             ))}
           </div>

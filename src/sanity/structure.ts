@@ -11,7 +11,7 @@ const skillTypeSections = [
 ];
 
 // https://www.sanity.io/docs/structure-builder-cheat-sheet
-export const structure: StructureResolver = S =>
+export const structure: StructureResolver = (S) =>
   S.list()
     .title('Portfolio Website')
     .items([
@@ -24,7 +24,7 @@ export const structure: StructureResolver = S =>
         .child(
           S.documentTypeList('portfolio')
             .title('Portfolios')
-            .child(documentId => S.document().schemaType('portfolio').documentId(documentId))
+            .child((documentId) => S.document().schemaType('portfolio').documentId(documentId)),
         ),
       S.documentTypeListItem('education').title('Education'),
       S.documentTypeListItem('experience').title('Experience'),
@@ -34,14 +34,14 @@ export const structure: StructureResolver = S =>
         .child(
           S.documentTypeList('project')
             .title('Projects')
-            .child(documentId => S.document().schemaType('project').documentId(documentId))
+            .child((documentId) => S.document().schemaType('project').documentId(documentId)),
         ),
       S.listItem()
         .title('Services')
         .child(
           S.documentTypeList('service')
             .title('Services')
-            .child(documentId => S.document().schemaType('service').documentId(documentId))
+            .child((documentId) => S.document().schemaType('service').documentId(documentId)),
         ),
       S.listItem()
         .title('Skills')
@@ -54,7 +54,9 @@ export const structure: StructureResolver = S =>
                 .child(
                   S.documentTypeList('skills')
                     .title('All Skills')
-                    .child(documentId => S.document().schemaType('skills').documentId(documentId))
+                    .child((documentId) =>
+                      S.document().schemaType('skills').documentId(documentId),
+                    ),
                 ),
               S.listItem()
                 .title('Uncategorized')
@@ -63,10 +65,12 @@ export const structure: StructureResolver = S =>
                     .title('Uncategorized Skills')
                     .schemaType('skills')
                     .filter('_type == "skills" && !defined(type)')
-                    .child(documentId => S.document().schemaType('skills').documentId(documentId))
+                    .child((documentId) =>
+                      S.document().schemaType('skills').documentId(documentId),
+                    ),
                 ),
               S.divider(),
-              ...skillTypeSections.map(section =>
+              ...skillTypeSections.map((section) =>
                 S.listItem()
                   .title(section.title)
                   .child(
@@ -75,9 +79,11 @@ export const structure: StructureResolver = S =>
                       .schemaType('skills')
                       .filter('_type == "skills" && type == $type')
                       .params({ type: section.value })
-                      .child(documentId => S.document().schemaType('skills').documentId(documentId))
-                  )
+                      .child((documentId) =>
+                        S.document().schemaType('skills').documentId(documentId),
+                      ),
+                  ),
               ),
-            ])
+            ]),
         ),
     ]);

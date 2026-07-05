@@ -8,20 +8,20 @@ export const serviceType = defineType({
     defineField({
       name: 'name',
       type: 'string',
-      validation: Rule => Rule.required().min(3),
+      validation: (Rule) => Rule.required().min(3),
     }),
     defineField({
       name: 'slug',
       type: 'slug',
       options: { source: 'name' },
-      validation: Rule => Rule.required(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'summary',
       title: 'Summary',
       type: 'text',
       rows: 3,
-      validation: Rule => Rule.required().min(20),
+      validation: (Rule) => Rule.required().min(20),
     }),
     defineField({
       name: 'image',
@@ -42,7 +42,7 @@ export const serviceType = defineType({
         {
           type: 'object',
           fields: [
-            defineField({ name: 'title', type: 'string', validation: Rule => Rule.required() }),
+            defineField({ name: 'title', type: 'string', validation: (Rule) => Rule.required() }),
             defineField({ name: 'description', title: 'Short Description', type: 'string' }),
             defineField({
               name: 'icon',
@@ -79,7 +79,7 @@ export const serviceType = defineType({
           preview: { select: { title: 'title', subtitle: 'description' } },
         },
       ],
-      validation: Rule => Rule.min(1),
+      validation: (Rule) => Rule.min(1),
     }),
     defineField({
       name: 'deliverables',
@@ -89,7 +89,7 @@ export const serviceType = defineType({
         {
           type: 'object',
           fields: [
-            defineField({ name: 'title', type: 'string', validation: Rule => Rule.required() }),
+            defineField({ name: 'title', type: 'string', validation: (Rule) => Rule.required() }),
             defineField({ name: 'description', title: 'Short Description', type: 'string' }),
             defineField({
               name: 'icon',
@@ -132,7 +132,7 @@ export const serviceType = defineType({
             defineField({
               name: 'title',
               type: 'string',
-              validation: Rule => Rule.required(),
+              validation: (Rule) => Rule.required(),
             }),
             defineField({
               name: 'description',

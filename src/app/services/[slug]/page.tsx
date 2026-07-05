@@ -3,10 +3,9 @@ import Image from 'next/image';
 import { getImageUrl } from '@/sanity/lib/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { ServiceTypes } from '@/types/Service';
-import { ProjectCard } from '@/types/Project';
+import type { ServiceTypes } from '@/types/Service';
+import type { ProjectCard } from '@/types/Project';
 import PortfolioCard from '@/components/PortfolioCard';
-import PageViewTracker from '@/components/PageViewTracker';
 import { client } from '@/sanity/lib/portfolio';
 
 interface RelatedExperience {
@@ -127,7 +126,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const imageUrl = getImageUrl(service.image);
   const contactHref = `/contact?${new URLSearchParams({ service: service.name, source: 'service-detail' }).toString()}`;
   const whatsappHref = `https://wa.me/923100810327?text=${encodeURIComponent(
-    `Hi Muzammil, I'm interested in your ${service.name} service. Can we discuss scope, timeline, and budget?`
+    `Hi Muzammil, I'm interested in your ${service.name} service. Can we discuss scope, timeline, and budget?`,
   )}`;
   const serviceSchema = {
     '@context': 'https://schema.org',
@@ -170,7 +169,6 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
             <div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">{service.name}</h1>
-              <PageViewTracker path={`/services/${slug}`} />
 
               {service.summary && (
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -207,7 +205,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     {(service.focus || []).map((item, i) => (
                       <li key={i} className="flex items-center gap-2 text-lg font-medium">
                         <span className="w-1.5 h-1.5 rounded-full bg-foreground/50" />
-                        {item}
+                        {item.title}
                       </li>
                     ))}
                   </ul>
@@ -271,7 +269,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     key={`deliverable-${i}`}
                     className="rounded-full border border-border/60 px-3 py-1.5 text-sm text-foreground/90"
                   >
-                    {item}
+                    {item.title}
                   </span>
                 ))}
               </div>
@@ -409,7 +407,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                {relatedExperiences.slice(0, 4).map(exp => (
+                {relatedExperiences.slice(0, 4).map((exp) => (
                   <Link
                     key={exp._id}
                     href={`/experiences/${exp.slug?.current}`}

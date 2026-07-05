@@ -13,7 +13,7 @@ export default function AboutPage() {
       <Navbar />
       <main className="min-h-screen pt-24 pb-16">
         <AboutMe />
-        <section className="grid grid-cols-2">
+        <section className="grid grid-cols-1 lg:grid-cols-2">
           <ProfessionalJourney />
           <Education />
         </section>

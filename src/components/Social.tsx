@@ -1,9 +1,9 @@
 'use client';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@muzammil328/ui';
-import { Button } from '@muzammil328/ui';
-import { GitHubIcon, LinkedInIcon } from '@muzammil328/icon';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui';
+import { Button } from '@/components/ui';
+import { GitHubIcon, LinkedInIcon } from '@/components/ui';
 
 type SocialItem = {
   name: 'github' | 'linkedin';

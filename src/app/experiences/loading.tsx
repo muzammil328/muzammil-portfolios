@@ -10,14 +10,14 @@ export default function Loading() {
 
           <section className="rounded-2xl border border-border/70 bg-card p-4 md:p-5 mb-8 animate-pulse">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
-              {[1, 2, 3, 4, 5].map(i => (
+              {[1, 2, 3, 4, 5].map((i) => (
                 <div key={i} className="h-10 rounded-md bg-muted" />
               ))}
             </div>
           </section>
 
           <div className="space-y-6">
-            {[1, 2, 3, 4].map(i => (
+            {[1, 2, 3, 4].map((i) => (
               <div
                 key={i}
                 className="rounded-2xl border border-border/70 bg-card p-6 animate-pulse"

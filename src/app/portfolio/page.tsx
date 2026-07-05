@@ -39,7 +39,7 @@ export default async function Page({
   }
 
   const filteredProjects = companyFilter
-    ? projects.filter(project => (project.company || '').trim().toLowerCase() === companyFilter)
+    ? projects.filter((project) => (project.company || '').trim().toLowerCase() === companyFilter)
     : projects;
 
   const filterBadgeLabel = filteredProjects[0]?.company || firstParam(params, 'company').trim();

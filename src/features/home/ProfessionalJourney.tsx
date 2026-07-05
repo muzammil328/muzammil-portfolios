@@ -85,7 +85,7 @@ export default function ProfessionalJourney() {
 
         {loading ? (
           <div className="space-y-12">
-            {[1, 2].map(i => (
+            {[1, 2].map((i) => (
               <div key={i} className="relative pl-0 md:pl-20">
                 <div className="bg-card border rounded-2xl p-6 animate-pulse">
                   <div className="h-6 w-32 bg-muted rounded mb-4" />

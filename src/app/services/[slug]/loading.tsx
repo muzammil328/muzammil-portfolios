@@ -17,7 +17,7 @@ export default function Loading() {
               <div className="h-5 w-11/12 bg-muted rounded mb-8 animate-pulse" />
 
               <div className="flex flex-wrap gap-2 mb-8">
-                {[1, 2, 3].map(i => (
+                {[1, 2, 3].map((i) => (
                   <div key={i} className="h-7 w-28 bg-muted rounded-full animate-pulse" />
                 ))}
               </div>
@@ -25,7 +25,7 @@ export default function Loading() {
               <div className="mb-8">
                 <div className="h-4 w-24 bg-muted rounded mb-4 animate-pulse" />
                 <div className="space-y-3">
-                  {[1, 2, 3].map(i => (
+                  {[1, 2, 3].map((i) => (
                     <div key={i} className="h-6 w-3/4 bg-muted rounded animate-pulse" />
                   ))}
                 </div>
@@ -34,7 +34,7 @@ export default function Loading() {
               <div>
                 <div className="h-4 w-28 bg-muted rounded mb-4 animate-pulse" />
                 <div className="flex flex-wrap gap-3">
-                  {[1, 2, 3, 4].map(i => (
+                  {[1, 2, 3, 4].map((i) => (
                     <div key={i} className="h-9 w-24 bg-muted rounded-full animate-pulse" />
                   ))}
                 </div>
@@ -45,7 +45,7 @@ export default function Loading() {
           <section className="mt-14 rounded-3xl border border-border/70 p-8 bg-card">
             <div className="h-10 w-56 bg-muted rounded mb-6 animate-pulse" />
             <div className="flex flex-wrap gap-2">
-              {[1, 2, 3, 4].map(i => (
+              {[1, 2, 3, 4].map((i) => (
                 <div key={i} className="h-8 w-32 bg-muted rounded-full animate-pulse" />
               ))}
             </div>
@@ -54,7 +54,7 @@ export default function Loading() {
           <section className="mt-10 rounded-3xl border border-border/70 p-8 bg-card">
             <div className="h-10 w-52 bg-muted rounded mb-6 animate-pulse" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {[1, 2].map(i => (
+              {[1, 2].map((i) => (
                 <div key={i} className="rounded-2xl border border-border/60 p-5">
                   <div className="h-4 w-16 bg-muted rounded mb-3 animate-pulse" />
                   <div className="h-6 w-2/3 bg-muted rounded mb-3 animate-pulse" />
@@ -78,7 +78,7 @@ export default function Loading() {
           <section className="mt-20">
             <div className="h-11 w-72 bg-muted rounded mb-8 animate-pulse" />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3].map(i => (
+              {[1, 2, 3].map((i) => (
                 <div key={i} className="rounded-2xl border border-border/70 bg-card p-6">
                   <div className="aspect-video bg-muted rounded-xl mb-4 animate-pulse" />
                   <div className="h-7 w-3/4 bg-muted rounded mb-3 animate-pulse" />

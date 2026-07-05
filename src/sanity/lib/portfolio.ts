@@ -45,7 +45,7 @@ export async function getProjectBySlug(slug: string) {
     "skills": skills[]->name,
     body
   }`,
-    { slug }
+    { slug },
   );
 }
 
@@ -149,4 +149,3 @@ export async function getAllPortfolioData() {
     projects,
   };
 }
-
