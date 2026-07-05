@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: '../../',
   },
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'framer-motion', 'gsap'],
+  },
   images: {
     remotePatterns: [
       {
