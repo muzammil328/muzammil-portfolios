@@ -1,4 +1,3 @@
-export { default as CheckIcon } from './icons/CheckIcon';
 export * from './icons/ChevronIcon';
 export { default as CircleIcon } from './icons/CircleIcon';
 export { default as ClockIcon } from './icons/ClockIcon';
@@ -10,7 +9,6 @@ export { default as LockIcon } from './icons/LockIcon';
 export { default as MenuIcon } from './icons/MenuIcon';
 export { default as MoonIcon } from './icons/MoonIcon';
 export { LinkedInIcon, GitHubIcon } from './icons/SocialIcon';
-export { default as StarIcon } from './icons/StarIcon';
 export { default as SunIcon } from './icons/SunIcon';
 export { UserIcon, UsersIcon } from './icons/UserIcon';
 export { ZoomInIcon } from './icons/ZoomIcon';

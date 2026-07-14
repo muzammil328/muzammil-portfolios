@@ -1,8 +1,2 @@
 export * from './components';
-export type {
-  InputProps,
-  TextareaProps,
-  CheckboxProps,
-  LabelProps,
-  FormFieldProps,
-} from './types';
+export type { InputProps, TextareaProps, LabelProps, FormFieldProps } from './types';

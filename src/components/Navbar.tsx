@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { Logo } from './Logo';
 import ScrollToTop from './ScrollToTop';
@@ -15,7 +15,7 @@ export default function Navbar() {
       { label: 'Home', id: '/' },
       { label: 'About', id: '/about' },
       { label: 'Portfolio', id: '/portfolio' },
-      { label: 'Blog', id: '/blogs' },
+      { label: 'Blog', id: 'https://blog.fluxion.dev' },
       { label: 'Contact', id: '/contact' },
     ],
     [],
@@ -24,6 +24,12 @@ export default function Navbar() {
   const scrollToSection = (sectionId: string) => {
     if (sectionId === 'home') {
       window.location.href = '/';
+      return;
+    }
+
+    // Handle fully external links (e.g. the blog subdomain)
+    if (sectionId.startsWith('http://') || sectionId.startsWith('https://')) {
+      window.open(sectionId, '_blank', 'noopener,noreferrer');
       return;
     }
 
@@ -71,7 +77,9 @@ export default function Navbar() {
     window.addEventListener('hashchange', handleHashChange);
 
     const handleScroll = () => {
-      const sections = navItems.map((item) => item.id).filter((id) => !id.startsWith('/'));
+      const sections = navItems
+        .map((item) => item.id)
+        .filter((id) => !id.startsWith('/') && !id.startsWith('http'));
       const scrollPosition = window.scrollY + 150;
 
       for (let i = sections.length - 1; i >= 0; i--) {

@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import { GitHubIcon, LinkedInIcon, EmailIcon } from '@/components/ui';
 import { ArrowUpRight, MapPin } from 'lucide-react';

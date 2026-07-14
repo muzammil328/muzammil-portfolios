@@ -6,14 +6,6 @@ export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextArea
   className?: string;
 }
 
-export interface CheckboxProps {
-  checked?: boolean;
-  onCheckedChange?: (checked: boolean) => void;
-  disabled?: boolean;
-  className?: string;
-  id?: string;
-}
-
 export interface FormFieldProps {
   label?: string;
   description?: string;

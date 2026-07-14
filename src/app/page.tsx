@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Blog from '@/features/home/Blog';
 import ContactSection from '@/features/home/ContactSection';
 import Education from '@/features/home/Education';
 import FollowMeBox from '@/features/home/FollowMeBox';
@@ -56,7 +55,6 @@ export default async function page() {
         </div>
         <WhatIDo />
         <HorizontalProjects />
-        <Blog />
         <Suspense>
           <ContactSection />
         </Suspense>
