@@ -1,9 +1,13 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { getServices } from '@/services/portfolioService';
+import skillsData from '@/data/skills.json';
 import Image from 'next/image';
-import { ServiceTypes } from '@/types/Service';
+
+interface Skill {
+  name: string;
+  icon: string | null;
+}
 
 /* Each tech icon travels the perimeter of one of the two dashed rectangles.
    Half-width/half-height are viewport-scaled (vw, clamped) so the path
@@ -41,8 +45,6 @@ const CENTER_SKILL_NAMES = [
 ];
 
 export default function WhatIDo() {
-  const [services, setServices] = useState<ServiceTypes[]>([]);
-  const [loading, setLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -52,31 +54,7 @@ export default function WhatIDo() {
     return () => window.removeEventListener('resize', check);
   }, []);
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const data = await getServices();
-        setServices(data);
-      } catch (error) {
-        console.error('Error fetching services:', error);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return (
-      <section className="min-h-screen w-full flex items-center justify-center py-20">
-        <div className="container mx-auto px-6 w-full space-y-4">
-          <div className="rounded-3xl border border-border/60 bg-card/80 backdrop-blur p-8 h-72 animate-pulse" />
-        </div>
-      </section>
-    );
-  }
-
-  const allSkills = services.flatMap((service) => service.skills);
+  const allSkills = skillsData as Skill[];
   const uniqueSkills = allSkills.filter(
     (skill, index) => allSkills.findIndex((s) => s.name === skill.name) === index,
   );

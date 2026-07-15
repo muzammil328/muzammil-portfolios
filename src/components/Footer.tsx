@@ -7,7 +7,6 @@ import { ArrowUpRight, MapPin } from 'lucide-react';
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Work', href: '/portfolio' },
-  { label: 'Services', href: '/services' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];

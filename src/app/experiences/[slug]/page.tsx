@@ -8,7 +8,6 @@ import BoldText from '@/components/BoldText';
 import {
   getExperienceBySlug,
   getProjectsByExperienceSlug,
-  getServicesRelatedToExperienceSlug,
 } from '@/services/experienceService';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -48,10 +47,9 @@ export default async function ExperienceDetailPage({
 }) {
   const { slug } = await params;
 
-  const [experience, relatedProjects, relatedServices] = await Promise.all([
+  const [experience, relatedProjects] = await Promise.all([
     getExperienceBySlug(slug),
     getProjectsByExperienceSlug(slug),
-    getServicesRelatedToExperienceSlug(),
   ]);
 
   const formatDate = (date?: string) => {
@@ -159,34 +157,6 @@ export default async function ExperienceDetailPage({
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {relatedProjects.map((project, index) => (
                   <PortfolioCard key={project._id} data={project} index={index} />
-                ))}
-              </div>
-            </section>
-          )}
-
-          {relatedServices.length > 0 && (
-            <section className="mt-20">
-              <div className="flex items-center justify-between mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Related Services</h2>
-                <Link href="/services" className="text-primary hover:underline font-medium">
-                  View all services
-                </Link>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                {relatedServices.slice(0, 4).map((service) => (
-                  <Link
-                    key={service._id}
-                    href={`/services/${service.slug}`}
-                    className="rounded-2xl border border-border/70 bg-card p-5 hover:bg-muted/30 transition-colors"
-                  >
-                    <h3 className="text-xl font-semibold">{service.name}</h3>
-                    {service.summary && (
-                      <p className="text-sm text-muted-foreground mt-2 line-clamp-2">
-                        {service.summary}
-                      </p>
-                    )}
-                  </Link>
                 ))}
               </div>
             </section>

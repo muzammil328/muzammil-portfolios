@@ -46,30 +46,3 @@ export async function getProjectsByExperienceSlug(slug: string): Promise<Project
   const projects = await getProjects();
   return projects.filter((project) => project.companySlug === slug);
 }
-
-interface RelatedService {
-  _id: string;
-  name: string;
-  slug: string;
-  summary?: string;
-}
-
-interface RelatedExperience {
-  _id: string;
-  company: string;
-  position: string;
-  slug: string;
-  summary?: string;
-}
-
-export async function getServicesRelatedToExperienceSlug(): Promise<RelatedService[]> {
-  // Projects are not linked to categories in the source data, so there is
-  // no way to derive related services for an experience.
-  return [];
-}
-
-export async function getExperiencesRelatedToServiceSlug(): Promise<RelatedExperience[]> {
-  // Projects are not linked to categories in the source data, so there is
-  // no way to derive related experiences for a service.
-  return [];
-}
