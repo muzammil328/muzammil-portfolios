@@ -1,0 +1,21 @@
+<svg height="20px" width="20px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" id="Layer_1">
+        <defs>
+          <style>
+            {`
+              .st0, .st1 {
+                fill: none;
+              }
+
+              .st1 {
+                stroke: #000;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 32px;
+              }
+            `}
+          </style>
+        </defs>
+        <rect height="256" width="256"></rect>
+        <line y2="208" x2="128" y1="128" x1="208"></line>
+        <line y2="192" x2="40" y1="40" x1="192"></line>
+      </svg>

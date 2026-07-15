@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og';
-import { client } from '@/sanity/lib/client';
+import { getServiceBySlug } from '@/services/portfolioService';
 
 export const size = {
   width: 1200,
@@ -8,19 +8,9 @@ export const size = {
 
 export const contentType = 'image/png';
 
-async function fetchService(slug: string) {
-  return client.fetch(
-    `*[_type == "service" && slug.current == $slug][0]{
-      name,
-      summary
-    }`,
-    { slug },
-  );
-}
-
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const service = await fetchService(slug);
+  const service = await getServiceBySlug(slug);
 
   const title = service?.name || 'Service';
   const description = service?.summary || 'Service details and process.';

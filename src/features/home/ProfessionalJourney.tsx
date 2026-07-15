@@ -2,36 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { client } from '@/sanity/lib/client';
-
-interface ExperienceItem {
-  _id: string;
-  company: string;
-  position: string;
-  slug?: { current: string };
-  startDate: string;
-  endDate: string;
-  summary: string;
-  highlights: string[];
-}
-
-async function fetchWorkExperiences() {
-  const query = `*[_type == "experience" && isVisible == true]{
-    _id,
-    company,
-    position,
-    slug,
-    startDate,
-    endDate,
-    summary,
-    highlights
-  }`;
-  return client.fetch<(ExperienceItem | null)[]>(query);
-}
-
-function isExperienceItem(value: ExperienceItem | null): value is ExperienceItem {
-  return value !== null;
-}
+import { getVisibleExperiences } from '@/services/experienceService';
+import { ExperienceItem } from '@/types/Experience';
 
 function formatYearMonth(value?: string): string {
   if (!value) return '';
@@ -53,8 +25,8 @@ export default function ProfessionalJourney() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await fetchWorkExperiences();
-        setExperiences((data || []).filter(isExperienceItem));
+        const data = await getVisibleExperiences();
+        setExperiences(data);
       } catch (error) {
         console.error('Error fetching work experiences:', error);
       } finally {
@@ -102,7 +74,6 @@ export default function ProfessionalJourney() {
 
             <div className="space-y-12">
               {displayExperiences.map((exp, index) => {
-                const expSlug = exp.slug?.current;
                 const startDateText = formatYearMonth(exp.startDate);
                 const endDateText = formatYearMonth(exp.endDate);
                 return (
@@ -110,7 +81,7 @@ export default function ProfessionalJourney() {
                     <div className="absolute left-6 md:left-6.25 top-0 w-4 h-4 rounded-full bg-primary z-10 hidden md:block"></div>
 
                     <Link
-                      href={expSlug ? `/experiences/${expSlug}` : '/experiences'}
+                      href={exp.slug ? `/experiences/${exp.slug}` : '/experiences'}
                       className="block bg-card border rounded-2xl p-6 transition-all duration-300 hover:bg-muted/50"
                     >
                       <div className="flex items-center gap-3 mb-4">
@@ -143,15 +114,6 @@ export default function ProfessionalJourney() {
                 );
               })}
             </div>
-
-            {/* <div className="mt-12 text-center">
-              <Link
-                href="/experiences"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-colors"
-              >
-                View All Experience →
-              </Link>
-            </div> */}
           </div>
         )}
       </div>

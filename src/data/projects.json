@@ -1,0 +1,1094 @@
+[
+  {
+    "_id": "45a6b924-8342-4aab-8a54-af207f6e228d",
+    "title": "Treepost AI",
+    "slug": "treepost-ai",
+    "mainImage": "/images/project-treepost-ai-main.png",
+    "sliderImages": [],
+    "description": "Treepost AI is a Canadian marketplace platform that connects homeowners with certified tree service contractors through AI-powered price estimates, real-time bidding, secure payments, and direct communication. The platform simplifies the process of finding trusted contractors by replacing manual quote requests with instant AI estimates, verified professionals, and a transparent bidding system.",
+    "liveLink": "https://treepost.ca/",
+    "githubLink": null,
+    "figmaDesign": "https://www.figma.com/design/3eOrZxjBsiR4yxXHNcACRS/Untitled?node-id=0-1&t=CryoYNzn2m6mfNEl-1",
+    "company": "Axtra Studios",
+    "companySlug": "axtra-studios",
+    "role": "frontend",
+    "teamSize": "1",
+    "duration": "less-1-month",
+    "priority": 1,
+    "skills": [],
+    "body": [
+      {
+        "_key": "6be0b8d7d772",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "ef5f888d5590",
+            "_type": "span",
+            "marks": [],
+            "text": "Problem"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "82f64aba8c58",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "ef5f888d5590",
+            "_type": "span",
+            "marks": [],
+            "text": "Homeowners struggled to find trusted tree contractors and had no way to compare fair pricing before hiring. Getting quotes meant contacting multiple contractors manually — slow, inconsistent, and unreliable. Unverified contractors, payment disputes, and zero transparency made the whole experience frustrating for both sides."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "daf517eebb29",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "376073e9506b",
+            "_type": "span",
+            "marks": [],
+            "text": "Solution"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "19a60c8da742",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "5f0c0dc735e8",
+            "_type": "span",
+            "marks": [],
+            "text": "Treepost AI built a digital marketplace that replaces the entire offline process. Homeowners post once and get instant AI-powered price estimates, browse verified contractors, and pay securely — all in one place. Contractors get qualified local leads, a bidding system, and real-time messaging without chasing clients."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "7da5dc73a78f",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "7637d9c32ef2",
+            "_type": "span",
+            "marks": [],
+            "text": "Key Features"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "1530c4e0b23a",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "d4be394a6583",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "AI-Powered Price Estimates: "
+          },
+          {
+            "_key": "d6201c8efd48",
+            "_type": "span",
+            "marks": [],
+            "text": "Homeowners receive instant project estimates using AI with up to 95% pricing accuracy before reviewing contractor bids."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "14332e75052f",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "76ae603f595e",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Job Posting System: "
+          },
+          {
+            "_key": "2d5e930be1b6",
+            "_type": "span",
+            "marks": [],
+            "text": "Users can post jobs with detailed descriptions, photos, and videos to help contractors assess project scope accurately."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "b3d60be11f7b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "53843f359952",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Contractor Verification: "
+          },
+          {
+            "_key": "f406c04c74ad",
+            "_type": "span",
+            "marks": [],
+            "text": "Contractors must submit licenses, insurance, and WSIB documentation before approval, ensuring a trusted service network."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "65b1e659d2dc",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "12ef57b96a8e",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Competitive Bidding Platform: "
+          },
+          {
+            "_key": "e0a9917701e8",
+            "_type": "span",
+            "marks": [],
+            "text": "Verified contractors browse available jobs and submit bids, allowing homeowners to compare pricing and choose the best fit."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "18a7783e0867",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "76cdd57045db",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Real-Time Messaging:"
+          },
+          {
+            "_key": "9f91b20ce79c",
+            "_type": "span",
+            "marks": [],
+            "text": " Built-in messaging enables direct communication between homeowners and contractors for faster decisions and better coordination."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "12a33b1ebb10",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "4bcddf86bad0",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Protected Payment System: "
+          },
+          {
+            "_key": "5224f2a06b99",
+            "_type": "span",
+            "marks": [],
+            "text": "Secure payment handling protects both parties by ensuring safe transactions throughout the project lifecycle."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "afbcb75aebaf",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "9d5d9a63686f",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Admin Dashboard: "
+          },
+          {
+            "_key": "9d2b640b48ef",
+            "_type": "span",
+            "marks": [],
+            "text": "Admins manage users, contractor approvals, analytics, platform reports, and AI feedback improvements from a centralized dashboard."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "09ebb227da54",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "07ff5be9ca7b",
+            "_type": "span",
+            "marks": [],
+            "text": "Outcome / Results"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "c8ef6567486c",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "7557f7544c84",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "95% AI Estimate Accuracy: "
+          },
+          {
+            "_key": "7578aaf3c513",
+            "_type": "span",
+            "marks": [],
+            "text": "The pricing engine provided highly accurate instant estimates, reducing uncertainty before contractor selection."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "ac4c89d576c4",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "9638216ba48c",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "15,000+ Community Members: "
+          },
+          {
+            "_key": "8d89a23542d7",
+            "_type": "span",
+            "marks": [],
+            "text": "The platform successfully built a strong network of homeowners and verified contractors across the Canadian market."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "4d5d3d2e760a",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "671648affabc",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "98% Customer Satisfaction Rate: "
+          },
+          {
+            "_key": "ac4ebea2ee1b",
+            "_type": "span",
+            "marks": [],
+            "text": "Transparent pricing, verified professionals, and secure workflows significantly improved user trust and satisfaction."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "8d3b2b22f47e",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "59252a8274a3",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "100% Verified Contractor Network: "
+          },
+          {
+            "_key": "def298e0243f",
+            "_type": "span",
+            "marks": [],
+            "text": "Strict contractor verification ensured all service providers met professional and legal compliance standards."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "3039a23fe7c0",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "2391b28ab68f",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Faster Hiring Workflow:"
+          },
+          {
+            "_key": "11588bea1375",
+            "_type": "span",
+            "marks": [],
+            "text": " AI estimates and bidding reduced the time required to find and hire trusted contractors compared to traditional manual processes."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "b6b96d658d30",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "af0b5e2a1d38",
+            "_type": "span",
+            "marks": [],
+            "text": "Key Takeaways / Learnings"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "14c74334b617",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "58e7ddd27573",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Advanced React Architecture: "
+          },
+          {
+            "_key": "ddd5f2f97ea4",
+            "_type": "span",
+            "marks": [],
+            "text": "Improved frontend scalability by managing complex multi-role dashboards and reusable component systems."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "b89998c26cd9",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "c524d068d2ce",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Pixel-Perfect UI Development: "
+          },
+          {
+            "_key": "61ef6eb54e5e",
+            "_type": "span",
+            "marks": [],
+            "text": "Strengthened expertise in building highly polished responsive interfaces across all device sizes."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "92ef5723b98d",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "e800fcf8704b",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Real-Time System Design: "
+          },
+          {
+            "_key": "f02c4a8d5c2f",
+            "_type": "span",
+            "marks": [],
+            "text": "Learned how to structure real-time messaging and notifications for seamless user communication."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "0a2d85d2cb66",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "b38ea5ef526e",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Complex State Management: "
+          },
+          {
+            "_key": "709299844b46",
+            "_type": "span",
+            "marks": [],
+            "text": "Handled bidding workflows, contractor verification states, and AI estimate feedback flows efficiently."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "7a42907e18c6",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "04b4d40173ff",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "AI + User Feedback Loops: "
+          },
+          {
+            "_key": "d13de092c80f",
+            "_type": "span",
+            "marks": [],
+            "text": "Gained experience integrating AI-generated estimates with user feedback systems for continuous platform improvement."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "41ba76afc129",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "2b8265c32e0a",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Role-Based Frontend Access: "
+          },
+          {
+            "_key": "5753fa55bb68",
+            "_type": "span",
+            "marks": [],
+            "text": "Built secure and intuitive interfaces for homeowners, contractors, and admins with different access levels."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "relatedProjects": [
+      {
+        "title": "DTF Printing Customer Portal",
+        "slug": "dtf-printing-customer-portal",
+        "mainImage": "/images/project-dtf-printing-customer-portal-main.png",
+        "description": "Urban DTF Customer Portal is a full-stack web application built for URBAN DTF & T-SHIRTS, a custom DTF printing business. The platform allows customers to upload designs, configure garment orders, make secure payments, and track production progress in real time. It helps streamline order management, reduce manual communication, and improve customer experience by transforming traditional printing operations into a fully digital workflow.",
+        "role": "fullstack",
+        "teamSize": "1",
+        "duration": "1-3-months"
+      },
+      {
+        "title": "Nova Exordium",
+        "slug": "nova-exordium",
+        "mainImage": "/images/project-nova-exordium-main.png",
+        "description": "Nova Exordium is an all-in-one platform designed to streamline project management and accelerate customer onboarding. It offers real-time dashboards, customizable templates, smart notifications, and collaborative tools to enhance team productivity and client engagement.",
+        "role": "fullstack",
+        "teamSize": null,
+        "duration": "1-3-months"
+      },
+      {
+        "title": "Insight Carrier",
+        "slug": "insight-carrier",
+        "mainImage": "/images/project-insight-carrier-main.png",
+        "description": "Insight Carrier is a B2B SaaS platform built for insurance agents, brokers, and carriers to access qualified trucking leads, company safety profiles, and policy renewal opportunities. The platform helps insurance professionals reduce manual research time, identify high-value prospects faster, and improve client retention using real-time motor carrier data.",
+        "role": "backend",
+        "teamSize": "1",
+        "duration": "3-6-months"
+      }
+    ]
+  },
+  {
+    "_id": "06c54daf-db7c-4a3f-ad09-bafc09cc6c5b",
+    "title": "Survey Management System",
+    "slug": "survey-management-system",
+    "mainImage": "/images/project-survey-management-system-main.png",
+    "sliderImages": [
+      "/images/project-survey-management-system-slide-1.png",
+      "/images/project-survey-management-system-slide-2.png",
+      "/images/project-survey-management-system-slide-3.png",
+      "/images/project-survey-management-system-slide-4.png",
+      "/images/project-survey-management-system-slide-5.heif",
+      "/images/project-survey-management-system-slide-6.png"
+    ],
+    "description": "Feedback Hub is a full-stack SaaS platform for creating feedback forms, sharing them via public links, and analyzing responses in real-time. It replaces tools like Google Forms and Typeform with a modern, team-oriented experience featuring rich analytics, workspace management, and billing/subscription support.",
+    "liveLink": "https://muzammil-feedback-frontend.vercel.app",
+    "githubLink": null,
+    "figmaDesign": null,
+    "company": "Side Project",
+    "companySlug": "side-project",
+    "role": "fullstack",
+    "teamSize": "1",
+    "duration": "6-12-months",
+    "priority": 2,
+    "skills": [
+      {
+        "name": "HTML5",
+        "icon": "/images/skill-html5.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Javascript",
+        "icon": "/images/skill-javascript.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Typescript",
+        "icon": "/images/skill-typescript.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "React JS",
+        "icon": "/images/skill-react-js.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      }
+    ],
+    "body": [],
+    "relatedProjects": [
+      {
+        "title": "DTF Printing Customer Portal",
+        "slug": "dtf-printing-customer-portal",
+        "mainImage": "/images/project-dtf-printing-customer-portal-main.png",
+        "description": "Urban DTF Customer Portal is a full-stack web application built for URBAN DTF & T-SHIRTS, a custom DTF printing business. The platform allows customers to upload designs, configure garment orders, make secure payments, and track production progress in real time. It helps streamline order management, reduce manual communication, and improve customer experience by transforming traditional printing operations into a fully digital workflow.",
+        "role": "fullstack",
+        "teamSize": "1",
+        "duration": "1-3-months"
+      },
+      {
+        "title": "Nova Exordium",
+        "slug": "nova-exordium",
+        "mainImage": "/images/project-nova-exordium-main.png",
+        "description": "Nova Exordium is an all-in-one platform designed to streamline project management and accelerate customer onboarding. It offers real-time dashboards, customizable templates, smart notifications, and collaborative tools to enhance team productivity and client engagement.",
+        "role": "fullstack",
+        "teamSize": null,
+        "duration": "1-3-months"
+      },
+      {
+        "title": "Insight Carrier",
+        "slug": "insight-carrier",
+        "mainImage": "/images/project-insight-carrier-main.png",
+        "description": "Insight Carrier is a B2B SaaS platform built for insurance agents, brokers, and carriers to access qualified trucking leads, company safety profiles, and policy renewal opportunities. The platform helps insurance professionals reduce manual research time, identify high-value prospects faster, and improve client retention using real-time motor carrier data.",
+        "role": "backend",
+        "teamSize": "1",
+        "duration": "3-6-months"
+      }
+    ]
+  },
+  {
+    "_id": "ad974572-dc6f-4bb9-bb2c-2ccdc1dc3cae",
+    "title": "Nova Exordium",
+    "slug": "nova-exordium",
+    "mainImage": "/images/project-nova-exordium-main.png",
+    "sliderImages": [],
+    "description": "Nova Exordium is an all-in-one platform designed to streamline project management and accelerate customer onboarding. It offers real-time dashboards, customizable templates, smart notifications, and collaborative tools to enhance team productivity and client engagement.",
+    "liveLink": "https://nova-exordium-frontend.vercel.app",
+    "githubLink": null,
+    "figmaDesign": "https://www.figma.com/design/3eOrZxjBsiR4yxXHNcACRS/Untitled?node-id=0-1&t=CryoYNzn2m6mfNEl-1",
+    "company": "Axtra Studios",
+    "companySlug": "axtra-studios",
+    "role": "fullstack",
+    "teamSize": null,
+    "duration": "1-3-months",
+    "priority": 3,
+    "skills": [
+      {
+        "name": "React JS",
+        "icon": "/images/skill-react-js.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Node JS",
+        "icon": "/images/skill-node-js.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "MongoDB",
+        "icon": "/images/skill-mongodb.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Socket IO",
+        "icon": null,
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Express JS",
+        "icon": "/images/skill-express-js.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      }
+    ],
+    "body": [],
+    "relatedProjects": []
+  },
+  {
+    "_id": "5ac5be01-e5a6-48b9-8625-71ed9d36ba46",
+    "title": "DTF Printing Customer Portal",
+    "slug": "dtf-printing-customer-portal",
+    "mainImage": "/images/project-dtf-printing-customer-portal-main.png",
+    "sliderImages": [
+      "/images/project-dtf-printing-customer-portal-slide-1.png",
+      "/images/project-dtf-printing-customer-portal-slide-2.png",
+      "/images/project-dtf-printing-customer-portal-slide-3.png",
+      "/images/project-dtf-printing-customer-portal-slide-4.png",
+      "/images/project-dtf-printing-customer-portal-slide-5.png"
+    ],
+    "description": "Urban DTF Customer Portal is a full-stack web application built for URBAN DTF & T-SHIRTS, a custom DTF printing business. The platform allows customers to upload designs, configure garment orders, make secure payments, and track production progress in real time. It helps streamline order management, reduce manual communication, and improve customer experience by transforming traditional printing operations into a fully digital workflow.",
+    "liveLink": "https://urbandtf.app",
+    "githubLink": null,
+    "figmaDesign": null,
+    "company": "Axtra Studios",
+    "companySlug": "axtra-studios",
+    "role": "fullstack",
+    "teamSize": "1",
+    "duration": "1-3-months",
+    "priority": 4,
+    "skills": [
+      {
+        "name": "HTML5",
+        "icon": "/images/skill-html5.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "CSS3",
+        "icon": "/images/skill-css3.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "/images/skill-tailwind-css.png",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "React JS",
+        "icon": "/images/skill-react-js.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Next JS",
+        "icon": "/images/skill-next-js.svg",
+        "color": null,
+        "proficiency": "advanced",
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Typescript",
+        "icon": "/images/skill-typescript.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "TanStack React Query",
+        "icon": "/images/skill-tanstack-react-query.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Express JS",
+        "icon": "/images/skill-express-js.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Node JS",
+        "icon": "/images/skill-node-js.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Postgresql",
+        "icon": "/images/skill-postgresql.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Prisma",
+        "icon": null,
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Socket IO",
+        "icon": null,
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Stripe",
+        "icon": "/images/skill-stripe.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Vercel",
+        "icon": "/images/skill-vercel.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      }
+    ],
+    "body": [],
+    "relatedProjects": [
+      {
+        "title": "Survey Management System",
+        "slug": "survey-management-system",
+        "mainImage": "/images/project-survey-management-system-main.png",
+        "description": "Feedback Hub is a full-stack SaaS platform for creating feedback forms, sharing them via public links, and analyzing responses in real-time. It replaces tools like Google Forms and Typeform with a modern, team-oriented experience featuring rich analytics, workspace management, and billing/subscription support.",
+        "role": "fullstack",
+        "teamSize": "1",
+        "duration": "6-12-months"
+      },
+      {
+        "title": "Nova Exordium",
+        "slug": "nova-exordium",
+        "mainImage": "/images/project-nova-exordium-main.png",
+        "description": "Nova Exordium is an all-in-one platform designed to streamline project management and accelerate customer onboarding. It offers real-time dashboards, customizable templates, smart notifications, and collaborative tools to enhance team productivity and client engagement.",
+        "role": "fullstack",
+        "teamSize": null,
+        "duration": "1-3-months"
+      },
+      {
+        "title": "Insight Carrier",
+        "slug": "insight-carrier",
+        "mainImage": "/images/project-insight-carrier-main.png",
+        "description": "Insight Carrier is a B2B SaaS platform built for insurance agents, brokers, and carriers to access qualified trucking leads, company safety profiles, and policy renewal opportunities. The platform helps insurance professionals reduce manual research time, identify high-value prospects faster, and improve client retention using real-time motor carrier data.",
+        "role": "backend",
+        "teamSize": "1",
+        "duration": "3-6-months"
+      }
+    ]
+  },
+  {
+    "_id": "d257ea4b-cc33-45f5-9ff5-e5a99e3da08d",
+    "title": "Insight Carrier",
+    "slug": "insight-carrier",
+    "mainImage": "/images/project-insight-carrier-main.png",
+    "sliderImages": [],
+    "description": "Insight Carrier is a B2B SaaS platform built for insurance agents, brokers, and carriers to access qualified trucking leads, company safety profiles, and policy renewal opportunities. The platform helps insurance professionals reduce manual research time, identify high-value prospects faster, and improve client retention using real-time motor carrier data.",
+    "liveLink": "https://www.insightcarrier.com",
+    "githubLink": null,
+    "figmaDesign": null,
+    "company": "Axtra Studios",
+    "companySlug": "axtra-studios",
+    "role": "backend",
+    "teamSize": "1",
+    "duration": "3-6-months",
+    "priority": 5,
+    "skills": [
+      {
+        "name": "React JS",
+        "icon": "/images/skill-react-js.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Next JS",
+        "icon": "/images/skill-next-js.svg",
+        "color": null,
+        "proficiency": "advanced",
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "/images/skill-tailwind-css.png",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Node JS",
+        "icon": "/images/skill-node-js.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "MongoDB",
+        "icon": "/images/skill-mongodb.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      }
+    ],
+    "body": [],
+    "relatedProjects": [
+      {
+        "title": "DTF Printing Customer Portal",
+        "slug": "dtf-printing-customer-portal",
+        "mainImage": "/images/project-dtf-printing-customer-portal-main.png",
+        "description": "Urban DTF Customer Portal is a full-stack web application built for URBAN DTF & T-SHIRTS, a custom DTF printing business. The platform allows customers to upload designs, configure garment orders, make secure payments, and track production progress in real time. It helps streamline order management, reduce manual communication, and improve customer experience by transforming traditional printing operations into a fully digital workflow.",
+        "role": "fullstack",
+        "teamSize": "1",
+        "duration": "1-3-months"
+      },
+      {
+        "title": "Nova Exordium",
+        "slug": "nova-exordium",
+        "mainImage": "/images/project-nova-exordium-main.png",
+        "description": "Nova Exordium is an all-in-one platform designed to streamline project management and accelerate customer onboarding. It offers real-time dashboards, customizable templates, smart notifications, and collaborative tools to enhance team productivity and client engagement.",
+        "role": "fullstack",
+        "teamSize": null,
+        "duration": "1-3-months"
+      },
+      {
+        "title": "Survey Management System",
+        "slug": "survey-management-system",
+        "mainImage": "/images/project-survey-management-system-main.png",
+        "description": "Feedback Hub is a full-stack SaaS platform for creating feedback forms, sharing them via public links, and analyzing responses in real-time. It replaces tools like Google Forms and Typeform with a modern, team-oriented experience featuring rich analytics, workspace management, and billing/subscription support.",
+        "role": "fullstack",
+        "teamSize": "1",
+        "duration": "6-12-months"
+      }
+    ]
+  },
+  {
+    "_id": "c87ab075-efab-4476-88fd-e82c398c5175",
+    "title": "BRIEFS Coach",
+    "slug": "briefs-coach",
+    "mainImage": "/images/project-briefs-coach-main.png",
+    "sliderImages": [],
+    "description": "B.R.I.E.F.S. Coach is an AI-powered mental coaching platform that helps users record voice-based emotional “vents” and receive instant AI-generated coaching guidance with relevant YouTube video recommendations. The platform enables organizations and practitioners to provide scalable mental wellness support by combining voice recording, GPT-4 coaching responses, coach management, and subscription-based team access.",
+    "liveLink": "https://briefscoach.com/",
+    "githubLink": null,
+    "figmaDesign": null,
+    "company": "Axtra Studios",
+    "companySlug": "axtra-studios",
+    "role": "fullstack",
+    "teamSize": "2",
+    "duration": "1-3-months",
+    "priority": 6,
+    "skills": [],
+    "body": [],
+    "relatedProjects": [
+      {
+        "title": "Treepost AI",
+        "slug": "treepost-ai",
+        "mainImage": "/images/project-treepost-ai-main.png",
+        "description": "Treepost AI is a Canadian marketplace platform that connects homeowners with certified tree service contractors through AI-powered price estimates, real-time bidding, secure payments, and direct communication. The platform simplifies the process of finding trusted contractors by replacing manual quote requests with instant AI estimates, verified professionals, and a transparent bidding system.",
+        "role": "frontend",
+        "teamSize": "1",
+        "duration": "less-1-month"
+      },
+      {
+        "title": "Insight Carrier",
+        "slug": "insight-carrier",
+        "mainImage": "/images/project-insight-carrier-main.png",
+        "description": "Insight Carrier is a B2B SaaS platform built for insurance agents, brokers, and carriers to access qualified trucking leads, company safety profiles, and policy renewal opportunities. The platform helps insurance professionals reduce manual research time, identify high-value prospects faster, and improve client retention using real-time motor carrier data.",
+        "role": "backend",
+        "teamSize": "1",
+        "duration": "3-6-months"
+      },
+      {
+        "title": "DTF Printing Customer Portal",
+        "slug": "dtf-printing-customer-portal",
+        "mainImage": "/images/project-dtf-printing-customer-portal-main.png",
+        "description": "Urban DTF Customer Portal is a full-stack web application built for URBAN DTF & T-SHIRTS, a custom DTF printing business. The platform allows customers to upload designs, configure garment orders, make secure payments, and track production progress in real time. It helps streamline order management, reduce manual communication, and improve customer experience by transforming traditional printing operations into a fully digital workflow.",
+        "role": "fullstack",
+        "teamSize": "1",
+        "duration": "1-3-months"
+      }
+    ]
+  },
+  {
+    "_id": "61a4ee97-0984-49e5-b7c8-7d2b416997f8",
+    "title": "Real Estate Media Pricing Calculator",
+    "slug": "real-estate-media-pricing-calculator",
+    "mainImage": "/images/project-real-estate-media-pricing-calculator-main.png",
+    "sliderImages": [],
+    "description": "Real Estate Media Pricing Calculator is a web-based pricing platform that helps real estate media professionals generate accurate, market-based pricing recommendations for photography, videography, drone services, floor plans, virtual staging, and twilight photography across the United States. The platform uses verified market data from 2,695 real estate media businesses to provide location-specific pricing ranges with confidence ratings, helping professionals price services competitively and confidently.",
+    "liveLink": "https://listingphotorates.com/",
+    "githubLink": null,
+    "figmaDesign": null,
+    "company": "Axtra Studios",
+    "companySlug": "axtra-studios",
+    "role": "fullstack",
+    "teamSize": "1",
+    "duration": "1-3-months",
+    "priority": 7,
+    "skills": [],
+    "body": [],
+    "relatedProjects": [
+      {
+        "title": "Extra Scrub",
+        "slug": "extra-scrub",
+        "mainImage": "/images/project-extra-scrub-main.png",
+        "description": "Extra Scrub Cleaning Services Website is a professional multi-page business website built for a cleaning company based in London. The platform helps customers explore residential and commercial cleaning services, request custom quotes, book appointments online, and contact the team easily. The goal was to create a modern, mobile-friendly digital presence that improves customer trust, simplifies service discovery, and increases booking conversions.",
+        "role": "frontend",
+        "teamSize": "1",
+        "duration": "less-1-month"
+      },
+      {
+        "title": "BRIEFS Coach",
+        "slug": "briefs-coach",
+        "mainImage": "/images/project-briefs-coach-main.png",
+        "description": "B.R.I.E.F.S. Coach is an AI-powered mental coaching platform that helps users record voice-based emotional “vents” and receive instant AI-generated coaching guidance with relevant YouTube video recommendations. The platform enables organizations and practitioners to provide scalable mental wellness support by combining voice recording, GPT-4 coaching responses, coach management, and subscription-based team access.",
+        "role": "fullstack",
+        "teamSize": "2",
+        "duration": "1-3-months"
+      },
+      {
+        "title": "DTF Printing Customer Portal",
+        "slug": "dtf-printing-customer-portal",
+        "mainImage": "/images/project-dtf-printing-customer-portal-main.png",
+        "description": "Urban DTF Customer Portal is a full-stack web application built for URBAN DTF & T-SHIRTS, a custom DTF printing business. The platform allows customers to upload designs, configure garment orders, make secure payments, and track production progress in real time. It helps streamline order management, reduce manual communication, and improve customer experience by transforming traditional printing operations into a fully digital workflow.",
+        "role": "fullstack",
+        "teamSize": "1",
+        "duration": "1-3-months"
+      }
+    ]
+  },
+  {
+    "_id": "9c807543-8d34-414c-bfc1-43d977da272a",
+    "title": "Extra Scrub",
+    "slug": "extra-scrub",
+    "mainImage": "/images/project-extra-scrub-main.png",
+    "sliderImages": [],
+    "description": "Extra Scrub Cleaning Services Website is a professional multi-page business website built for a cleaning company based in London. The platform helps customers explore residential and commercial cleaning services, request custom quotes, book appointments online, and contact the team easily. The goal was to create a modern, mobile-friendly digital presence that improves customer trust, simplifies service discovery, and increases booking conversions.",
+    "liveLink": "https://extrascrub.ca/",
+    "githubLink": null,
+    "figmaDesign": null,
+    "company": "Axtra Studios",
+    "companySlug": "axtra-studios",
+    "role": "frontend",
+    "teamSize": "1",
+    "duration": "less-1-month",
+    "priority": 8,
+    "skills": [],
+    "body": [],
+    "relatedProjects": [
+      {
+        "title": "Treepost AI",
+        "slug": "treepost-ai",
+        "mainImage": "/images/project-treepost-ai-main.png",
+        "description": "Treepost AI is a Canadian marketplace platform that connects homeowners with certified tree service contractors through AI-powered price estimates, real-time bidding, secure payments, and direct communication. The platform simplifies the process of finding trusted contractors by replacing manual quote requests with instant AI estimates, verified professionals, and a transparent bidding system.",
+        "role": "frontend",
+        "teamSize": "1",
+        "duration": "less-1-month"
+      },
+      {
+        "title": "BRIEFS Coach",
+        "slug": "briefs-coach",
+        "mainImage": "/images/project-briefs-coach-main.png",
+        "description": "B.R.I.E.F.S. Coach is an AI-powered mental coaching platform that helps users record voice-based emotional “vents” and receive instant AI-generated coaching guidance with relevant YouTube video recommendations. The platform enables organizations and practitioners to provide scalable mental wellness support by combining voice recording, GPT-4 coaching responses, coach management, and subscription-based team access.",
+        "role": "fullstack",
+        "teamSize": "2",
+        "duration": "1-3-months"
+      },
+      {
+        "title": "DTF Printing Customer Portal",
+        "slug": "dtf-printing-customer-portal",
+        "mainImage": "/images/project-dtf-printing-customer-portal-main.png",
+        "description": "Urban DTF Customer Portal is a full-stack web application built for URBAN DTF & T-SHIRTS, a custom DTF printing business. The platform allows customers to upload designs, configure garment orders, make secure payments, and track production progress in real time. It helps streamline order management, reduce manual communication, and improve customer experience by transforming traditional printing operations into a fully digital workflow.",
+        "role": "fullstack",
+        "teamSize": "1",
+        "duration": "1-3-months"
+      }
+    ]
+  }
+]

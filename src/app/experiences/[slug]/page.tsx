@@ -1,97 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
-import { client } from '@/sanity/lib/client';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PortfolioCard from '@/components/PortfolioCard';
 import ExperienceMilestones from '@/components/ExperienceMilestones';
-import { ProjectCard } from '@/types/Project';
-
-interface RelatedService {
-  _id: string;
-  name: string;
-  slug: { current: string };
-  summary?: string;
-}
-
-interface Experience {
-  _id: string;
-  company: string;
-  position: string;
-  slug: { current: string };
-  imageUrl?: string;
-  startDate: string;
-  endDate?: string;
-  isCurrent?: boolean;
-  summary: string;
-  highlights: string[];
-  milestones: {
-    _key: string;
-    title: string;
-    type: string;
-    description?: string;
-    date?: string;
-    link?: string;
-    imageUrls?: string[];
-  }[];
-}
-
-async function fetchExperience(slug: string) {
-  const query = `*[_type == "experience" && slug.current == $slug][0]{
-    _id,
-    company,
-    position,
-    slug,
-    "imageUrl": image.asset->url,
-    startDate,
-    endDate,
-    isCurrent,
-    summary,
-    highlights,
-    milestones[]{
-      _key,
-      title,
-      type,
-      description,
-      date,
-      link,
-      "imageUrls": images[].asset->url
-    }
-  }`;
-  return client.fetch(query, { slug });
-}
-
-async function fetchProjectsByExperience(slug: string) {
-  const query = `*[_type == "project" && company->slug.current == $slug] | order(_createdAt desc){
-    _id,
-    title,
-    slug,
-    mainImage,
-    description,
-    liveLink,
-    githubLink,
-    "company": company->company,
-    "companySlug": company->slug.current,
-    "category": category->name,
-    "skills": skills[]->name
-  }`;
-  return client.fetch(query, { slug });
-}
-
-async function fetchRelatedServicesByExperience(slug: string) {
-  const query = `*[_type == "service" && slug.current in *[_type == "project" && company->slug.current == $slug].category->slug.current]{
-    _id,
-    name,
-    slug,
-    summary
-  }`;
-
-  return client.fetch(query, { slug });
-}
+import {
+  getExperienceBySlug,
+  getProjectsByExperienceSlug,
+  getServicesRelatedToExperienceSlug,
+} from '@/services/experienceService';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const experience = (await fetchExperience(slug)) as Experience | null;
+  const experience = await getExperienceBySlug(slug);
 
   if (!experience) {
     return {
@@ -126,11 +47,11 @@ export default async function ExperienceDetailPage({
 }) {
   const { slug } = await params;
 
-  const [experience, relatedProjects, relatedServices] = (await Promise.all([
-    fetchExperience(slug),
-    fetchProjectsByExperience(slug),
-    fetchRelatedServicesByExperience(slug),
-  ])) as [Experience | null, ProjectCard[], RelatedService[]];
+  const [experience, relatedProjects, relatedServices] = await Promise.all([
+    getExperienceBySlug(slug),
+    getProjectsByExperienceSlug(slug),
+    getServicesRelatedToExperienceSlug(),
+  ]);
 
   const formatDate = (date?: string) => {
     if (!date) return '';
@@ -198,10 +119,10 @@ export default async function ExperienceDetailPage({
               )}
             </div>
 
-            {experience.imageUrl && (
+            {experience.image && (
               <div className="rounded-2xl border border-border/70 bg-card overflow-hidden">
                 <img
-                  src={experience.imageUrl}
+                  src={experience.image}
                   alt={`${experience.company} cover`}
                   className="w-full h-64 md:h-80 object-cover object-center"
                 />
@@ -253,7 +174,7 @@ export default async function ExperienceDetailPage({
                 {relatedServices.slice(0, 4).map((service) => (
                   <Link
                     key={service._id}
-                    href={`/services/${service.slug?.current}`}
+                    href={`/services/${service.slug}`}
                     className="rounded-2xl border border-border/70 bg-card p-5 hover:bg-muted/30 transition-colors"
                   >
                     <h3 className="text-xl font-semibold">{service.name}</h3>

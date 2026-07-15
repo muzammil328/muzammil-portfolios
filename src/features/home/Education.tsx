@@ -1,33 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { client } from '@/sanity/lib/portfolio';
-
-interface EducationItem {
-  _id?: string;
-  institution: string;
-  area: string;
-  studyType: string;
-  startDate?: string;
-  endDate?: string;
-  score?: string;
-}
-
-async function fetchEducation() {
-  const query = `*[_type == "education"] | order(startDate desc){
-    _id,
-    institution,
-    area,
-    studyType,
-    startDate,
-    endDate,
-    score
-  }`;
-  return client.fetch<(EducationItem | null)[]>(query);
-}
-
-function isEducationItem(value: EducationItem | null): value is EducationItem {
-  return value !== null;
-}
+import { getEducationList } from '@/services/educationService';
+import { EducationItem } from '@/types/Education';
 
 function formatEducationDate(date?: string): string {
   if (!date) return '';
@@ -48,8 +22,8 @@ export default function Education() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await fetchEducation();
-        setEducation((data || []).filter(isEducationItem));
+        const data = await getEducationList();
+        setEducation(data);
       } catch (error) {
         console.error('Error fetching education:', error);
       } finally {
@@ -95,7 +69,7 @@ export default function Education() {
           <>
             {education.length === 0 ? (
               <div className="bg-card border rounded-2xl p-6 text-center text-muted-foreground">
-                No education records found in Sanity.
+                No education records found.
               </div>
             ) : (
               <div className="relative">

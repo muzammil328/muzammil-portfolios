@@ -1,0 +1,356 @@
+[
+  {
+    "_id": "4edd9f4e-664e-45d4-a9ab-bc5132ad2f3b",
+    "name": "Database Development",
+    "slug": "database",
+    "image": "/images/service-database.jpg",
+    "summary": null,
+    "focus": [
+      {
+        "title": "Schema Design"
+      },
+      {
+        "title": "Data Modeling"
+      },
+      {
+        "title": "Query Optimization"
+      },
+      {
+        "title": "Modern ORMs"
+      }
+    ],
+    "deliverables": null,
+    "processSteps": null,
+    "idealClient": null,
+    "timeline": null,
+    "pricing": null,
+    "isFeatured": null,
+    "proofPoints": null,
+    "testimonials": null,
+    "skills": [
+      {
+        "name": "MongoDB",
+        "icon": "/images/skill-mongodb.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Postgresql",
+        "icon": "/images/skill-postgresql.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Firebase",
+        "icon": "/images/skill-firebase.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Mongoose",
+        "icon": null,
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Supabase",
+        "icon": null,
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Prisma",
+        "icon": null,
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      }
+    ]
+  },
+  {
+    "_id": "602a3409-2ad7-4b5e-9b01-ffae2f91bffa",
+    "name": "Frontend",
+    "slug": "frontend",
+    "image": "/images/service-frontend.jpg",
+    "summary": null,
+    "focus": [
+      {
+        "title": "Pixel Perfect Design"
+      },
+      {
+        "title": "Responsive Design"
+      },
+      {
+        "title": "Component-Driven Architecture"
+      },
+      {
+        "title": "Mobile-First Design"
+      },
+      {
+        "title": "Performance Optimization"
+      }
+    ],
+    "deliverables": null,
+    "processSteps": null,
+    "idealClient": null,
+    "timeline": null,
+    "pricing": null,
+    "isFeatured": null,
+    "proofPoints": null,
+    "testimonials": null,
+    "skills": [
+      {
+        "name": "HTML5",
+        "icon": "/images/skill-html5.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "CSS3",
+        "icon": "/images/skill-css3.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "SCSS",
+        "icon": "/images/skill-scss.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "/images/skill-tailwind-css.png",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Shadcn UI",
+        "icon": "/images/skill-shadcn-ui.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Javascript",
+        "icon": "/images/skill-javascript.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Typescript",
+        "icon": "/images/skill-typescript.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "React JS",
+        "icon": "/images/skill-react-js.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Next JS",
+        "icon": "/images/skill-next-js.svg",
+        "color": null,
+        "proficiency": "advanced",
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Framer Motion",
+        "icon": "/images/skill-framer-motion.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Redux",
+        "icon": "/images/skill-redux.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "React Hook Form",
+        "icon": "/images/skill-react-hook-form.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "TanStack React Query",
+        "icon": "/images/skill-tanstack-react-query.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Axios",
+        "icon": "/images/skill-axios.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      }
+    ]
+  },
+  {
+    "_id": "97af4cba-4a29-4af3-af8f-0f9dd4653d42",
+    "name": "DevOps Development",
+    "slug": "devops",
+    "image": "/images/service-devops.jpg",
+    "summary": null,
+    "focus": [],
+    "deliverables": null,
+    "processSteps": null,
+    "idealClient": null,
+    "timeline": null,
+    "pricing": null,
+    "isFeatured": null,
+    "proofPoints": null,
+    "testimonials": null,
+    "skills": [
+      {
+        "name": "Git",
+        "icon": "/images/skill-git.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Github",
+        "icon": "/images/skill-github.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Vercel",
+        "icon": "/images/skill-vercel.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": " Heroku",
+        "icon": null,
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Netlify",
+        "icon": null,
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      }
+    ]
+  },
+  {
+    "_id": "ad7dda5e-4b2d-462b-a7c0-ee7676c62d4f",
+    "name": "Backend Development",
+    "slug": "backend-development",
+    "image": "/images/service-backend-development.jpg",
+    "summary": null,
+    "focus": [
+      {
+        "title": "Type-Safe REST APIs"
+      },
+      {
+        "title": "Secure Authentication (JWT)"
+      },
+      {
+        "title": "Scalable Architecture"
+      },
+      {
+        "title": "Performance Optimization"
+      }
+    ],
+    "deliverables": null,
+    "processSteps": null,
+    "idealClient": null,
+    "timeline": null,
+    "pricing": null,
+    "isFeatured": null,
+    "proofPoints": null,
+    "testimonials": null,
+    "skills": [
+      {
+        "name": "Node JS",
+        "icon": "/images/skill-node-js.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Express JS",
+        "icon": "/images/skill-express-js.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Stripe",
+        "icon": "/images/skill-stripe.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Cloudinary",
+        "icon": "/images/skill-cloudinary.svg",
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      },
+      {
+        "name": "Socket IO",
+        "icon": null,
+        "color": null,
+        "proficiency": null,
+        "yearsUsed": null,
+        "featured": null
+      }
+    ]
+  }
+]

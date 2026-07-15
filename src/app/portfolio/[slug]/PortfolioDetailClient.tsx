@@ -3,13 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { client } from '@/sanity/lib/client';
-import { getImageUrl } from '@/sanity/lib/image';
+import { getProjectBySlugDetailed } from '@/services/portfolioService';
 import { PortableText } from '@portabletext/react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { ProjectDetail } from '@/types/Project';
-import { SanityImageType } from '@/types/sanity';
 import PortfolioCard from '@/components/PortfolioCard';
 import {
   CloseIcon,
@@ -86,7 +84,7 @@ function getTeamSizeLabel(teamSize?: string): string {
 
 interface ProjectSkillItem {
   name: string;
-  icon?: SanityImageType;
+  icon?: string | null;
 }
 
 function SkeletonLoader() {
@@ -192,36 +190,6 @@ function Lightbox({
   );
 }
 
-async function fetchProject(slug: string) {
-  const query = `*[_type == "project" && slug.current == $slug][0]{
-    title,
-    mainImage,
-    "sliderImages": sliderImages[]{ _key, _type, asset },
-    description,
-    role,
-    duration,
-    teamSize,
-    liveLink,
-    githubLink,
-    figmaDesign,
-    "category": category->name,
-    "company": company->{company, "slug": slug.current},
-    "skillNames": skills[]->{ name, icon },
-    body,
-    "relatedProjects": relatedProjects[]->{
-      title,
-      slug,
-      mainImage,
-      description,
-      "category": category->name,
-      role,
-      teamSize,
-      duration
-    }
-  }`;
-  return client.fetch(query, { slug });
-}
-
 export default function PortfolioDetailClient({ slug }: { slug: string }) {
   const [project, setProject] = useState<ProjectDetail | null>(null);
   const [loading, setLoading] = useState(true);
@@ -240,7 +208,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
     async function fetchData() {
       if (!slug) return;
       try {
-        const projectData = await fetchProject(slug);
+        const projectData = await getProjectBySlugDetailed(slug);
 
         if (projectData) {
           setProject(projectData);
@@ -279,16 +247,11 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
     );
   }
 
-  const orderedSliderImages = (project.sliderImages || [])
-    .filter((image): image is SanityImageType => Boolean(image?.asset?._ref))
-    .filter((image, index, images) => {
-      // Keep first occurrence only to avoid duplicate screenshots in the grid.
-      return images.findIndex((candidate) => candidate.asset._ref === image.asset._ref) === index;
-    });
+  const orderedSliderImages = (project.sliderImages || []).filter(
+    (image, index, images) => Boolean(image) && images.indexOf(image) === index,
+  );
 
-  const sliderImageUrls = orderedSliderImages
-    .map((image) => getImageUrl(image, 1200, 800))
-    .filter((url): url is string => Boolean(url));
+  const sliderImageUrls = orderedSliderImages;
   const projectContactHref = `/contact?${new URLSearchParams({
     service: project.category || 'Project Development',
     project: project.title,
@@ -303,7 +266,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
     height = 800,
   ) => {
     const image = orderedSliderImages[imageIndex];
-    const imageUrl = image ? getImageUrl(image, width, height) : null;
+    const imageUrl = image;
 
     if (!image || !imageUrl) {
       return (
@@ -319,7 +282,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
 
     return (
       <button
-        key={image._key}
+        key={imageIndex}
         className={`relative overflow-hidden rounded-2xl group ${colSpanClass}`}
         onClick={() => openLightbox(sliderImageUrls, imageIndex)}
       >
@@ -438,7 +401,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
                 <div className="flex flex-wrap gap-3 mt-4">
                   {(project.skillNames as unknown as ProjectSkillItem[] | undefined)?.map(
                     (skill, i: number) => {
-                      const iconUrl = skill.icon ? getImageUrl(skill.icon, 32, 32) : null;
+                      const iconUrl = skill.icon || null;
                       return (
                         <span
                           key={i}
@@ -466,7 +429,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
               {project.mainImage &&
                 (() => {
-                  const imageUrl = getImageUrl(project.mainImage, 800, 450);
+                  const imageUrl = project.mainImage;
                   return imageUrl ? (
                     <Image
                       src={imageUrl}
@@ -562,7 +525,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
               <PortfolioCard
                 key={index}
                 data={{
-                  _id: `${rp.slug?.current || rp.title}-${index}`,
+                  _id: `${rp.slug || rp.title}-${index}`,
                   title: rp.title,
                   slug: rp.slug,
                   description: rp.description || '',

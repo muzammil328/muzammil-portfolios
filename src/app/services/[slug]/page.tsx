@@ -1,73 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { getImageUrl } from '@/sanity/lib/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import type { ServiceTypes } from '@/types/Service';
-import type { ProjectCard } from '@/types/Project';
 import PortfolioCard from '@/components/PortfolioCard';
-import { client } from '@/sanity/lib/portfolio';
-
-interface RelatedExperience {
-  _id: string;
-  company: string;
-  position: string;
-  slug: { current: string };
-  summary?: string;
-}
-
-async function fetchService(slug: string) {
-  const query = `*[_type == "service" && slug.current == $slug][0]{
-    _id,
-    name,
-    slug,
-    image,
-    summary,
-    focus,
-    deliverables,
-    processSteps,
-    idealClient,
-    timeline,
-    pricing,
-    isFeatured,
-    proofPoints,
-    testimonials,
-    "skills": skills[]->{name, icon}
-  }`;
-  return client.fetch(query, { slug });
-}
-
-async function fetchProjectsByCategorySlug(slug: string) {
-  const query = `*[_type == "project" && category->slug.current == $slug] | order(_createdAt desc){
-    _id,
-    title,
-    slug,
-    mainImage,
-    description,
-    liveLink,
-    githubLink,
-    "category": category->name,
-    "skills": skills[]->name
-  }`;
-
-  return client.fetch(query, { slug });
-}
-
-async function fetchRelatedExperiencesByServiceSlug(slug: string) {
-  const query = `*[_type == "experience" && _id in *[_type == "project" && category->slug.current == $slug].company[]._ref]{
-    _id,
-    company,
-    position,
-    slug,
-    summary
-  }`;
-
-  return client.fetch(query, { slug });
-}
+import { getServiceBySlug, getProjectsByCategorySlug } from '@/services/portfolioService';
+import { getExperiencesRelatedToServiceSlug } from '@/services/experienceService';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const service = (await fetchService(slug)) as ServiceTypes | null;
+  const service = await getServiceBySlug(slug);
 
   if (!service) {
     return {
@@ -100,11 +41,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
-  const [service, relatedProjects, relatedExperiences] = (await Promise.all([
-    fetchService(slug),
-    fetchProjectsByCategorySlug(slug),
-    fetchRelatedExperiencesByServiceSlug(slug),
-  ])) as [ServiceTypes | null, ProjectCard[], RelatedExperience[]];
+  const [service, relatedProjects, relatedExperiences] = await Promise.all([
+    getServiceBySlug(slug),
+    getProjectsByCategorySlug(),
+    getExperiencesRelatedToServiceSlug(),
+  ]);
 
   if (!service) {
     return (
@@ -123,7 +64,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     );
   }
 
-  const imageUrl = getImageUrl(service.image);
+  const imageUrl = service.image;
   const contactHref = `/contact?${new URLSearchParams({ service: service.name, source: 'service-detail' }).toString()}`;
   const whatsappHref = `https://wa.me/923100810327?text=${encodeURIComponent(
     `Hi Muzammil, I'm interested in your ${service.name} service. Can we discuss scope, timeline, and budget?`,
@@ -236,7 +177,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 </h2>
                 <div className="flex flex-wrap gap-3">
                   {(service.skills || []).map((skill, i) => {
-                    const iconUrl = getImageUrl(skill.icon, 32, 32);
+                    const iconUrl = skill.icon;
                     return (
                       <div
                         key={i}
@@ -410,7 +351,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 {relatedExperiences.slice(0, 4).map((exp) => (
                   <Link
                     key={exp._id}
-                    href={`/experiences/${exp.slug?.current}`}
+                    href={`/experiences/${exp.slug}`}
                     className="rounded-2xl border border-border/70 bg-card p-5 hover:bg-muted/30 transition-colors"
                   >
                     <h3 className="text-xl font-semibold">{exp.company}</h3>

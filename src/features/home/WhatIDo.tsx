@@ -111,7 +111,13 @@ type AccentKey = keyof typeof accentMap;
 const STAT_ICONS = [Layers, Clock, Star, Users, Zap];
 
 /* ─── Proficiency config ─── */
-const PROFICIENCY_ORDER = ['expert', 'advanced', 'intermediate', 'beginner', undefined];
+const PROFICIENCY_ORDER: (string | null | undefined)[] = [
+  'expert',
+  'advanced',
+  'intermediate',
+  'beginner',
+  undefined,
+];
 
 const PROFICIENCY_SIZE: Record<string, number> = {
   expert: 72,
@@ -503,7 +509,7 @@ export default function WhatIDo() {
         {services.map((service, index) => {
           const accent = accentMap[index as AccentKey] || accentMap[0];
           const skills = service.skills?.length > 0 ? service.skills : [];
-          /* normalise: Sanity may still return old plain strings */
+          /* normalise: focus items may be plain strings or {title} objects */
           const normaliseFocus = (arr: unknown[]): FocusItem[] =>
             arr.map((v) => (typeof v === 'string' ? { title: v } : (v as FocusItem)));
           const focusItems: FocusItem[] =
@@ -562,7 +568,7 @@ export default function WhatIDo() {
                       asChild
                     >
                       <Link
-                        href={`/services/${service.slug.current}`}
+                        href={`/services/${service.slug}`}
                         aria-label={`View work for ${service.name}`}
                         className="flex items-center gap-1.5 group"
                       >

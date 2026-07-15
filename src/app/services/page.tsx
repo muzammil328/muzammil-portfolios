@@ -1,29 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { client } from '@/sanity/lib/client';
-import { getImageUrl } from '@/sanity/lib/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { ServiceTypes } from '@/types/Service';
-
-async function fetchServices() {
-  const query = `*[_type == "service"] | order(_createdAt desc){
-    _id,
-    name,
-    slug,
-    image,
-    summary,
-    focus,
-    timeline,
-    pricing,
-    isFeatured,
-    proofPoints,
-    testimonials,
-    "skills": skills[]->{name, icon}
-  }`;
-  return client.fetch(query);
-}
+import { getServices } from '@/services/portfolioService';
 
 export const metadata = {
   title: 'Services | Muzammil Safdar',
@@ -36,7 +16,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const services = (await fetchServices()) as ServiceTypes[];
+  const services = await getServices();
 
   return (
     <>
@@ -48,8 +28,8 @@ export default async function Page() {
           {services.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service) => {
-                const imageUrl = getImageUrl(service.image);
-                const serviceSlug = service.slug?.current || service._id;
+                const imageUrl = service.image;
+                const serviceSlug = service.slug || service._id;
 
                 return (
                   <Link key={service._id} href={`/services/${serviceSlug}`} className="group block">
@@ -115,7 +95,7 @@ export default async function Page() {
                       {service.skills && service.skills.length > 0 && (
                         <div className="flex flex-wrap gap-2 mt-4">
                           {service.skills.slice(0, 4).map((skill, i) => {
-                            const iconUrl = getImageUrl(skill.icon, 32, 32);
+                            const iconUrl = skill.icon;
                             return (
                               <div
                                 key={i}

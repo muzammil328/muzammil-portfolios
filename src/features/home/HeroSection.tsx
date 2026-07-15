@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CV_FILE } from '@/constants/index';
 import { downloadFile } from '@/utils/downloadFile';
-import { getImageUrl } from '@/sanity/lib/image';
 import { ProfileTypes } from '@/types/Profile';
 import { GitHubIcon, LinkedInIcon } from '@/components/ui';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -149,7 +148,7 @@ export default function HeroSection({ profile }: HeroSectionProps) {
         >
           {profile?.image && (
             <Image
-              src={getImageUrl(profile.image, 480, 480) || '/Muhammad-Muzammil-Safdar.jpeg'}
+              src={profile.image}
               alt={displayProfile.name}
               width={480}
               height={480}

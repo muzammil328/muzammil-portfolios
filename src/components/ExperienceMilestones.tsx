@@ -2,19 +2,10 @@
 
 import React from 'react';
 import { CloseIcon } from '@/components/ui';
-
-interface Milestone {
-  _key: string;
-  title: string;
-  type: string;
-  description?: string;
-  date?: string;
-  link?: string;
-  imageUrls?: string[];
-}
+import { ExperienceMilestone } from '@/types/Experience';
 
 interface ExperienceMilestonesProps {
-  milestones: Milestone[];
+  milestones: ExperienceMilestone[];
 }
 
 function formatMilestoneDate(date?: string): string {
@@ -30,10 +21,10 @@ function formatMilestoneDate(date?: string): string {
 }
 
 export default function ExperienceMilestones({ milestones }: ExperienceMilestonesProps) {
-  const [selectedMilestone, setSelectedMilestone] = React.useState<Milestone | null>(null);
+  const [selectedMilestone, setSelectedMilestone] = React.useState<ExperienceMilestone | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = React.useState(0);
 
-  const openMilestoneModal = (milestone: Milestone) => {
+  const openMilestoneModal = (milestone: ExperienceMilestone) => {
     setSelectedMilestone(milestone);
     setSelectedImageIndex(0);
   };
@@ -47,7 +38,7 @@ export default function ExperienceMilestones({ milestones }: ExperienceMilestone
     ? formatMilestoneDate(selectedMilestone.date)
     : '';
 
-  const selectedMilestoneImages = selectedMilestone?.imageUrls ?? [];
+  const selectedMilestoneImages = selectedMilestone?.images ?? [];
   const selectedMilestonePrimaryImage =
     selectedMilestoneImages[selectedImageIndex] ?? selectedMilestoneImages[0];
 
@@ -56,11 +47,11 @@ export default function ExperienceMilestones({ milestones }: ExperienceMilestone
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {milestones.map((milestone) => {
           const formattedDate = formatMilestoneDate(milestone.date);
-          const primaryImage = milestone.imageUrls?.[0];
+          const primaryImage = milestone.images?.[0];
 
           return (
             <button
-              key={milestone._key}
+              key={milestone.title}
               type="button"
               onClick={() => openMilestoneModal(milestone)}
               className="w-full text-left rounded-2xl border border-border/70 bg-card overflow-hidden hover:bg-muted/30 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
@@ -174,7 +165,7 @@ export default function ExperienceMilestones({ milestones }: ExperienceMilestone
                     <div className="grid grid-cols-3 gap-2">
                       {selectedMilestoneImages.map((imageUrl, index) => (
                         <button
-                          key={`${selectedMilestone._key}-image-${index}`}
+                          key={`${selectedMilestone.title}-image-${index}`}
                           type="button"
                           onClick={() => setSelectedImageIndex(index)}
                           className={`rounded-md overflow-hidden border transition-colors ${

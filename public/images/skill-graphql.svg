@@ -1,0 +1,18 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" height="20px" width="20px">
+  <rect transform="translate(-5.858 16.107) rotate(-59.999)" height="1.187" width="22.901" y="12.534" x="-0.43"></rect>
+  <rect height="1.187" width="22.902" y="21.162" x="4.545"></rect>
+  <rect transform="translate(-15.812 21.857) rotate(-59.999)" height="13.227" width="1.187" y="18.008" x="10.43"></rect>
+  <rect transform="translate(4.092 21.856) rotate(-59.999)" height="13.227" width="1.187" y="0.771" x="20.381"></rect>
+  <rect transform="translate(-2.213 6.502) rotate(-30.001)" height="1.187" width="13.227" y="6.787" x="4.412"></rect>
+  <rect transform="translate(-3.753 12.25) rotate(-30.001)" height="22.901" width="1.187" y="1.677" x="20.389"></rect>
+  <rect height="13.228" width="1.187" y="9.386" x="5.454"></rect>
+  <rect height="13.228" width="1.187" y="9.386" x="25.36"></rect>
+  <rect transform="translate(-9.498 13.785) rotate(-30.001)" height="1.037" width="11.504" y="24.097" x="15.222"></rect>
+  <path d="M28.12,23a2.5,2.5,0,1,1-.915-3.411A2.5,2.5,0,0,1,28.12,23"></path>
+  <path d="M8.2,11.5a2.5,2.5,0,1,1-.915-3.411A2.5,2.5,0,0,1,8.2,11.5"></path>
+  <path d="M3.88,23a2.5,2.5,0,1,1,3.411.915A2.5,2.5,0,0,1,3.88,23"></path>
+  <path d="M23.8,11.5a2.5,2.5,0,1,1,3.411.915A2.5,2.5,0,0,1,23.8,11.5"></path>
+  <path d="M16,30a2.5,2.5,0,1,1,2.5-2.5A2.493,2.493,0,0,1,16,30"></path>
+  <path d="M16,6.991a2.5,2.5,0,1,1,2.5-2.5,2.493,2.493,0,0,1-2.5,2.5"></path>
+</svg>

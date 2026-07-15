@@ -21,9 +21,9 @@ export default function HorizontalProjects() {
   useEffect(() => {
     async function fetchProjects() {
       try {
-        const sanityProjects = await getProjects();
-        if (sanityProjects && sanityProjects.length > 0) {
-          setProjects(sanityProjects);
+        const fetchedProjects = await getProjects();
+        if (fetchedProjects && fetchedProjects.length > 0) {
+          setProjects(fetchedProjects);
         }
       } catch (error) {
         console.error('Error fetching projects:', error);

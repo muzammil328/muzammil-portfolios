@@ -1,13 +1,12 @@
-import { SanityImageType, SanitySlugType } from '@/types/sanity';
 import { PortableTextBlock } from '@portabletext/react';
 
 export interface ProjectCard {
   _id: string;
   title: string;
-  slug: SanitySlugType;
+  slug: string;
   description: string;
-  mainImage: SanityImageType;
-  category: string;
+  mainImage: string | null;
+  category?: string;
   company?: string;
   companySlug?: string;
   skills: string[];
@@ -21,8 +20,9 @@ export interface ProjectCard {
 
 export interface ProjectDetail {
   title: string;
-  mainImage: SanityImageType;
-  sliderImages: SanityImageType[];
+  slug: string;
+  mainImage: string | null;
+  sliderImages: string[];
   description?: string;
   role?: string;
   duration?: string;
@@ -30,22 +30,22 @@ export interface ProjectDetail {
   liveLink: string;
   githubLink: string;
   figmaDesign?: string;
-  category: string;
+  category?: string;
   company?: {
     company: string;
     slug: string;
   };
   skillNames: {
     name: string;
-    icon?: SanityImageType;
+    icon?: string | null;
   }[];
   body?: PortableTextBlock[];
   relatedProjects?: {
-    category: string;
+    category?: string;
     description: string;
     title: string;
-    slug: SanitySlugType;
-    mainImage: SanityImageType;
+    slug: string;
+    mainImage: string | null;
     role?: string;
     teamSize?: string;
     duration?: string;

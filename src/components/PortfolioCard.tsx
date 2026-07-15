@@ -33,8 +33,7 @@ const durationMap: Record<string, string> = {
 };
 
 function getDetailLink(data: ProjectCard): string {
-  if (data.slug?.current) return data.slug.current;
-  return '#';
+  return data.slug || '#';
 }
 
 function getDescription(data: ProjectCard): string {
@@ -86,7 +85,7 @@ export default function PortfolioCard({ data, index = 0 }: { data: ProjectCard; 
             {' '}
             {/* or h-48, h-72, adjust as needed */}
             <Image
-              src={getImageSrc(data, 1200)}
+              src={getImageSrc(data)}
               alt={data.title}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105 z-0"

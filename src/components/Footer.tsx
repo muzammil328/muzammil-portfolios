@@ -117,8 +117,6 @@ function FooterContent() {
         <span className="flex items-center gap-1">
           Built with
           <span className="text-white/50 mx-0.5">Next.js</span>
-          &amp;
-          <span className="text-white/50 mx-0.5">Sanity</span>
         </span>
       </div>
     </div>

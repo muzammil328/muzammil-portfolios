@@ -1,10 +1,8 @@
-import { SanitySlugType, SanityImageType } from '@/types/sanity';
-
 export interface ServiceTypes {
   _id: string;
   name: string;
-  slug: SanitySlugType;
-  image: SanityImageType;
+  slug: string;
+  image: string | null;
   summary?: string;
   focus: { title: string; description?: string; icon?: string }[];
   deliverables?: { title: string; description?: string; icon?: string }[];
@@ -32,11 +30,11 @@ export interface ServiceTypes {
   }[];
   skills: {
     name: string;
-    icon: SanityImageType;
-    color?: string;
-    proficiency?: 'beginner' | 'intermediate' | 'advanced' | 'expert';
-    yearsUsed?: number;
-    featured?: boolean;
+    icon: string | null;
+    color?: string | null;
+    proficiency?: 'beginner' | 'intermediate' | 'advanced' | 'expert' | null;
+    yearsUsed?: number | null;
+    featured?: boolean | null;
   }[];
 }
 

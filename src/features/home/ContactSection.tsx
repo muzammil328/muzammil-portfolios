@@ -22,10 +22,6 @@ export default function ContactSection({
     lname: '',
     email: '',
     phone: '',
-    serviceInterested: '',
-    projectType: '',
-    budgetRange: '',
-    desiredTimeline: '',
     projectReference: '',
     pagePath: '',
     utmSource: '',
@@ -70,7 +66,6 @@ export default function ContactSection({
     setFormData((prev) => ({
       ...prev,
       leadSource,
-      serviceInterested: prev.serviceInterested || service || '',
       projectReference: prev.projectReference || project || '',
       pagePath: prev.pagePath || pagePath || '',
       utmSource: prev.utmSource || utmSource,
@@ -110,10 +105,6 @@ export default function ContactSection({
           lname: '',
           email: '',
           phone: '',
-          serviceInterested: '',
-          projectType: '',
-          budgetRange: '',
-          desiredTimeline: '',
           projectReference: '',
           pagePath: '',
           utmSource: '',
@@ -225,84 +216,6 @@ export default function ContactSection({
                 className="bg-background border-border"
                 placeholder="000 000 000"
               />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <Label htmlFor="serviceInterested" className="text-foreground">
-                Service Needed
-              </Label>
-              <select
-                id="serviceInterested"
-                name="serviceInterested"
-                value={formData.serviceInterested}
-                onChange={handleChange}
-                className="w-full h-10 rounded-md border border-border bg-background px-3 text-sm"
-              >
-                <option value="">Select a service</option>
-                <option value="Web Development">Web Development</option>
-                <option value="SaaS Development">SaaS Development</option>
-                <option value="Maintenance & Support">Maintenance & Support</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="projectType" className="text-foreground">
-                Project Type
-              </Label>
-              <select
-                id="projectType"
-                name="projectType"
-                value={formData.projectType}
-                onChange={handleChange}
-                className="w-full h-10 rounded-md border border-border bg-background px-3 text-sm"
-              >
-                <option value="">Select project type</option>
-                <option value="New build">New build</option>
-                <option value="Redesign">Redesign</option>
-                <option value="Feature extension">Feature extension</option>
-                <option value="Bug fixing">Bug fixing</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <Label htmlFor="budgetRange" className="text-foreground">
-                Budget Range
-              </Label>
-              <select
-                id="budgetRange"
-                name="budgetRange"
-                value={formData.budgetRange}
-                onChange={handleChange}
-                className="w-full h-10 rounded-md border border-border bg-background px-3 text-sm"
-              >
-                <option value="">Select budget range</option>
-                <option value="Under 1k">Under $1k</option>
-                <option value="1k - 3k">$1k - $3k</option>
-                <option value="3k - 7k">$3k - $7k</option>
-                <option value="7k+">$7k+</option>
-              </select>
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="desiredTimeline" className="text-foreground">
-                Desired Timeline
-              </Label>
-              <select
-                id="desiredTimeline"
-                name="desiredTimeline"
-                value={formData.desiredTimeline}
-                onChange={handleChange}
-                className="w-full h-10 rounded-md border border-border bg-background px-3 text-sm"
-              >
-                <option value="">Select timeline</option>
-                <option value="ASAP">ASAP</option>
-                <option value="2-4 weeks">2-4 weeks</option>
-                <option value="1-2 months">1-2 months</option>
-                <option value="Flexible">Flexible</option>
-              </select>
             </div>
           </div>
 

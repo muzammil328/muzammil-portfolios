@@ -13,10 +13,6 @@ export interface ContactFormRecord {
   email: string;
   phone: string;
   message: string;
-  service_interested?: string | null;
-  project_type?: string | null;
-  budget_range?: string | null;
-  desired_timeline?: string | null;
   project_reference?: string | null;
   page_path?: string | null;
   lead_source?: ContactLeadSource | null;
@@ -37,10 +33,6 @@ const ContactFormSchema = new Schema<ContactFormRecord>(
     email: { type: String, required: true, trim: true, lowercase: true },
     phone: { type: String, required: true, trim: true },
     message: { type: String, required: true, trim: true },
-    service_interested: { type: String, default: null },
-    project_type: { type: String, default: null },
-    budget_range: { type: String, default: null },
-    desired_timeline: { type: String, default: null },
     project_reference: { type: String, default: null },
     page_path: { type: String, default: null },
     lead_source: { type: String, default: null },

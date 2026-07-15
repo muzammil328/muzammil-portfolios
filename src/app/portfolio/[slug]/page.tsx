@@ -1,15 +1,6 @@
 import type { Metadata } from 'next';
-import { client } from '@/sanity/lib/client';
+import { getProjectBySlugDetailed } from '@/services/portfolioService';
 import PortfolioDetailClient from './PortfolioDetailClient';
-
-async function fetchProjectMeta(slug: string) {
-  const query = `*[_type == "project" && slug.current == $slug][0]{
-    title,
-    description
-  }`;
-
-  return client.fetch(query, { slug });
-}
 
 export async function generateMetadata({
   params,
@@ -17,7 +8,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const project = await fetchProjectMeta(slug);
+  const project = await getProjectBySlugDetailed(slug);
 
   if (!project) {
     return {

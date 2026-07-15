@@ -1,33 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { client } from '@/sanity/lib/client';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-
-interface Experience {
-  _id: string;
-  company: string;
-  position: string;
-  slug: { current: string };
-  startDate: string;
-  endDate?: string;
-  isCurrent?: boolean;
-  summary: string;
-}
-
-async function fetchExperiences() {
-  const query = `*[_type == "experience"] | order(startDate desc){
-    _id,
-    company,
-    position,
-    slug,
-    startDate,
-    endDate,
-    isCurrent,
-    summary
-  }`;
-  return client.fetch(query);
-}
+import { getExperiences } from '@/services/experienceService';
 
 export const metadata = {
   title: 'Experience | Muzammil Safdar',
@@ -49,7 +24,7 @@ export default async function Page({
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const params = await searchParams;
-  const experiences = (await fetchExperiences()) as Experience[];
+  const experiences = await getExperiences();
 
   const selectedCompany = typeof params.company === 'string' ? params.company.trim() : '';
   const normalizedCompany = selectedCompany.toLowerCase();
@@ -88,7 +63,7 @@ export default async function Page({
           {filteredExperiences.length > 0 ? (
             <div id="experience-results" className="space-y-6 scroll-mt-32">
               {filteredExperiences.map((exp) => {
-                const expSlug = exp.slug?.current || exp._id;
+                const expSlug = exp.slug || exp._id;
                 const startDateText = formatDate(exp.startDate);
                 const endDateText = exp.isCurrent === true ? 'Present' : formatDate(exp.endDate);
                 const duration = endDateText ? `${startDateText} - ${endDateText}` : startDateText;
@@ -120,7 +95,7 @@ export default async function Page({
             <div className="rounded-2xl border border-border/70 bg-muted/30 p-8 text-center">
               <p className="text-muted-foreground">
                 {selectedCompany
-                  ? `No experiences found for company \"${selectedCompany}\".`
+                  ? `No experiences found for company "${selectedCompany}".`
                   : 'No experiences found.'}
               </p>
             </div>

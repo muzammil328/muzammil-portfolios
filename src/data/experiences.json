@@ -1,0 +1,142 @@
+[
+  {
+    "_id": "1d453206-a84f-4bda-9dc4-6eb71b7d3f24",
+    "company": "Axtra Studios",
+    "companyUrl": "https://axtrastudios.com",
+    "position": "Associate Software Engineer",
+    "slug": "axtra-studios",
+    "image": "/images/experience-axtra-studios-cover.jpg",
+    "isVisible": true,
+    "isCurrent": true,
+    "location": {
+      "city": "Lahore",
+      "country": "Pakistan"
+    },
+    "startDate": "2024-12-01",
+    "endDate": "Present",
+    "summary": "Full-stack Software Engineer specializing in building scalable web applications using React, Next.js, Node.js, Express.js, MongoDB, SQL, and TypeScript. Experienced in developing production-ready features across frontend, backend, and database layers while improving application performance, maintainability, and user experience.",
+    "highlights": [
+      "Developed full-stack features using React, Next.js, Node.js, Express.js, MongoDB, and SQL across frontend, backend, and database layers.",
+      "Built and maintained REST API endpoints, improving API response time from 900 ms to 450 ms through query optimization and cleaner request handling.",
+      "Created 40 reusable React components for repeated UI patterns, reducing duplicate code and making frontend updates easier to manage.",
+      "Worked on 4 key modules, including user management, authentication, dashboard pages, and data-driven application workflows.",
+      "Implemented secure login, authorization, and role-based access control, supporting 3 user roles with different permissions and protected routes.",
+      "Used SSR and SSG in Next.js to improve page load time by 30% for server-rendered and pre-rendered pages.",
+      "Optimized MongoDB and SQL queries and debugged frontend-to-backend issues by tracing API requests, validating database responses, and resolving edge-case behavior."
+    ],
+    "milestones": [
+      {
+        "title": "Padel Day",
+        "type": "celebration",
+        "description": "Good games, great vibes. Padel Day at Axtra Studios was the perfect midweek reset! Thanks to everyone who played and cheered.",
+        "date": "2025-05-06",
+        "link": "https://www.linkedin.com/posts/axtra-studios_padelday-teamaxtra-axtrastudios-activity-7341821927453290497--ZGN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGHy_p4BtYwduESRAOeEnH6KPB_azH4ZfXg",
+        "images": [
+          "/images/experience-axtra-studios-milestone-padel-day-1.jpg"
+        ]
+      },
+      {
+        "title": "Annual Dinner",
+        "type": "annualDinner",
+        "description": "An evening well spent and memories well made!\n\nOur Annual Dinner 2025 was a perfect blend of great food, engaging conversations, and exceptional company. From laughter around the table to meaningful connections beyond work, the evening truly reflected the culture we’re proud of.\n\nHuge appreciation to our leadership and organizing team for making it a seamless and memorable experience.\n\nHere’s to the people who make it all worthwhile!",
+        "date": "2026-01-01",
+        "link": "https://www.linkedin.com/posts/axtra-studios_annual-dinner-2025-activity-7420340603454042112-rYF8?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGHy_p4BtYwduESRAOeEnH6KPB_azH4ZfXg",
+        "images": [
+          "/images/experience-axtra-studios-milestone-annual-dinner-1.png",
+          "/images/experience-axtra-studios-milestone-annual-dinner-2.png",
+          "/images/experience-axtra-studios-milestone-annual-dinner-3.png",
+          "/images/experience-axtra-studios-milestone-annual-dinner-4.png",
+          "/images/experience-axtra-studios-milestone-annual-dinner-5.png"
+        ]
+      },
+      {
+        "title": "1st Work Anniversary",
+        "type": "anniversary",
+        "description": "Explored new technologies and tools, completed advanced certifications, and contributed to the company's strategic roadmap discussions.\n\n",
+        "date": "2026-03-01",
+        "link": "https://www.linkedin.com/posts/axtra-studios_axtrastudios-teamcelebrations-employeemilestones-activity-7446871927819763712-ga7R?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGHy_p4BtYwduESRAOeEnH6KPB_azH4ZfXg",
+        "images": [
+          "/images/experience-axtra-studios-milestone-1st-work-anniversary-1.jpg"
+        ]
+      },
+      {
+        "title": "Happy Birthday",
+        "type": "celebration",
+        "description": "Grateful for another year of life, learning, growth, and unforgettable memories. Every experience, challenge, and achievement has helped shape who I am today.",
+        "date": "2026-04-20",
+        "link": "https://www.linkedin.com/posts/axtra-studios_axtrastudios-teamcelebrations-employeemilestones-activity-7446871927819763712-ga7R?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGHy_p4BtYwduESRAOeEnH6KPB_azH4ZfXg",
+        "images": [
+          "/images/experience-axtra-studios-milestone-happy-birthday-1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "29650854-1a88-47bb-9f0b-a1bc04a860c0",
+    "company": "Devmate Solutions",
+    "companyUrl": "https://www.devmatesolutions.com/",
+    "position": "Full Stack Developer (Contract · Remote)",
+    "slug": "devmate-solutions",
+    "image": "/images/experience-devmate-solutions-cover.jpg",
+    "isVisible": null,
+    "isCurrent": false,
+    "location": {
+      "city": "Al Mouj, Muscat",
+      "country": "Oman"
+    },
+    "startDate": "2024-09-01",
+    "endDate": "2024-30-11",
+    "summary": "Worked as a Full Stack Developer on a CRM platform, contributing to frontend development, backend integration, and deployment while collaborating with a remote team.",
+    "highlights": [
+      "Developed responsive, mobile-friendly user interfaces using React.js, ensuring a consistent experience across desktop and mobile devices.",
+      "Integrated REST APIs and implemented efficient state management to enable secure and reliable data flow between frontend and backend.",
+      "Contributed to the development of a CRM platform supporting wholesale sales, inventory management, customer records, and financial reporting.",
+      "Strengthened full-stack development skills by working across frontend, backend, database, and deployment workflows.",
+      "Participated in deploying and maintaining applications on cloud platforms, including Azure, Google Cloud Platform (GCP), and Railway.",
+      "Collaborated with remote team members using Git and GitHub, following code review and version control best practices.",
+      "Fixed application bugs, improved UI consistency, and optimized overall application performance."
+    ],
+    "milestones": []
+  },
+  {
+    "_id": "83317b70-0afc-4d81-8f9d-43fe03ac5d7e",
+    "company": "Side Project",
+    "companyUrl": null,
+    "position": "Full Stack Developer",
+    "slug": "side-project",
+    "image": null,
+    "isVisible": false,
+    "isCurrent": false,
+    "location": null,
+    "startDate": null,
+    "endDate": null,
+    "summary": null,
+    "highlights": [],
+    "milestones": []
+  },
+  {
+    "_id": "b82b1fe5-35ef-4a26-a018-e05eb470faa6",
+    "company": "Fista Solution",
+    "companyUrl": "https://www.fistasolutions.com",
+    "position": "MERN Stack Developer Intern",
+    "slug": "fista-solution",
+    "image": "/images/experience-fista-solution-cover.jpg",
+    "isVisible": true,
+    "isCurrent": false,
+    "location": {
+      "city": "Faisalabad",
+      "country": "Pakistan"
+    },
+    "startDate": "2024-06-01",
+    "endDate": "2024-08-30",
+    "summary": "I started my software development career at Fista Solutions, gaining practical experience in full-stack web development by working on real-world projects under the guidance of senior engineers.",
+    "highlights": [
+      "Assisted in developing and maintaining web application pages using HTML, CSS, JavaScript, and React.js.",
+      "Built small frontend features, fixed UI issues, and improved responsive layouts across multiple screens.",
+      "Integrated frontend components with backend APIs and learned data flow between client and server.",
+      "Participated in debugging, testing, and resolving application issues to improve code quality.",
+      "Collaborated with senior developers during code reviews and followed software development best practices."
+    ],
+    "milestones": []
+  }
+]
