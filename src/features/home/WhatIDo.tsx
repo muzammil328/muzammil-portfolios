@@ -65,17 +65,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 /* Each tech icon orbits one of the two dashed rings. Radii are viewport-scaled
    (vw, clamped) so the orbit shrinks to fit on narrow screens instead of
-   overflowing the card. Durations are staggered per item and delays spread
-   evenly (in thirds of a circle) so icons on the same ring don't bunch up. */
-const ORBIT_RADII = [
-  'clamp(100px, 27.5vw, 215px)',
-  'clamp(100px, 27.5vw, 215px)',
-  'clamp(100px, 27.5vw, 215px)',
-  'clamp(65px, 18vw, 140px)',
-  'clamp(65px, 18vw, 140px)',
-  'clamp(65px, 18vw, 140px)',
-];
-const ORBIT_DURATIONS = [26, 31, 36, 18, 22, 27];
+   overflowing the card. Items alternate between the outer and inner ring;
+   within a ring, durations/delays are derived from the item's position among
+   its ring-mates (not a fixed-length table) so any number of skills spreads
+   evenly around the ring instead of stacking on top of earlier items. */
+const ORBIT_RING_RADII = ['clamp(100px, 27.5vw, 215px)', 'clamp(65px, 18vw, 140px)'];
+const ORBIT_RING_BASE_DURATION = [26, 18];
 
 /* Below this width the card's two-column layout collapses to a single
    column (see the `max-[900px]:grid-cols-1` card class below) — the pinned
@@ -255,8 +250,7 @@ export default function WhatIDo() {
           const summary = service.summary;
           const featuredSkill = service.skills.find((skill) => skill.featured && skill.icon);
           const orbitingSkills = service.skills
-            .filter((skill) => skill !== featuredSkill)
-            .slice(0, 6);
+            .filter((skill) => skill !== featuredSkill);
 
           return (
             <div
@@ -328,7 +322,7 @@ export default function WhatIDo() {
 
                 {/* Actions */}
                 <div className="mt-auto pt-3 flex flex-wrap items-center gap-2">
-                  <Button asChild>
+                  <Button asChild className='rounded-full' size="lg">
                     <Link
                       href={`/services/${service.slug}`}
                       aria-label={`View work for ${service.name}`}
@@ -338,7 +332,7 @@ export default function WhatIDo() {
                       <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                     </Link>
                   </Button>
-                  <Button asChild variant="outline">
+                  <Button asChild variant="outline"  className='rounded-full' size="lg">
                     <Link
                       href={`/contact?${new URLSearchParams({ service: service.name, source: 'home' }).toString()}`}
                     >
@@ -369,16 +363,18 @@ export default function WhatIDo() {
                   )}
 
                   {orbitingSkills.map((skill, i) => {
-                    const ringPosition = i % 3;
-                    const duration = ORBIT_DURATIONS[i];
-                    const delay = -(ringPosition / 3) * duration;
+                    const ring = i % 2;
+                    const indexInRing = Math.floor(i / 2);
+                    const itemsInRing = Math.ceil((orbitingSkills.length - ring) / 2);
+                    const duration = ORBIT_RING_BASE_DURATION[ring];
+                    const delay = -(indexInRing / itemsInRing) * duration;
                     return (
                       <div
                         key={skill.name}
                         className="orbit-item"
                         style={
                           {
-                            '--orbit-radius': ORBIT_RADII[i],
+                            '--orbit-radius': ORBIT_RING_RADII[ring],
                             animationName: i % 2 === 0 ? 'orbit' : 'orbit-reverse',
                             animationDuration: `${duration}s`,
                             animationDelay: `${delay}s`,

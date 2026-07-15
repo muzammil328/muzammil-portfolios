@@ -43,56 +43,56 @@
     "skills": [
       {
         "name": "HTML5",
-        "icon": "/images/skill-html5.svg"
+        "icon": "/skills/frontend/html5.svg"
       },
       {
         "name": "CSS3",
-        "icon": "/images/skill-css3.svg"
+        "icon": "/skills/frontend/css3.svg"
       },
       {
         "name": "SCSS",
-        "icon": "/images/skill-scss.svg"
+        "icon": "/skills/frontend/scss.svg"
       },
       {
         "name": "Tailwind CSS",
-        "icon": "/images/skill-tailwind-css.png"
+        "icon": "/skills/frontend/tailwind-css.png"
       },
       {
         "name": "Shadcn UI",
-        "icon": "/images/skill-shadcn-ui.svg"
+        "icon": "/skills/frontend/shadcn-ui.svg"
       },
       {
         "name": "Javascript",
-        "icon": "/images/skill-javascript.svg"
+        "icon": "/skills/frontend/javascript.svg"
       },
       {
         "name": "React JS",
-        "icon": "/images/skill-react-js.svg",
+        "icon": "/skills/frontend/react-js.svg",
         "featured": true
       },
       {
         "name": "Next JS",
-        "icon": "/images/skill-next-js.svg"
+        "icon": "/skills/frontend/next-js.svg"
       },
       {
         "name": "Framer Motion",
-        "icon": "/images/skill-framer-motion.svg"
+        "icon": "/skills/frontend/framer-motion.svg"
       },
       {
         "name": "Redux",
-        "icon": "/images/skill-redux.svg"
+        "icon": "/skills/frontend/redux.svg"
       },
       {
         "name": "React Hook Form",
-        "icon": "/images/skill-react-hook-form.svg"
+        "icon": "/skills/frontend/react-hook-form.svg"
       },
       {
         "name": "TanStack React Query",
-        "icon": "/images/skill-tanstack-react-query.svg"
+        "icon": "/skills/frontend/tanstack-react-query.svg"
       },
       {
         "name": "Typescript",
-        "icon": "/images/skill-typescript.svg"
+        "icon": "/skills/frontend/typescript.svg"
       }
     ]
   },
