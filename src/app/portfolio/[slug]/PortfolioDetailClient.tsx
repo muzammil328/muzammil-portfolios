@@ -165,6 +165,7 @@ function Lightbox({
           alt={`Screenshot ${currentIndex + 1}`}
           width={1200}
           height={800}
+          style={{ width: 'auto', height: 'auto' }}
           className="max-h-[90vh] w-auto mx-auto object-contain"
         />
         <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 text-white text-sm">
@@ -301,6 +302,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
             alt={`Screenshot ${imageIndex + 1}`}
             width={width}
             height={height}
+            loading={imageIndex === 0 ? 'eager' : 'lazy'}
             className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
           />
         )}
@@ -418,12 +420,13 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
                           key={i}
                           className="flex items-center gap-2 px-3 py-1.5 bg-secondary/80 text-secondary-foreground rounded-full text-sm border border-border/50 hover:border-primary/50 hover:bg-secondary transition-all"
                         >
-                          {iconUrl && (
+                           {iconUrl && (
                             <Image
                               src={iconUrl}
                               alt={skill.name}
                               width={16}
                               height={16}
+                              style={{ width: 'auto', height: 'auto' }}
                               className="object-contain"
                             />
                           )}
@@ -446,6 +449,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
                       src={imageUrl}
                       alt={project.title}
                       fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover shadow-lg border border-border/30"
                       priority
                     />
