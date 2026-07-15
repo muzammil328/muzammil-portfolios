@@ -224,5 +224,5 @@ function Badge({
   );
 }
 
-export { Badge, badgeBase as badgeVariants };
+export { Badge };
 export type { BadgeProps, BadgeColor, BadgeStyle };

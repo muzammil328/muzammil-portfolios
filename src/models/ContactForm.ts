@@ -1,12 +1,5 @@
 import mongoose, { Schema, type Model } from 'mongoose';
 
-export type ContactLeadSource =
-  | 'home'
-  | 'service-detail'
-  | 'portfolio-detail'
-  | 'contact'
-  | 'other';
-
 export interface ContactFormRecord {
   fname: string;
   lname: string;

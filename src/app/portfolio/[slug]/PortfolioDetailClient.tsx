@@ -460,33 +460,24 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
             <h2 className="text-2xl font-bold">Project Screenshots</h2>
           </div>
 
-          {orderedSliderImages.length === 1 ? (
-            <div className="grid grid-cols-1">{renderScreenshotTile(0, '')}</div>
-          ) : orderedSliderImages.length === 2 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-              {renderScreenshotTile(0, '', 900, 700)}
-              {renderScreenshotTile(1, '', 900, 700)}
-            </div>
-          ) : orderedSliderImages.length < 5 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 md:gap-6 items-start">
-              {renderScreenshotTile(0, 'lg:col-span-7', 1200, 760)}
-              {renderScreenshotTile(1, 'lg:col-span-5', 960, 760)}
-              {orderedSliderImages[2] && renderScreenshotTile(2, 'lg:col-span-5', 960, 760)}
-              {orderedSliderImages[3] && renderScreenshotTile(3, 'lg:col-span-7', 1200, 760)}
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 md:gap-6 items-start">
-              {renderScreenshotTile(0, 'lg:col-span-4', 900, 760)}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-6">
+  {/* Left Column */}
+  <div className="grid gap-5 md:gap-6">
+    {renderScreenshotTile(0, '', 900, 760)}
+    {renderScreenshotTile(1, '', 900, 760)}
+  </div>
 
-              <div className="lg:col-span-4 grid grid-cols-1 gap-5 md:gap-6">
-                {renderScreenshotTile(1, '', 900, 760)}
-                {renderScreenshotTile(2, '', 900, 760)}
-              </div>
-              {renderScreenshotTile(3, 'lg:col-span-4', 900, 760)}
-              {renderScreenshotTile(4, 'lg:col-span-8', 800, 760)}
-              {renderScreenshotTile(5, 'lg:col-span-4', 900, 760)}
-            </div>
-          )}
+  {/* Middle Column - spans both rows */}
+  <div className="row-span-2 h-full">
+    {renderScreenshotTile(2, "h-full", 1200, 1600)}
+  </div>
+
+  {/* Right Column */}
+  <div className="grid gap-5 md:gap-6">
+    {renderScreenshotTile(3, '', 900, 760)}
+    {renderScreenshotTile(4, '', 900, 760)}
+  </div>
+</div>
         </section>
       )}
 

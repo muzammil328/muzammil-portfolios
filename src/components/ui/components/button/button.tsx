@@ -252,7 +252,7 @@ function Button({
   );
 }
 
-export { Button, buttonVariants };
+export { Button };
 
 // ─── Usage Examples ───────────────────────────────────────────────────────────
 //

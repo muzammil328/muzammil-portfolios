@@ -1,3 +1,3 @@
 export * from './badge';
-export { Button, buttonVariants } from './button';
+export { Button } from './button';
 export * from './feedback';
