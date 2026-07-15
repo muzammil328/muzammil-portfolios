@@ -478,10 +478,8 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
     {renderScreenshotTile(1, '', 900, 760)}
   </div>
 
-  {/* Middle Column - spans both rows */}
-  <div className="row-span-2 h-full">
-    {renderScreenshotTile(2, 'h-full', 1200, 1600, true)}
-  </div>
+  {/* Middle Column - stretches to match the row height set by the left/right columns */}
+  {renderScreenshotTile(2, 'h-full min-h-100', 1200, 1600, true)}
 
   {/* Right Column */}
   <div className="grid gap-5 md:gap-6">
