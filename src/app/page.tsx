@@ -1,4 +1,3 @@
-import Metadata from 'next';
 import ContactSection from '@/features/home/ContactSection';
 import Education from '@/features/home/Education';
 import FollowMeBox from '@/features/home/FollowMeBox';
@@ -10,6 +9,7 @@ import ProfessionalJourney from '@/features/home/ProfessionalJourney';
 import WhatIDo from '@/features/home/WhatIDo';
 import { fetchProfile } from '@/services/profileService';
 import { Suspense } from 'react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Muzammil Safdar | Full Stack Developer',

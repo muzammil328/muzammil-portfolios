@@ -8,10 +8,10 @@ import { PortableTextBlock } from '@portabletext/react';
 type RawSkill = {
   name: string;
   icon: string | null;
-  color: string | null;
-  proficiency: string | null;
-  yearsUsed: number | null;
-  featured: boolean | null;
+  color?: string | null;
+  proficiency?: string | null;
+  yearsUsed?: number | null;
+  featured?: boolean | null;
 };
 
 function toServiceSkill(skill: RawSkill): ServiceTypes['skills'][number] {
