@@ -264,6 +264,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
     colSpanClass: string,
     width = 1200,
     height = 800,
+    fillHeight = false,
   ) => {
     const image = orderedSliderImages[imageIndex];
     const imageUrl = image;
@@ -286,13 +287,23 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
         className={`relative overflow-hidden rounded-2xl group ${colSpanClass}`}
         onClick={() => openLightbox(sliderImageUrls, imageIndex)}
       >
-        <Image
-          src={imageUrl}
-          alt={`Screenshot ${imageIndex + 1}`}
-          width={width}
-          height={height}
-          className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
-        />
+        {fillHeight ? (
+          <Image
+            src={imageUrl}
+            alt={`Screenshot ${imageIndex + 1}`}
+            fill
+            sizes="(max-width: 1024px) 100vw, 33vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        ) : (
+          <Image
+            src={imageUrl}
+            alt={`Screenshot ${imageIndex + 1}`}
+            width={width}
+            height={height}
+            className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+          />
+        )}
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition-colors flex items-center justify-center">
           <ZoomInIcon />
         </div>
@@ -469,7 +480,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
 
   {/* Middle Column - spans both rows */}
   <div className="row-span-2 h-full">
-    {renderScreenshotTile(2, "h-full", 1200, 1600)}
+    {renderScreenshotTile(2, 'h-full', 1200, 1600, true)}
   </div>
 
   {/* Right Column */}

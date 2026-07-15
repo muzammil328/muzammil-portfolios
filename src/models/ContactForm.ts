@@ -8,7 +8,7 @@ export interface ContactFormRecord {
   message: string;
   project_reference?: string | null;
   page_path?: string | null;
-  lead_source?: ContactLeadSource | null;
+  lead_source?: string | null;
   lead_score?: number | null;
   lead_band?: string | null;
   lead_priority?: string | null;
