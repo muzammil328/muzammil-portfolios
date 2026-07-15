@@ -78,7 +78,7 @@
     "position": "Full Stack Developer (Contract · Remote)",
     "slug": "devmate-solutions",
     "image": "/images/experience-devmate-solutions-cover.jpg",
-    "isVisible": null,
+    "isVisible": true,
     "isCurrent": false,
     "location": {
       "city": "Al Mouj, Muscat",

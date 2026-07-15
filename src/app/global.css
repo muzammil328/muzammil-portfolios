@@ -255,3 +255,26 @@ ol.list-decimal {
 .prose h4 {
   @apply text-4xl font-bold mb-6;
 }
+/* Things Tailwind utilities can't cleanly express: dotted background texture with mask, and circular orbit motion for the tech icons */
+  .dot-texture{
+    background-image: radial-gradient(rgba(108,92,231,.16) 1px, transparent 1px);
+    background-size: 22px 22px;
+    -webkit-mask-image: linear-gradient(90deg,#000,transparent 78%);
+    mask-image: linear-gradient(90deg,#000,transparent 78%);
+  }
+  /* Rotate the point around the center, then counter-rotate so the icon itself stays upright. */
+  @keyframes orbit {
+    from { transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg); }
+  }
+  @keyframes orbit-reverse {
+    from { transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg); }
+    to   { transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg); }
+  }
+  .orbit-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }

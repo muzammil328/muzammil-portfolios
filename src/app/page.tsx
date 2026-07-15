@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import Metadata from 'next';
 import ContactSection from '@/features/home/ContactSection';
 import Education from '@/features/home/Education';
 import FollowMeBox from '@/features/home/FollowMeBox';
@@ -46,7 +46,6 @@ export default async function page() {
         <HeroSection profile={profile} />
         <FollowMeBox />
       </div>
-
       <main>
         {/* <AboutMe /> */}
         <div className="grid lg:grid-cols-2 gap-4 items-start">
@@ -56,7 +55,7 @@ export default async function page() {
         <WhatIDo />
         <HorizontalProjects />
         <Suspense>
-          <ContactSection />
+        <ContactSection />
         </Suspense>
       </main>
 
