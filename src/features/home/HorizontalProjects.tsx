@@ -91,7 +91,7 @@ export default function HorizontalProjects() {
       className="relative w-full bg-background overflow-hidden flex flex-col h-auto md:h-screen md:justify-center"
     >
       <div className="container mx-auto px-4 md:px-10 mb-8 md:mb-12 md:absolute md:top-10 md:left-0 z-10">
-        <h3 className="text-4xl md:text-5xl font-bold mb-6">Recent Projects</h3>
+        <h3 className="text-4xl md:text-5xl font-bold my-6">Recent Projects</h3>
         <p className="text-muted-foreground text-lg">
           Explore a collection of my latest work, ranging from complex web applications to creative
           websites.

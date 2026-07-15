@@ -27,8 +27,8 @@ const ORBIT_RECT_SIZES = [
    extents, tuned independently from the desktop sizes rather than swapped,
    since the desktop height clamp was too narrow to serve as a mobile width. */
 const ORBIT_RECT_SIZES_MOBILE = [
-  { w: 'clamp(140px, 44vw, 200px)', h: 'clamp(160px, 50vw, 260px)' },
-  { w: 'clamp(90px, 30vw, 130px)', h: 'clamp(110px, 34vw, 170px)' },
+  { w: 'clamp(90px, 34vw, 170px)', h: 'clamp(110px, 40vw, 200px)' },
+  { w: 'clamp(65px, 25vw, 125px)', h: 'clamp(80px, 29vw, 145px)' },
 ];
 const ORBIT_RING_BASE_DURATION = [26, 18];
 const MOBILE_BREAKPOINT = 640;
@@ -58,9 +58,13 @@ export default function WhatIDo() {
   const uniqueSkills = allSkills.filter(
     (skill, index) => allSkills.findIndex((s) => s.name === skill.name) === index,
   );
-  const centerSkills = CENTER_SKILL_NAMES.map((name) =>
-    uniqueSkills.find((skill) => skill.name === name),
-  ).filter((skill): skill is NonNullable<typeof skill> => Boolean(skill));
+  /* On mobile all skills orbit together with no dedicated center group —
+     only desktop pulls the headline skills out into a fixed center cluster. */
+  const centerSkills = isMobile
+    ? []
+    : CENTER_SKILL_NAMES.map((name) => uniqueSkills.find((skill) => skill.name === name)).filter(
+        (skill): skill is NonNullable<typeof skill> => Boolean(skill),
+      );
   const orbitingSkills = uniqueSkills.filter((skill) => !centerSkills.includes(skill));
 
   return (
@@ -97,7 +101,7 @@ export default function WhatIDo() {
         <div
           className={
             isMobile
-              ? 'relative rounded-4xl overflow-hidden backdrop-blur-[18px] shadow-card dark:shadow-card-dark min-h-[clamp(460px,130vw,680px)]'
+              ? 'relative rounded-4xl overflow-hidden backdrop-blur-[18px] shadow-card dark:shadow-card-dark min-h-[clamp(340px,96vw,440px)]'
               : 'relative rounded-4xl overflow-hidden backdrop-blur-[18px] shadow-card dark:shadow-card-dark sm:min-h-125 md:min-h-137.5'
           }
         >
@@ -108,7 +112,7 @@ export default function WhatIDo() {
             <div
               className={
                 isMobile
-                  ? 'orbit-stage relative min-h-[clamp(380px,105vw,580px)] w-full grid place-items-center'
+                  ? 'orbit-stage relative min-h-[clamp(280px,82vw,380px)] w-full grid place-items-center'
                   : 'orbit-stage relative min-h-[clamp(200px,38vw,340px)] w-full grid place-items-center'
               }
               aria-label="Technology stack"
@@ -116,31 +120,31 @@ export default function WhatIDo() {
               <div
                 className={
                   isMobile
-                    ? 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[clamp(280px,88vw,400px)] h-[clamp(320px,100vw,520px)] border border-dashed border-brand/[.22] rounded-3xl'
+                    ? 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[clamp(180px,68vw,340px)] h-[clamp(220px,80vw,400px)] border border-dashed border-brand/[.22] rounded-3xl'
                     : 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[clamp(280px,68vw,960px)] h-[clamp(160px,36vw,380px)] border border-dashed border-brand/[.22] rounded-3xl'
                 }
               ></div>
               <div
                 className={
                   isMobile
-                    ? 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[clamp(180px,60vw,260px)] h-[clamp(220px,68vw,340px)] border border-dashed border-brand/[.22] rounded-2xl'
+                    ? 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[clamp(130px,50vw,250px)] h-[clamp(160px,58vw,290px)] border border-dashed border-brand/[.22] rounded-2xl'
                     : 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[clamp(180px,44vw,600px)] h-[clamp(100px,24vw,240px)] border border-dashed border-brand/[.22] rounded-2xl'
                 }
               ></div>
 
               {centerSkills.length > 0 && (
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-1 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 max-w-[min(85vw,320px)]">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-nowrap items-center justify-center gap-1 sm:gap-2">
                   {centerSkills.map((skill) => (
                     <div
                       key={skill.name}
-                      className="group relative flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-2xl bg-white dark:bg-[#1b2030] border border-[#e7e9ef] dark:border-[#2b3142] shadow-[0_14px_35px_rgba(26,33,57,.10)]"
+                      className="group relative flex items-center justify-center w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1b2030] border border-[#e7e9ef] dark:border-[#2b3142] shadow-[0_14px_35px_rgba(26,33,57,.10)] shrink-0"
                     >
                       <Image
                         src={skill.icon as string}
                         alt={skill.name}
                         width={40}
                         height={40}
-                        className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9 object-contain"
+                        className="w-4.5 h-4.5 sm:w-7 sm:h-7 md:w-9 md:h-9 object-contain"
                       />
                       <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-foreground px-2 py-1 text-xs font-medium text-background opacity-0 transition-opacity duration-150 group-hover:opacity-100">
                         {skill.name}
