@@ -471,22 +471,19 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
             <h2 className="text-2xl font-bold">Project Screenshots</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-6">
-  {/* Left Column */}
-  <div className="grid gap-5 md:gap-6">
-    {renderScreenshotTile(0, '', 900, 760)}
-    {renderScreenshotTile(1, '', 900, 760)}
-  </div>
-
-  {/* Middle Column - stretches to match the row height set by the left/right columns */}
-  {renderScreenshotTile(2, 'h-full min-h-100', 1200, 1600, true)}
-
-  {/* Right Column */}
-  <div className="grid gap-5 md:gap-6">
-    {renderScreenshotTile(3, '', 900, 760)}
-    {renderScreenshotTile(4, '', 900, 760)}
-  </div>
-</div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-5 md:gap-6">
+            {renderScreenshotTile(0, 'lg:col-start-1 lg:row-start-1', 900, 760)}
+            {renderScreenshotTile(1, 'lg:col-start-1 lg:row-start-2', 900, 760)}
+            {renderScreenshotTile(
+              2,
+              'lg:col-start-2 lg:row-start-1 lg:row-span-2 h-full min-h-100',
+              1200,
+              1600,
+              true,
+            )}
+            {renderScreenshotTile(3, 'lg:col-start-3 lg:row-start-1', 900, 760)}
+            {renderScreenshotTile(4, 'lg:col-start-3 lg:row-start-2', 900, 760)}
+          </div>
         </section>
       )}
 
