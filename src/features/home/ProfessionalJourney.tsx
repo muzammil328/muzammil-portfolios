@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { getVisibleExperiences } from '@/services/experienceService';
 import { ExperienceItem } from '@/types/Experience';
+import BoldText from '@/components/BoldText';
 
 function formatYearMonth(value?: string): string {
   if (!value) return '';
@@ -105,7 +106,9 @@ export default function ProfessionalJourney() {
                         {(exp.highlights || []).map((achievement, achIndex) => (
                           <div key={achIndex} className="flex items-center gap-3">
                             <span className="text-primary shrink-0">▹</span>
-                            <span className="text-foreground text-sm">{achievement}</span>
+                            <span className="text-foreground text-sm">
+                              <BoldText text={achievement} />
+                            </span>
                           </div>
                         ))}
                       </div>

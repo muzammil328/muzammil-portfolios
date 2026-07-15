@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PortfolioCard from '@/components/PortfolioCard';
 import ExperienceMilestones from '@/components/ExperienceMilestones';
+import BoldText from '@/components/BoldText';
 import {
   getExperienceBySlug,
   getProjectsByExperienceSlug,
@@ -111,7 +112,9 @@ export default async function ExperienceDetailPage({
                     {experience.highlights.map((highlight, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <span className="mt-2 w-1.5 h-1.5 rounded-full bg-foreground/50 shrink-0" />
-                        <span className="text-lg">{highlight}</span>
+                        <span className="text-lg">
+                          <BoldText text={highlight} />
+                        </span>
                       </li>
                     ))}
                   </ul>
