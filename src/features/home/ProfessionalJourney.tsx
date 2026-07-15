@@ -48,7 +48,7 @@ export default function ProfessionalJourney() {
               JOURNEY
             </h2>
           </div>
-          <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 text-foreground">
+          <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 text-foreground">
             Professional Journey
           </h3>
           <p className="text-base md:text-lg text-muted-foreground">

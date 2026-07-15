@@ -14,14 +14,14 @@ function getSocialIcon(network: string) {
   const lower = network?.toLowerCase() || '';
 
   if (lower.includes('linkedin')) {
-    return <LinkedInIcon />;
+    return <LinkedInIcon size={18} />;
   }
 
   if (lower.includes('github')) {
-    return <GitHubIcon />;
+    return <GitHubIcon size={18} />;
   }
 
-  return <GitHubIcon />;
+  return <GitHubIcon size={18} />;
 }
 
 export default function FollowMeBox() {

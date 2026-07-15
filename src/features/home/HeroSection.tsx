@@ -92,11 +92,11 @@ export default function HeroSection({ profile }: HeroSectionProps) {
 
       <div className="flex flex-col lg:flex-row items-center lg:gap-24 gap-12">
         <motion.div style={{ y: textY }} className="w-full lg:w-2/3 md:mt-12 sm:mt-8 mt-4 z-10">
-          <span className="inline-block text-foreground text-4xl">
+          <span className="inline-block text-foreground text-3xl sm:text-4xl">
             I&apos;m {displayProfile.name}
           </span>
 
-          <h1 className="text-4xl sm:text-5xl md:text-[6rem] leading-tight font-bold">
+          <h1 className="text-5xl sm:text-6xl md:text-[5rem] leading-tight font-bold">
             {displayProfile.label}
             <br />
             in Pakistan
@@ -133,7 +133,11 @@ export default function HeroSection({ profile }: HeroSectionProps) {
                       aria-label={social.network || 'Social profile'}
                       className="w-9 h-9 p-1 flex items-center justify-center rounded-full border border-border"
                     >
-                      {lower.includes('linkedin') ? <LinkedInIcon /> : <GitHubIcon />}
+                      {lower.includes('linkedin') ? (
+                        <LinkedInIcon size={18} />
+                      ) : (
+                        <GitHubIcon size={18} />
+                      )}
                     </Link>
                   );
                 })}
@@ -152,8 +156,8 @@ export default function HeroSection({ profile }: HeroSectionProps) {
               alt={displayProfile.name}
               width={480}
               height={480}
-              sizes="(max-width: 640px) 280px, (max-width: 1024px) 360px, 480px"
-              className="w-full max-w-70 sm:max-w-90 lg:max-w-120 h-auto aspect-square object-cover rounded-2xl"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 360px, 480px"
+              className="w-full max-w-md sm:max-w-90 lg:max-w-120 h-auto aspect-square object-cover rounded-2xl"
               priority
               fetchPriority="high"
             />
@@ -164,8 +168,8 @@ export default function HeroSection({ profile }: HeroSectionProps) {
               alt="Portrait"
               width={480}
               height={480}
-              sizes="(max-width: 640px) 280px, (max-width: 1024px) 360px, 480px"
-              className="w-full max-w-70 sm:max-w-90 lg:max-w-120 h-auto aspect-square object-cover rounded-2xl"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 360px, 480px"
+              className="w-full max-w-md sm:max-w-90 lg:max-w-120 h-auto aspect-square object-cover rounded-2xl"
               priority
               fetchPriority="high"
             />

@@ -262,14 +262,16 @@ ol.list-decimal {
     -webkit-mask-image: linear-gradient(90deg,#000,transparent 78%);
     mask-image: linear-gradient(90deg,#000,transparent 78%);
   }
-  /* Rotate the point around the center, then counter-rotate so the icon itself stays upright. */
-  @keyframes orbit {
-    from { transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg); }
-  }
-  @keyframes orbit-reverse {
-    from { transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg); }
-    to   { transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg); }
+  /* Trace the perimeter of a --orbit-w x --orbit-h rectangle centered on the
+     item's start position: corner to corner in a straight line each quarter,
+     so the icon travels the four edges instead of a circular arc. Reversed
+     items use animation-direction: reverse rather than a mirrored keyframe. */
+  @keyframes orbit-rect {
+    0%   { transform: translate(calc(var(--orbit-w) * -1), calc(var(--orbit-h) * -1)); }
+    25%  { transform: translate(var(--orbit-w), calc(var(--orbit-h) * -1)); }
+    50%  { transform: translate(var(--orbit-w), var(--orbit-h)); }
+    75%  { transform: translate(calc(var(--orbit-w) * -1), var(--orbit-h)); }
+    100% { transform: translate(calc(var(--orbit-w) * -1), calc(var(--orbit-h) * -1)); }
   }
   .orbit-item {
     position: absolute;
@@ -277,4 +279,7 @@ ol.list-decimal {
     left: 50%;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+  }
+  .orbit-stage:hover .orbit-item {
+    animation-play-state: paused;
   }

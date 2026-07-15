@@ -15,7 +15,6 @@ export default function Navbar() {
       { label: 'Home', id: '/' },
       { label: 'About', id: '/about' },
       { label: 'Portfolio', id: '/portfolio' },
-      { label: 'Blog', id: 'https://blog.fluxion.dev' },
       { label: 'Contact', id: '/contact' },
     ],
     [],
@@ -27,7 +26,7 @@ export default function Navbar() {
       return;
     }
 
-    // Handle fully external links (e.g. the blog subdomain)
+    // Handle fully external links
     if (sectionId.startsWith('http://') || sectionId.startsWith('https://')) {
       window.open(sectionId, '_blank', 'noopener,noreferrer');
       return;

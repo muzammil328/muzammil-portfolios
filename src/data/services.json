@@ -135,43 +135,24 @@
     "skills": [
       {
         "name": "Node JS",
-        "icon": "/images/skill-node-js.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
+        "icon": "/skills/backend/node-js.svg",
         "featured": true
       },
       {
         "name": "Express JS",
-        "icon": "/images/skill-express-js.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/backend/express-js.svg"
       },
       {
         "name": "Stripe",
-        "icon": "/images/skill-stripe.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/backend/stripe.webp"
       },
       {
         "name": "Cloudinary",
-        "icon": "/images/skill-cloudinary.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/backend/cloudinary.svg"
       },
       {
         "name": "Socket IO",
-        "icon": null,
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/backend/socket-io.svg"
       }
     ]
   },
