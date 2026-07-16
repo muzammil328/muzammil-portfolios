@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { GitHubIcon, UsersIcon, ClockIcon, ExternalLinkIcon } from '@/components/ui';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Badge } from '@/components/ui';
 import { getImageSrc } from '@/utils/getImageSrc';
 import { ProjectCard } from '@/types/Project';
 
@@ -97,17 +96,6 @@ export default function PortfolioCard({ data, index = 0 }: { data: ProjectCard; 
               View Details
             </span>
           </div>
-          {/* Category Badge */}
-          {data.category && (
-            <div className="absolute top-4 left-4">
-              <Badge
-                variant="primary_solid"
-                className="backdrop-blur-md bg-primary hover:bg-primary/90 text-primary-foreground"
-              >
-                {data.category}
-              </Badge>
-            </div>
-          )}
         </Link>
 
         {/* Content Section */}

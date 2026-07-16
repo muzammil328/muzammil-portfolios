@@ -1,12 +1,9 @@
-import { PortableTextBlock } from '@portabletext/react';
-
 export interface ProjectCard {
   _id: string;
   title: string;
   slug: string;
   description: string;
   mainImage: string | null;
-  category?: string;
   company?: string;
   companySlug?: string;
   skills: string[];
@@ -30,7 +27,6 @@ export interface ProjectDetail {
   liveLink: string;
   githubLink: string;
   figmaDesign?: string;
-  category?: string;
   company?: {
     company: string;
     slug: string;
@@ -39,9 +35,8 @@ export interface ProjectDetail {
     name: string;
     icon?: string | null;
   }[];
-  body?: PortableTextBlock[];
+  body?: string;
   relatedProjects?: {
-    category?: string;
     description: string;
     title: string;
     slug: string;

@@ -37,7 +37,7 @@
         "icon": "/skills/deployment/vercel.svg"
       }
     ],
-    "body": [],
+    "body": "## Problem\n\nDevelopers repeatedly rebuild the same SaaS landing page sections — heroes, pricing tables, CTAs, navbars, footers, FAQs, testimonials — from scratch on every project, or hunt through inconsistent component libraries that require heavy setup, CLIs, or npm installs before a single component can be used.\n\n## Solution\n\nStackyard is a website-only, copy-paste UI component library built with Next.js and Tailwind CSS. Every section is browsable by category, previewable live in the browser, and ships as self-contained, dependency-free source code that can be pasted directly into any project — no CLI, no install step, no configuration.\n\n## Key Features\n\n- **Live Component Previews: **Every section renders live in the browser before copying, so developers can see exactly how it looks and behaves.\n- **Categorized Browsing: **Components are organized into hero, pricing, CTA, navbar, footer, FAQ, testimonial, and more, making it fast to find the right section.\n- **Copy-Paste Source Code: **Each component ships as dependency-free, self-contained code — no package installs or CLI setup required.\n- **Free & Pro Tiers: **A free tier covers core components, while a paid Pro tier unlocks the full library for teams that need more coverage.\n\n## Outcome / Results\n\n- **Faster Prototyping: **Reduced the time to assemble a full SaaS landing page from hours to minutes by removing the need to build sections from scratch.\n- **Zero-Dependency Adoption: **Because components are dependency-free, they drop into any Next.js + Tailwind project without version conflicts.\n\n## Key Takeaways / Learnings\n\n- **Component API Design: **Learned how to design components that stay flexible and dependency-free while still looking production-ready out of the box.\n- **Content-Driven Architecture: **Built a scalable pattern for organizing, previewing, and gating large numbers of UI variants behind free/pro access.",
     "relatedProjects": [
       {
         "title": "Treepost AI",
@@ -107,7 +107,7 @@
         "icon": "/skills/frontend/react-js.svg"
       }
     ],
-    "body": [],
+    "body": "## Problem\n\nTeams collecting feedback often rely on generic form tools like Google Forms or Typeform, which lack team-oriented workspaces, rich analytics, and built-in billing — forcing them to stitch together multiple tools just to create, share, and analyze feedback at scale.\n\n## Solution\n\nFeedback Hub is a full-stack SaaS platform for creating feedback forms, sharing them via public links, and analyzing responses in real time. It replaces point solutions with a single modern, team-oriented experience that includes rich analytics, workspace management, and subscription billing.\n\n## Key Features\n\n- **Public Feedback Forms: **Users create feedback forms and share them via public links, no account required for respondents.\n- **Real-Time Analytics: **Responses are analyzed as they arrive, giving teams live visibility into feedback trends instead of static exports.\n- **Workspace Management: **Teams organize forms and responses inside shared workspaces built for collaboration.\n- **Billing & Subscriptions: **Built-in subscription management supports monetizing the platform directly.\n\n## Outcome / Results\n\n- **Consolidated Workflow: **Replaced the need for separate form, analytics, and billing tools with a single connected platform.\n- **Faster Feedback Loops: **Real-time analytics let teams react to feedback trends immediately instead of waiting on manual exports.\n\n## Key Takeaways / Learnings\n\n- **Full-Stack SaaS Architecture: **Gained experience building a complete SaaS product end-to-end, from form builder to billing.\n- **Real-Time Data Pipelines: **Learned to structure real-time analytics so response data updates live without manual refreshes.",
     "relatedProjects": [
       {
         "title": "Real Estate Media Pricing Calculator",
@@ -155,502 +155,7 @@
     "duration": "less-1-month",
     "priority": 2,
     "skills": [],
-    "body": [
-      {
-        "_key": "6be0b8d7d772",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "ef5f888d5590",
-            "_type": "span",
-            "marks": [],
-            "text": "Problem"
-          }
-        ],
-        "markDefs": [],
-        "style": "h2"
-      },
-      {
-        "_key": "82f64aba8c58",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "ef5f888d5590",
-            "_type": "span",
-            "marks": [],
-            "text": "Homeowners struggled to find trusted tree contractors and had no way to compare fair pricing before hiring. Getting quotes meant contacting multiple contractors manually — slow, inconsistent, and unreliable. Unverified contractors, payment disputes, and zero transparency made the whole experience frustrating for both sides."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "daf517eebb29",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "376073e9506b",
-            "_type": "span",
-            "marks": [],
-            "text": "Solution"
-          }
-        ],
-        "markDefs": [],
-        "style": "h2"
-      },
-      {
-        "_key": "19a60c8da742",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "5f0c0dc735e8",
-            "_type": "span",
-            "marks": [],
-            "text": "Treepost AI built a digital marketplace that replaces the entire offline process. Homeowners post once and get instant AI-powered price estimates, browse verified contractors, and pay securely — all in one place. Contractors get qualified local leads, a bidding system, and real-time messaging without chasing clients."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "7da5dc73a78f",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "7637d9c32ef2",
-            "_type": "span",
-            "marks": [],
-            "text": "Key Features"
-          }
-        ],
-        "markDefs": [],
-        "style": "h2"
-      },
-      {
-        "_key": "1530c4e0b23a",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "d4be394a6583",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "AI-Powered Price Estimates: "
-          },
-          {
-            "_key": "d6201c8efd48",
-            "_type": "span",
-            "marks": [],
-            "text": "Homeowners receive instant project estimates using AI with up to 95% pricing accuracy before reviewing contractor bids."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "14332e75052f",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "76ae603f595e",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "Job Posting System: "
-          },
-          {
-            "_key": "2d5e930be1b6",
-            "_type": "span",
-            "marks": [],
-            "text": "Users can post jobs with detailed descriptions, photos, and videos to help contractors assess project scope accurately."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "b3d60be11f7b",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "53843f359952",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "Contractor Verification: "
-          },
-          {
-            "_key": "f406c04c74ad",
-            "_type": "span",
-            "marks": [],
-            "text": "Contractors must submit licenses, insurance, and WSIB documentation before approval, ensuring a trusted service network."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "65b1e659d2dc",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "12ef57b96a8e",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "Competitive Bidding Platform: "
-          },
-          {
-            "_key": "e0a9917701e8",
-            "_type": "span",
-            "marks": [],
-            "text": "Verified contractors browse available jobs and submit bids, allowing homeowners to compare pricing and choose the best fit."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "18a7783e0867",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "76cdd57045db",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "Real-Time Messaging:"
-          },
-          {
-            "_key": "9f91b20ce79c",
-            "_type": "span",
-            "marks": [],
-            "text": " Built-in messaging enables direct communication between homeowners and contractors for faster decisions and better coordination."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "12a33b1ebb10",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "4bcddf86bad0",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "Protected Payment System: "
-          },
-          {
-            "_key": "5224f2a06b99",
-            "_type": "span",
-            "marks": [],
-            "text": "Secure payment handling protects both parties by ensuring safe transactions throughout the project lifecycle."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "afbcb75aebaf",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "9d5d9a63686f",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "Admin Dashboard: "
-          },
-          {
-            "_key": "9d2b640b48ef",
-            "_type": "span",
-            "marks": [],
-            "text": "Admins manage users, contractor approvals, analytics, platform reports, and AI feedback improvements from a centralized dashboard."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "09ebb227da54",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "07ff5be9ca7b",
-            "_type": "span",
-            "marks": [],
-            "text": "Outcome / Results"
-          }
-        ],
-        "markDefs": [],
-        "style": "h2"
-      },
-      {
-        "_key": "c8ef6567486c",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "7557f7544c84",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "95% AI Estimate Accuracy: "
-          },
-          {
-            "_key": "7578aaf3c513",
-            "_type": "span",
-            "marks": [],
-            "text": "The pricing engine provided highly accurate instant estimates, reducing uncertainty before contractor selection."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "ac4c89d576c4",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "9638216ba48c",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "15,000+ Community Members: "
-          },
-          {
-            "_key": "8d89a23542d7",
-            "_type": "span",
-            "marks": [],
-            "text": "The platform successfully built a strong network of homeowners and verified contractors across the Canadian market."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "4d5d3d2e760a",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "671648affabc",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "98% Customer Satisfaction Rate: "
-          },
-          {
-            "_key": "ac4ebea2ee1b",
-            "_type": "span",
-            "marks": [],
-            "text": "Transparent pricing, verified professionals, and secure workflows significantly improved user trust and satisfaction."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "8d3b2b22f47e",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "59252a8274a3",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "100% Verified Contractor Network: "
-          },
-          {
-            "_key": "def298e0243f",
-            "_type": "span",
-            "marks": [],
-            "text": "Strict contractor verification ensured all service providers met professional and legal compliance standards."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "3039a23fe7c0",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "2391b28ab68f",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "Faster Hiring Workflow:"
-          },
-          {
-            "_key": "11588bea1375",
-            "_type": "span",
-            "marks": [],
-            "text": " AI estimates and bidding reduced the time required to find and hire trusted contractors compared to traditional manual processes."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "b6b96d658d30",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "af0b5e2a1d38",
-            "_type": "span",
-            "marks": [],
-            "text": "Key Takeaways / Learnings"
-          }
-        ],
-        "markDefs": [],
-        "style": "h2"
-      },
-      {
-        "_key": "14c74334b617",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "58e7ddd27573",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "Advanced React Architecture: "
-          },
-          {
-            "_key": "ddd5f2f97ea4",
-            "_type": "span",
-            "marks": [],
-            "text": "Improved frontend scalability by managing complex multi-role dashboards and reusable component systems."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "b89998c26cd9",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "c524d068d2ce",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "Pixel-Perfect UI Development: "
-          },
-          {
-            "_key": "61ef6eb54e5e",
-            "_type": "span",
-            "marks": [],
-            "text": "Strengthened expertise in building highly polished responsive interfaces across all device sizes."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "92ef5723b98d",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "e800fcf8704b",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "Real-Time System Design: "
-          },
-          {
-            "_key": "f02c4a8d5c2f",
-            "_type": "span",
-            "marks": [],
-            "text": "Learned how to structure real-time messaging and notifications for seamless user communication."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "0a2d85d2cb66",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "b38ea5ef526e",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "Complex State Management: "
-          },
-          {
-            "_key": "709299844b46",
-            "_type": "span",
-            "marks": [],
-            "text": "Handled bidding workflows, contractor verification states, and AI estimate feedback flows efficiently."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "7a42907e18c6",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "04b4d40173ff",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "AI + User Feedback Loops: "
-          },
-          {
-            "_key": "d13de092c80f",
-            "_type": "span",
-            "marks": [],
-            "text": "Gained experience integrating AI-generated estimates with user feedback systems for continuous platform improvement."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "41ba76afc129",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "2b8265c32e0a",
-            "_type": "span",
-            "marks": [
-              "strong"
-            ],
-            "text": "Role-Based Frontend Access: "
-          },
-          {
-            "_key": "5753fa55bb68",
-            "_type": "span",
-            "marks": [],
-            "text": "Built secure and intuitive interfaces for homeowners, contractors, and admins with different access levels."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      }
-    ],
+    "body": "## Problem\n\nHomeowners struggled to find trusted tree contractors and had no way to compare fair pricing before hiring. Getting quotes meant contacting multiple contractors manually — slow, inconsistent, and unreliable. Unverified contractors, payment disputes, and zero transparency made the whole experience frustrating for both sides.\n\n## Solution\n\nTreepost AI built a digital marketplace that replaces the entire offline process. Homeowners post once and get instant AI-powered price estimates, browse verified contractors, and pay securely — all in one place. Contractors get qualified local leads, a bidding system, and real-time messaging without chasing clients.\n\n## Key Features\n\n- **AI-Powered Price Estimates: **Homeowners receive instant project estimates using AI with up to 95% pricing accuracy before reviewing contractor bids.\n- **Job Posting System: **Users can post jobs with detailed descriptions, photos, and videos to help contractors assess project scope accurately.\n- **Contractor Verification: **Contractors must submit licenses, insurance, and WSIB documentation before approval, ensuring a trusted service network.\n- **Competitive Bidding Platform: **Verified contractors browse available jobs and submit bids, allowing homeowners to compare pricing and choose the best fit.\n- **Real-Time Messaging:** Built-in messaging enables direct communication between homeowners and contractors for faster decisions and better coordination.\n- **Protected Payment System: **Secure payment handling protects both parties by ensuring safe transactions throughout the project lifecycle.\n- **Admin Dashboard: **Admins manage users, contractor approvals, analytics, platform reports, and AI feedback improvements from a centralized dashboard.\n\n## Outcome / Results\n\n- **95% AI Estimate Accuracy: **The pricing engine provided highly accurate instant estimates, reducing uncertainty before contractor selection.\n- **15,000+ Community Members: **The platform successfully built a strong network of homeowners and verified contractors across the Canadian market.\n- **98% Customer Satisfaction Rate: **Transparent pricing, verified professionals, and secure workflows significantly improved user trust and satisfaction.\n- **100% Verified Contractor Network: **Strict contractor verification ensured all service providers met professional and legal compliance standards.\n- **Faster Hiring Workflow:** AI estimates and bidding reduced the time required to find and hire trusted contractors compared to traditional manual processes.\n\n## Key Takeaways / Learnings\n\n- **Advanced React Architecture: **Improved frontend scalability by managing complex multi-role dashboards and reusable component systems.\n- **Pixel-Perfect UI Development: **Strengthened expertise in building highly polished responsive interfaces across all device sizes.\n- **Real-Time System Design: **Learned how to structure real-time messaging and notifications for seamless user communication.\n- **Complex State Management: **Handled bidding workflows, contractor verification states, and AI estimate feedback flows efficiently.\n- **AI + User Feedback Loops: **Gained experience integrating AI-generated estimates with user feedback systems for continuous platform improvement.\n- **Role-Based Frontend Access: **Built secure and intuitive interfaces for homeowners, contractors, and admins with different access levels.",
     "relatedProjects": [
       {
         "title": "DTF Printing Customer Portal",
@@ -724,7 +229,7 @@
         "icon": "/skills/backend/express-js.svg"
       }
     ],
-    "body": [],
+    "body": "## Problem\n\nTeams managing multiple client projects often struggle with scattered onboarding steps, delayed status visibility, and disconnected communication tools — slowing down both project delivery and the first impression new clients get during onboarding.\n\n## Solution\n\nNova Exordium is an all-in-one platform designed to streamline project management and accelerate customer onboarding. It offers real-time dashboards, customizable templates, smart notifications, and collaborative tools that keep teams and clients aligned from day one.\n\n## Key Features\n\n- **Real-Time Dashboards: **Project status and progress update live, giving teams and clients shared visibility without manual status updates.\n- **Customizable Templates: **Onboarding and project templates can be tailored per client, reducing repetitive setup work.\n- **Smart Notifications: **Automated notifications keep team members and clients informed of key milestones and changes.\n- **Real-Time Messaging: **Built-in messaging (Socket.IO) enables direct communication without leaving the platform.\n\n## Outcome / Results\n\n- **Faster Client Onboarding: **Customizable templates and automated notifications reduced the manual steps needed to onboard a new client.\n- **Improved Team Productivity: **Centralized dashboards and messaging cut down on status-update overhead across the team.\n\n## Key Takeaways / Learnings\n\n- **Real-Time System Design: **Learned to structure Socket.IO-based real-time updates across dashboards and messaging simultaneously.\n- **Multi-Role Collaboration Tools: **Built collaborative features that stay coherent across different team and client roles.",
     "relatedProjects": [
       {
         "title": "Insight Carrier",
@@ -835,7 +340,7 @@
         "icon": "/skills/deployment/vercel.svg"
       }
     ],
-    "body": [],
+    "body": "## Problem\n\nURBAN DTF & T-SHIRTS relied on manual communication to collect designs, configure garment orders, and track production — a slow, error-prone process that made it hard to scale order volume or give customers visibility into their order status.\n\n## Solution\n\nUrban DTF Customer Portal is a full-stack web application that lets customers upload designs, configure garment orders, make secure payments, and track production progress in real time — transforming a manual printing workflow into a fully digital, self-service experience.\n\n## Key Features\n\n- **Design Upload & Order Configuration: **Customers upload designs and configure garment orders directly, replacing back-and-forth manual requests.\n- **Secure Payments: **Stripe-powered checkout handles order payments securely within the portal.\n- **Real-Time Production Tracking: **Socket.IO-driven updates let customers track order progress live instead of requesting status manually.\n- **Order Management Dashboard: **Staff manage incoming orders, production stages, and customer communication from a centralized dashboard.\n\n## Outcome / Results\n\n- **Reduced Manual Communication: **Digitizing design uploads and order configuration cut down on manual back-and-forth with customers.\n- **Streamlined Order Management: **Centralized order and production tracking made it easier to manage higher order volume.\n\n## Key Takeaways / Learnings\n\n- **Real-Time Order Tracking: **Learned to build real-time production tracking using Socket.IO on top of a Prisma/PostgreSQL backend.\n- **Payment Integration at Scale: **Gained experience integrating Stripe for a production order-to-payment workflow.",
     "relatedProjects": [
       {
         "title": "Real Estate Media Pricing Calculator",
@@ -904,7 +409,7 @@
         "icon": "/skills/database/mongodb.svg"
       }
     ],
-    "body": [],
+    "body": "## Problem\n\nInsurance agents, brokers, and carriers spend significant time manually researching trucking companies to find qualified leads, verify safety profiles, and identify policy renewal opportunities — slowing down prospecting and hurting client retention.\n\n## Solution\n\nInsight Carrier is a B2B SaaS platform that gives insurance professionals direct access to qualified trucking leads, company safety profiles, and policy renewal opportunities, using real-time motor carrier data to replace manual research.\n\n## Key Features\n\n- **Qualified Lead Access: **Surfaces trucking leads that match an agent or broker’s target criteria, cutting down manual prospecting.\n- **Safety Profile Lookups: **Provides company safety profiles sourced from real-time motor carrier data.\n- **Renewal Opportunity Tracking: **Flags policy renewal opportunities so agents can act before a client’s policy lapses.\n- **Real-Time Carrier Data: **Backend integrates live motor carrier data instead of relying on stale, manually updated records.\n\n## Outcome / Results\n\n- **Reduced Manual Research Time: **Real-time carrier data lookups replaced hours of manual research per prospect.\n- **Improved Client Retention: **Proactive renewal tracking helped agents reach clients before policies lapsed.\n\n## Key Takeaways / Learnings\n\n- **Backend-Heavy SaaS Design: **Focused on backend architecture for ingesting and serving real-time third-party carrier data reliably.\n- **Domain-Specific Data Modeling: **Learned to model insurance/trucking domain data (safety profiles, renewals) in MongoDB.",
     "relatedProjects": [
       {
         "title": "DTF Printing Customer Portal",
@@ -952,7 +457,7 @@
     "duration": "1-3-months",
     "priority": 7,
     "skills": [],
-    "body": [],
+    "body": "## Problem\n\nPeople experiencing emotional stress often don’t have immediate access to a coach or therapist, and typing out feelings during a difficult moment can be harder than simply speaking them — leaving a gap between needing support and being able to express it.\n\n## Solution\n\nB.R.I.E.F.S. Coach is an AI-powered mental coaching platform that lets users record voice-based emotional \"vents\" and receive instant AI-generated coaching guidance, paired with relevant YouTube video recommendations, enabling organizations to offer scalable mental wellness support.\n\n## Key Features\n\n- **Voice-Based Venting: **Users record how they’re feeling by voice instead of typing, lowering the barrier to expressing emotion.\n- **AI Coaching Responses: **GPT-4 generates instant, relevant coaching guidance based on the recorded vent.\n- **Curated Video Recommendations: **Relevant YouTube videos are recommended alongside AI guidance for further support.\n- **Coach & Subscription Management: **Organizations and practitioners manage coaches and offer the platform via subscription-based team access.\n\n## Outcome / Results\n\n- **Scalable Wellness Support: **Enabled organizations to offer mental wellness support without needing a 1:1 coach available at all times.\n- **Lower Barrier to Support: **Voice-based input made it easier for users to express emotions compared to text-only journaling tools.\n\n## Key Takeaways / Learnings\n\n- **AI Prompt & Response Design: **Learned to design GPT-4 prompts that produce empathetic, actionable coaching responses from raw voice input.\n- **Voice-to-Insight Pipelines: **Gained experience building a pipeline from voice recording to transcription to AI-generated guidance.",
     "relatedProjects": [
       {
         "title": "Insight Carrier",
@@ -1000,7 +505,7 @@
     "duration": "1-3-months",
     "priority": 8,
     "skills": [],
-    "body": [],
+    "body": "## Problem\n\nReal estate media professionals — photographers, videographers, drone operators — often price their services by guesswork or outdated rate cards, making it hard to stay competitive without either undercharging or losing bids on price.\n\n## Solution\n\nReal Estate Media Pricing Calculator is a web-based pricing platform that generates accurate, market-based pricing recommendations for photography, videography, drone services, floor plans, virtual staging, and twilight photography, using verified market data from 2,695 real estate media businesses across the United States.\n\n## Key Features\n\n- **Location-Specific Pricing: **Generates pricing ranges tailored to the professional’s specific market location.\n- **Multi-Service Coverage: **Covers photography, videography, drone services, floor plans, virtual staging, and twilight photography in one calculator.\n- **Confidence Ratings: **Each pricing recommendation includes a confidence rating based on the underlying market data.\n- **Verified Market Dataset: **Built on market data from 2,695 real estate media businesses rather than static or self-reported rate cards.\n\n## Outcome / Results\n\n- **More Competitive Pricing: **Helped professionals price services with market-backed confidence instead of guesswork.\n- **Reduced Under/Overpricing: **Location-specific ranges reduced the risk of pricing too high to win bids or too low to be profitable.\n\n## Key Takeaways / Learnings\n\n- **Data-Driven Pricing Models: **Learned to translate a large verified dataset into simple, actionable pricing ranges for end users.\n- **Confidence-Rated Recommendations: **Gained experience presenting statistical confidence in a way non-technical users can trust and act on.",
     "relatedProjects": [
       {
         "title": "Survey Management System",
@@ -1048,7 +553,7 @@
     "duration": "less-1-month",
     "priority": 9,
     "skills": [],
-    "body": [],
+    "body": "## Problem\n\nExtra Scrub, a cleaning company based in London, needed a professional online presence — without one, customers had no easy way to explore services, request quotes, or book appointments, which limited trust and booking conversions.\n\n## Solution\n\nExtra Scrub Cleaning Services Website is a professional multi-page business website that lets customers explore residential and commercial cleaning services, request custom quotes, book appointments online, and contact the team easily, all through a modern, mobile-friendly design.\n\n## Key Features\n\n- **Service Exploration: **Customers browse residential and commercial cleaning services in a clear, organized layout.\n- **Custom Quote Requests: **A quote request flow lets customers describe their needs and get a tailored response.\n- **Online Appointment Booking: **Customers book appointments directly through the site instead of calling or emailing.\n- **Mobile-Friendly Design: **The site is fully responsive, built for customers browsing and booking from their phones.\n\n## Outcome / Results\n\n- **Increased Booking Conversions: **A modern, trustworthy digital presence made it easier for visitors to convert into booked appointments.\n- **Simplified Service Discovery: **Clear service categorization reduced confusion about what Extra Scrub offers.\n\n## Key Takeaways / Learnings\n\n- **Conversion-Focused Web Design: **Learned to structure a small business site around clear calls-to-action for quotes and bookings.\n- **Mobile-First Development: **Reinforced building fully responsive layouts for a primarily mobile customer base.",
     "relatedProjects": [
       {
         "title": "Nova Exordium",

@@ -1,7 +1,6 @@
 import profileData from '@/data/profile.json';
 import projectsData from '@/data/projects.json';
 import { ProjectCard, ProjectDetail } from '@/types/Project';
-import { PortableTextBlock } from '@portabletext/react';
 
 type RawProject = (typeof projectsData)[number];
 
@@ -48,7 +47,7 @@ export async function getProjectBySlugDetailed(slug: string): Promise<ProjectDet
       ? { company: project.company, slug: project.companySlug ?? '' }
       : undefined,
     skillNames: project.skills.map((skill) => ({ name: skill.name, icon: skill.icon })),
-    body: project.body as PortableTextBlock[],
+    body: project.body,
     relatedProjects: project.relatedProjects.map((related) => ({
       title: related.title,
       slug: related.slug,

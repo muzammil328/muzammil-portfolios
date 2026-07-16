@@ -4,11 +4,11 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getProjectBySlugDetailed } from '@/services/portfolioService';
-import { PortableText } from '@portabletext/react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { ProjectDetail } from '@/types/Project';
 import PortfolioCard from '@/components/PortfolioCard';
+import ProjectBody from '@/components/ProjectBody';
 import {
   CloseIcon,
   GitHubIcon,
@@ -226,7 +226,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
     fetchData();
   }, [slug]);
 
-  const hasBody = Array.isArray(project?.body) && project.body.length > 0;
+  const hasBody = Boolean(project?.body && project.body.trim());
 
   if (loading) {
     return <SkeletonLoader />;
@@ -254,7 +254,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
 
   const sliderImageUrls = orderedSliderImages;
   const projectContactHref = `/contact?${new URLSearchParams({
-    service: project.category || 'Project Development',
+    service: 'Project Development',
     project: project.title,
     page: `/portfolio/${slug}`,
     source: 'portfolio-detail',
@@ -463,7 +463,7 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
       {/* Body */}
       {hasBody && (
         <section className="container mx-auto px-4 py-12">
-          <PortableText value={project.body || []} />
+          <ProjectBody content={project.body!} />
         </section>
       )}
 
@@ -531,7 +531,6 @@ export default function PortfolioDetailClient({ slug }: { slug: string }) {
                   slug: rp.slug,
                   description: rp.description || '',
                   mainImage: rp.mainImage,
-                  category: rp.category || '',
                   skills: [],
                   liveLink: '/',
                   githubLink: '/',
