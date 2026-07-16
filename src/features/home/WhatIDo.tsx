@@ -89,7 +89,7 @@ export default function WhatIDo() {
                         {skill.name.trim().slice(0, 2).toUpperCase()}
                       </span>
                     )}
-                    <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-foreground px-2 py-1 text-xs font-medium text-background opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-10">
+                    <span className="pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-neutral-900 px-2 py-1 text-xs font-medium text-white opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-20 dark:bg-white dark:text-neutral-900">
                       {skill.name}
                     </span>
                   </li>

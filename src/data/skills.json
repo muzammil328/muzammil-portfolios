@@ -29,8 +29,8 @@
   { "name": "Prisma", "icon": "/skills/database/prisma.svg", "category": "database" },
 
   { "name": "Vercel", "icon": "/skills/deployment/vercel.svg", "category": "deployment" },
-  { "name": "Heroku", "icon": null, "category": "deployment" },
-  { "name": "Netlify", "icon": null, "category": "deployment" },
+  { "name": "Heroku", "icon": "/skills/deployment/heroku.svg", "category": "deployment" },
+  { "name": "Netlify", "icon": "/skills/deployment/netlify.svg", "category": "deployment" },
 
   { "name": "Git", "icon": "/skills/tools/git.svg", "category": "devops" },
   { "name": "Github", "icon": "/skills/tools/github.svg", "category": "devops" },
