@@ -20,6 +20,7 @@
   { "name": "Cloudinary", "icon": "/skills/backend/cloudinary.svg", "category": "backend" },
   { "name": "Socket IO", "icon": "/skills/backend/socket-io.svg", "category": "backend" },
   { "name": "Clerk", "icon": "/skills/backend/clerk.svg", "category": "backend" },
+  { "name": "Dart", "icon": "/skills/backend/dart.svg", "category": "backend" },
 
   { "name": "MongoDB", "icon": "/skills/database/mongodb.svg", "category": "database" },
   { "name": "Postgresql", "icon": "/skills/database/postgresql.svg", "category": "database" },
@@ -27,13 +28,17 @@
   { "name": "Mongoose", "icon": "/skills/database/mongoose.svg", "category": "database" },
   { "name": "Supabase", "icon": "/skills/database/supabase.svg", "category": "database" },
   { "name": "Prisma", "icon": "/skills/database/prisma.svg", "category": "database" },
+  { "name": "Redis", "icon": "/skills/database/redis.svg", "category": "database" },
 
   { "name": "Vercel", "icon": "/skills/deployment/vercel.svg", "category": "deployment" },
   { "name": "Heroku", "icon": "/skills/deployment/heroku.svg", "category": "deployment" },
   { "name": "Netlify", "icon": "/skills/deployment/netlify.svg", "category": "deployment" },
+  { "name": "Amplify", "icon": "/skills/deployment/amplify.svg", "category": "deployment" },
+  { "name": "EC2", "icon": "/skills/deployment/ec2.svg", "category": "deployment" },
 
-  { "name": "Git", "icon": "/skills/tools/git.svg", "category": "devops" },
-  { "name": "Github", "icon": "/skills/tools/github.svg", "category": "devops" },
+  { "name": "Git", "icon": "/skills/deveops/git.svg", "category": "devops" },
+  { "name": "Github", "icon": "/skills/deveops/github.svg", "category": "devops" },
+  { "name": "Docker", "icon": "/skills/deveops/docker.svg", "category": "devops" },
 
   { "name": "NPM", "icon": "/skills/tools/npm.svg", "category": "tools" },
   { "name": "PNPM", "icon": "/skills/tools/pnpm.svg", "category": "tools" },
