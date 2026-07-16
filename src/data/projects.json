@@ -1,5 +1,73 @@
 [
-
+  {
+    "_id": "da44bed7-d38a-4836-8e8c-a3237a3ba315",
+    "title": "Stackyard",
+    "slug": "stackyard",
+    "mainImage": "/images/project-stackyard-main.png",
+    "sliderImages": [],
+    "description": "Stackyard is a website-only, copy-paste UI component library built with Next.js and Tailwind CSS. Users browse categorized sections (hero, pricing, CTA, navbar, footer, FAQ, testimonials, and more), preview them live, and copy self-contained, dependency-free source code straight into their own projects — no CLI or npm install required. The library supports free and pro (paid) component tiers.",
+    "liveLink": "https://ui-components-eosin.vercel.app",
+    "githubLink": null,
+    "figmaDesign": null,
+    "company": "Side Project",
+    "companySlug": "side-project",
+    "role": "frontend",
+    "teamSize": "1",
+    "duration": "1-3-months",
+    "priority": 1,
+    "skills": [
+      {
+        "name": "Typescript",
+        "icon": "/skills/frontend/typescript.svg"
+      },
+      {
+        "name": "React JS",
+        "icon": "/skills/frontend/react-js.svg"
+      },
+      {
+        "name": "Next JS",
+        "icon": "/skills/frontend/next-js.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "/skills/frontend/tailwind-css.png"
+      },
+      {
+        "name": "Vercel",
+        "icon": "/skills/deployment/vercel.svg"
+      }
+    ],
+    "body": [],
+    "relatedProjects": [
+      {
+        "title": "Treepost AI",
+        "slug": "treepost-ai",
+        "mainImage": "/images/project-treepost-ai-main.png",
+        "description": "Treepost AI is a Canadian marketplace platform that connects homeowners with certified tree service contractors through AI-powered price estimates, real-time bidding, secure payments, and direct communication. The platform simplifies the process of finding trusted contractors by replacing manual quote requests with instant AI estimates, verified professionals, and a transparent bidding system.",
+        "role": "frontend",
+        "teamSize": "1",
+        "duration": "less-1-month"
+      },
+      {
+        "title": "Extra Scrub",
+        "slug": "extra-scrub",
+        "mainImage": "/images/project-extra-scrub-main.png",
+        "description": "Extra Scrub Cleaning Services Website is a professional multi-page business website built for a cleaning company based in London. The platform helps customers explore residential and commercial cleaning services, request custom quotes, book appointments online, and contact the team easily. The goal was to create a modern, mobile-friendly digital presence that improves customer trust, simplifies service discovery, and increases booking conversions.",
+        "role": "frontend",
+        "teamSize": "1",
+        "duration": "less-1-month"
+      },
+      {
+        "title": "BRIEFS Coach",
+        "slug": "briefs-coach",
+        "mainImage": "/images/project-briefs-coach-main.png",
+        "description": "B.R.I.E.F.S. Coach is an AI-powered mental coaching platform that helps users record voice-based emotional “vents” and receive instant AI-generated coaching guidance with relevant YouTube video recommendations. The platform enables organizations and practitioners to provide scalable mental wellness support by combining voice recording, GPT-4 coaching responses, coach management, and subscription-based team access.",
+        "role": "fullstack",
+        "teamSize": "2",
+        "duration": "1-3-months"
+      }
+    ]
+  },
   {
     "_id": "06c54daf-db7c-4a3f-ad09-bafc09cc6c5b",
     "title": "Survey Management System",
@@ -22,69 +90,53 @@
     "role": "fullstack",
     "teamSize": "1",
     "duration": "6-12-months",
-    "priority": 2,
+    "priority": 3,
     "skills": [
       {
         "name": "HTML5",
-        "icon": "/images/skill-html5.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/frontend/html5.svg"
       },
       {
         "name": "Javascript",
-        "icon": "/images/skill-javascript.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/frontend/javascript.svg"
       },
       {
         "name": "Typescript",
-        "icon": "/images/skill-typescript.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/frontend/typescript.svg"
       },
       {
         "name": "React JS",
-        "icon": "/images/skill-react-js.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/frontend/react-js.svg"
       }
     ],
     "body": [],
     "relatedProjects": [
       {
+        "title": "Real Estate Media Pricing Calculator",
+        "slug": "real-estate-media-pricing-calculator",
+        "mainImage": "/images/project-real-estate-media-pricing-calculator-main.png",
+        "description": "Real Estate Media Pricing Calculator is a web-based pricing platform that helps real estate media professionals generate accurate, market-based pricing recommendations for photography, videography, drone services, floor plans, virtual staging, and twilight photography across the United States. The platform uses verified market data from 2,695 real estate media businesses to provide location-specific pricing ranges with confidence ratings, helping professionals price services competitively and confidently.",
+        "role": "fullstack",
+        "teamSize": "1",
+        "duration": "1-3-months"
+      },
+      {
+        "title": "Extra Scrub",
+        "slug": "extra-scrub",
+        "mainImage": "/images/project-extra-scrub-main.png",
+        "description": "Extra Scrub Cleaning Services Website is a professional multi-page business website built for a cleaning company based in London. The platform helps customers explore residential and commercial cleaning services, request custom quotes, book appointments online, and contact the team easily. The goal was to create a modern, mobile-friendly digital presence that improves customer trust, simplifies service discovery, and increases booking conversions.",
+        "role": "frontend",
+        "teamSize": "1",
+        "duration": "less-1-month"
+      },
+      {
         "title": "DTF Printing Customer Portal",
         "slug": "dtf-printing-customer-portal",
-        "mainImage": "/images/project-dtf-printing-customer-portal-main.png",
+        "mainImage": "/projects/dtf/project-dtf-printing-customer-portal-main.png",
         "description": "Urban DTF Customer Portal is a full-stack web application built for URBAN DTF & T-SHIRTS, a custom DTF printing business. The platform allows customers to upload designs, configure garment orders, make secure payments, and track production progress in real time. It helps streamline order management, reduce manual communication, and improve customer experience by transforming traditional printing operations into a fully digital workflow.",
         "role": "fullstack",
         "teamSize": "1",
         "duration": "1-3-months"
-      },
-      {
-        "title": "Nova Exordium",
-        "slug": "nova-exordium",
-        "mainImage": "/images/project-nova-exordium-main.png",
-        "description": "Nova Exordium is an all-in-one platform designed to streamline project management and accelerate customer onboarding. It offers real-time dashboards, customizable templates, smart notifications, and collaborative tools to enhance team productivity and client engagement.",
-        "role": "fullstack",
-        "teamSize": null,
-        "duration": "1-3-months"
-      },
-      {
-        "title": "Insight Carrier",
-        "slug": "insight-carrier",
-        "mainImage": "/images/project-insight-carrier-main.png",
-        "description": "Insight Carrier is a B2B SaaS platform built for insurance agents, brokers, and carriers to access qualified trucking leads, company safety profiles, and policy renewal opportunities. The platform helps insurance professionals reduce manual research time, identify high-value prospects faster, and improve client retention using real-time motor carrier data.",
-        "role": "backend",
-        "teamSize": "1",
-        "duration": "3-6-months"
       }
     ]
   },
@@ -103,7 +155,7 @@
     "role": "frontend",
     "teamSize": "1",
     "duration": "less-1-month",
-    "priority": 1,
+    "priority": 2,
     "skills": [],
     "body": [
       {
@@ -605,7 +657,7 @@
       {
         "title": "DTF Printing Customer Portal",
         "slug": "dtf-printing-customer-portal",
-        "mainImage": "/images/project-dtf-printing-customer-portal-main.png",
+        "mainImage": "/projects/dtf/project-dtf-printing-customer-portal-main.png",
         "description": "Urban DTF Customer Portal is a full-stack web application built for URBAN DTF & T-SHIRTS, a custom DTF printing business. The platform allows customers to upload designs, configure garment orders, make secure payments, and track production progress in real time. It helps streamline order management, reduce manual communication, and improve customer experience by transforming traditional printing operations into a fully digital workflow.",
         "role": "fullstack",
         "teamSize": "1",
@@ -614,20 +666,20 @@
       {
         "title": "Nova Exordium",
         "slug": "nova-exordium",
-        "mainImage": "/images/project-nova-exordium-main.png",
+        "mainImage": "/projects/nova/nova-exordium-main.png",
         "description": "Nova Exordium is an all-in-one platform designed to streamline project management and accelerate customer onboarding. It offers real-time dashboards, customizable templates, smart notifications, and collaborative tools to enhance team productivity and client engagement.",
         "role": "fullstack",
         "teamSize": null,
         "duration": "1-3-months"
       },
       {
-        "title": "Insight Carrier",
-        "slug": "insight-carrier",
-        "mainImage": "/images/project-insight-carrier-main.png",
-        "description": "Insight Carrier is a B2B SaaS platform built for insurance agents, brokers, and carriers to access qualified trucking leads, company safety profiles, and policy renewal opportunities. The platform helps insurance professionals reduce manual research time, identify high-value prospects faster, and improve client retention using real-time motor carrier data.",
-        "role": "backend",
+        "title": "Stackyard",
+        "slug": "stackyard",
+        "mainImage": "/images/project-stackyard-main.png",
+        "description": "Stackyard is a website-only, copy-paste UI component library built with Next.js and Tailwind CSS. Users browse categorized sections (hero, pricing, CTA, navbar, footer, FAQ, testimonials, and more), preview them live, and copy self-contained, dependency-free source code straight into their own projects — no CLI or npm install required. The library supports free and pro (paid) component tiers.",
+        "role": "frontend",
         "teamSize": "1",
-        "duration": "3-6-months"
+        "duration": "1-3-months"
       }
     ]
   },
@@ -635,8 +687,13 @@
     "_id": "ad974572-dc6f-4bb9-bb2c-2ccdc1dc3cae",
     "title": "Nova Exordium",
     "slug": "nova-exordium",
-    "mainImage": "/images/project-nova-exordium-main.png",
-    "sliderImages": [],
+    "mainImage": "/projects/nova/nova-exordium-main.png",
+    "sliderImages": [
+      "/projects/nova/nova-1.png",
+      "/projects/nova/nova-2.png",
+      "/projects/nova/nova-3.png",
+      "/projects/nova/nova-4.png"
+    ],
     "description": "Nova Exordium is an all-in-one platform designed to streamline project management and accelerate customer onboarding. It offers real-time dashboards, customizable templates, smart notifications, and collaborative tools to enhance team productivity and client engagement.",
     "liveLink": "https://nova-exordium-frontend.vercel.app",
     "githubLink": null,
@@ -646,63 +703,71 @@
     "role": "fullstack",
     "teamSize": null,
     "duration": "1-3-months",
-    "priority": 3,
+    "priority": 4,
     "skills": [
       {
         "name": "React JS",
-        "icon": "/images/skill-react-js.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/frontend/react-js.svg"
       },
       {
         "name": "Node JS",
-        "icon": "/images/skill-node-js.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/backend/node-js.svg"
       },
       {
         "name": "MongoDB",
-        "icon": "/images/skill-mongodb.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/database/mongodb.svg"
       },
       {
         "name": "Socket IO",
-        "icon": null,
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/backend/socket-io.svg"
       },
       {
         "name": "Express JS",
-        "icon": "/images/skill-express-js.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/backend/express-js.svg"
       }
     ],
     "body": [],
-    "relatedProjects": []
+    "relatedProjects": [
+      {
+        "title": "Insight Carrier",
+        "slug": "insight-carrier",
+        "mainImage": "/images/project-insight-carrier-main.png",
+        "description": "Insight Carrier is a B2B SaaS platform built for insurance agents, brokers, and carriers to access qualified trucking leads, company safety profiles, and policy renewal opportunities. The platform helps insurance professionals reduce manual research time, identify high-value prospects faster, and improve client retention using real-time motor carrier data.",
+        "role": "backend",
+        "teamSize": "1",
+        "duration": "3-6-months"
+      },
+      {
+        "title": "Extra Scrub",
+        "slug": "extra-scrub",
+        "mainImage": "/images/project-extra-scrub-main.png",
+        "description": "Extra Scrub Cleaning Services Website is a professional multi-page business website built for a cleaning company based in London. The platform helps customers explore residential and commercial cleaning services, request custom quotes, book appointments online, and contact the team easily. The goal was to create a modern, mobile-friendly digital presence that improves customer trust, simplifies service discovery, and increases booking conversions.",
+        "role": "frontend",
+        "teamSize": "1",
+        "duration": "less-1-month"
+      },
+      {
+        "title": "Stackyard",
+        "slug": "stackyard",
+        "mainImage": "/images/project-stackyard-main.png",
+        "description": "Stackyard is a website-only, copy-paste UI component library built with Next.js and Tailwind CSS. Users browse categorized sections (hero, pricing, CTA, navbar, footer, FAQ, testimonials, and more), preview them live, and copy self-contained, dependency-free source code straight into their own projects — no CLI or npm install required. The library supports free and pro (paid) component tiers.",
+        "role": "frontend",
+        "teamSize": "1",
+        "duration": "1-3-months"
+      }
+    ]
   },
   {
     "_id": "5ac5be01-e5a6-48b9-8625-71ed9d36ba46",
     "title": "DTF Printing Customer Portal",
     "slug": "dtf-printing-customer-portal",
-    "mainImage": "/images/project-dtf-printing-customer-portal-main.png",
+    "mainImage": "/projects/dtf/project-dtf-printing-customer-portal-main.png",
     "sliderImages": [
-      "/images/project-dtf-printing-customer-portal-slide-1.png",
-      "/images/project-dtf-printing-customer-portal-slide-2.png",
-      "/images/project-dtf-printing-customer-portal-slide-3.png",
-      "/images/project-dtf-printing-customer-portal-slide-4.png",
-      "/images/project-dtf-printing-customer-portal-slide-5.png"
+      "/projects/dtf/project-dtf-printing-customer-portal-slide-1.png",
+      "/projects/dtf/project-dtf-printing-customer-portal-slide-2.png",
+      "/projects/dtf/project-dtf-printing-customer-portal-slide-3.png",
+      "/projects/dtf/project-dtf-printing-customer-portal-slide-4.png",
+      "/projects/dtf/project-dtf-printing-customer-portal-slide-5.png"
     ],
     "description": "Urban DTF Customer Portal is a full-stack web application built for URBAN DTF & T-SHIRTS, a custom DTF printing business. The platform allows customers to upload designs, configure garment orders, make secure payments, and track production progress in real time. It helps streamline order management, reduce manual communication, and improve customer experience by transforming traditional printing operations into a fully digital workflow.",
     "liveLink": "https://urbandtf.app",
@@ -713,149 +778,93 @@
     "role": "fullstack",
     "teamSize": "1",
     "duration": "1-3-months",
-    "priority": 4,
+    "priority": 5,
     "skills": [
       {
         "name": "HTML5",
-        "icon": "/images/skill-html5.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/frontend/html5.svg"
       },
       {
         "name": "CSS3",
-        "icon": "/images/skill-css3.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/frontend/css3.svg"
       },
       {
         "name": "Tailwind CSS",
-        "icon": "/images/skill-tailwind-css.png",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/frontend/tailwind-css.png"
       },
       {
         "name": "React JS",
-        "icon": "/images/skill-react-js.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/frontend/react-js.svg"
       },
       {
         "name": "Next JS",
-        "icon": "/images/skill-next-js.svg",
-        "color": null,
-        "proficiency": "advanced",
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/frontend/next-js.svg"
       },
       {
         "name": "Typescript",
-        "icon": "/images/skill-typescript.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/frontend/typescript.svg"
       },
       {
         "name": "TanStack React Query",
-        "icon": "/images/skill-tanstack-react-query.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/frontend/tanstack-react-query.svg"
       },
       {
         "name": "Express JS",
-        "icon": "/images/skill-express-js.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/backend/express-js.svg"
       },
       {
         "name": "Node JS",
-        "icon": "/images/skill-node-js.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/backend/node-js.svg"
       },
       {
         "name": "Postgresql",
-        "icon": "/images/skill-postgresql.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/database/postgresql.svg"
       },
       {
         "name": "Prisma",
-        "icon": null,
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/database/prisma.svg"
       },
       {
         "name": "Socket IO",
-        "icon": null,
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/backend/socket-io.svg"
       },
       {
         "name": "Stripe",
-        "icon": "/images/skill-stripe.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/backend/stripe.webp"
       },
       {
         "name": "Vercel",
-        "icon": "/images/skill-vercel.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/deployment/vercel.svg"
       }
     ],
     "body": [],
     "relatedProjects": [
       {
-        "title": "Survey Management System",
-        "slug": "survey-management-system",
-        "mainImage": "/images/project-survey-management-system-main.png",
-        "description": "Feedback Hub is a full-stack SaaS platform for creating feedback forms, sharing them via public links, and analyzing responses in real-time. It replaces tools like Google Forms and Typeform with a modern, team-oriented experience featuring rich analytics, workspace management, and billing/subscription support.",
+        "title": "Real Estate Media Pricing Calculator",
+        "slug": "real-estate-media-pricing-calculator",
+        "mainImage": "/images/project-real-estate-media-pricing-calculator-main.png",
+        "description": "Real Estate Media Pricing Calculator is a web-based pricing platform that helps real estate media professionals generate accurate, market-based pricing recommendations for photography, videography, drone services, floor plans, virtual staging, and twilight photography across the United States. The platform uses verified market data from 2,695 real estate media businesses to provide location-specific pricing ranges with confidence ratings, helping professionals price services competitively and confidently.",
         "role": "fullstack",
         "teamSize": "1",
-        "duration": "6-12-months"
-      },
-      {
-        "title": "Nova Exordium",
-        "slug": "nova-exordium",
-        "mainImage": "/images/project-nova-exordium-main.png",
-        "description": "Nova Exordium is an all-in-one platform designed to streamline project management and accelerate customer onboarding. It offers real-time dashboards, customizable templates, smart notifications, and collaborative tools to enhance team productivity and client engagement.",
-        "role": "fullstack",
-        "teamSize": null,
         "duration": "1-3-months"
       },
       {
-        "title": "Insight Carrier",
-        "slug": "insight-carrier",
-        "mainImage": "/images/project-insight-carrier-main.png",
-        "description": "Insight Carrier is a B2B SaaS platform built for insurance agents, brokers, and carriers to access qualified trucking leads, company safety profiles, and policy renewal opportunities. The platform helps insurance professionals reduce manual research time, identify high-value prospects faster, and improve client retention using real-time motor carrier data.",
-        "role": "backend",
+        "title": "Treepost AI",
+        "slug": "treepost-ai",
+        "mainImage": "/images/project-treepost-ai-main.png",
+        "description": "Treepost AI is a Canadian marketplace platform that connects homeowners with certified tree service contractors through AI-powered price estimates, real-time bidding, secure payments, and direct communication. The platform simplifies the process of finding trusted contractors by replacing manual quote requests with instant AI estimates, verified professionals, and a transparent bidding system.",
+        "role": "frontend",
         "teamSize": "1",
-        "duration": "3-6-months"
+        "duration": "less-1-month"
+      },
+      {
+        "title": "BRIEFS Coach",
+        "slug": "briefs-coach",
+        "mainImage": "/images/project-briefs-coach-main.png",
+        "description": "B.R.I.E.F.S. Coach is an AI-powered mental coaching platform that helps users record voice-based emotional “vents” and receive instant AI-generated coaching guidance with relevant YouTube video recommendations. The platform enables organizations and practitioners to provide scalable mental wellness support by combining voice recording, GPT-4 coaching responses, coach management, and subscription-based team access.",
+        "role": "fullstack",
+        "teamSize": "2",
+        "duration": "1-3-months"
       }
     ]
   },
@@ -874,47 +883,27 @@
     "role": "backend",
     "teamSize": "1",
     "duration": "3-6-months",
-    "priority": 5,
+    "priority": 6,
     "skills": [
       {
         "name": "React JS",
-        "icon": "/images/skill-react-js.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/frontend/react-js.svg"
       },
       {
         "name": "Next JS",
-        "icon": "/images/skill-next-js.svg",
-        "color": null,
-        "proficiency": "advanced",
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/frontend/next-js.svg"
       },
       {
         "name": "Tailwind CSS",
-        "icon": "/images/skill-tailwind-css.png",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/frontend/tailwind-css.png"
       },
       {
         "name": "Node JS",
-        "icon": "/images/skill-node-js.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/backend/node-js.svg"
       },
       {
         "name": "MongoDB",
-        "icon": "/images/skill-mongodb.svg",
-        "color": null,
-        "proficiency": null,
-        "yearsUsed": null,
-        "featured": null
+        "icon": "/skills/database/mongodb.svg"
       }
     ],
     "body": [],
@@ -922,29 +911,29 @@
       {
         "title": "DTF Printing Customer Portal",
         "slug": "dtf-printing-customer-portal",
-        "mainImage": "/images/project-dtf-printing-customer-portal-main.png",
+        "mainImage": "/projects/dtf/project-dtf-printing-customer-portal-main.png",
         "description": "Urban DTF Customer Portal is a full-stack web application built for URBAN DTF & T-SHIRTS, a custom DTF printing business. The platform allows customers to upload designs, configure garment orders, make secure payments, and track production progress in real time. It helps streamline order management, reduce manual communication, and improve customer experience by transforming traditional printing operations into a fully digital workflow.",
         "role": "fullstack",
         "teamSize": "1",
         "duration": "1-3-months"
       },
       {
+        "title": "Extra Scrub",
+        "slug": "extra-scrub",
+        "mainImage": "/images/project-extra-scrub-main.png",
+        "description": "Extra Scrub Cleaning Services Website is a professional multi-page business website built for a cleaning company based in London. The platform helps customers explore residential and commercial cleaning services, request custom quotes, book appointments online, and contact the team easily. The goal was to create a modern, mobile-friendly digital presence that improves customer trust, simplifies service discovery, and increases booking conversions.",
+        "role": "frontend",
+        "teamSize": "1",
+        "duration": "less-1-month"
+      },
+      {
         "title": "Nova Exordium",
         "slug": "nova-exordium",
-        "mainImage": "/images/project-nova-exordium-main.png",
+        "mainImage": "/projects/nova/nova-exordium-main.png",
         "description": "Nova Exordium is an all-in-one platform designed to streamline project management and accelerate customer onboarding. It offers real-time dashboards, customizable templates, smart notifications, and collaborative tools to enhance team productivity and client engagement.",
         "role": "fullstack",
         "teamSize": null,
         "duration": "1-3-months"
-      },
-      {
-        "title": "Survey Management System",
-        "slug": "survey-management-system",
-        "mainImage": "/images/project-survey-management-system-main.png",
-        "description": "Feedback Hub is a full-stack SaaS platform for creating feedback forms, sharing them via public links, and analyzing responses in real-time. It replaces tools like Google Forms and Typeform with a modern, team-oriented experience featuring rich analytics, workspace management, and billing/subscription support.",
-        "role": "fullstack",
-        "teamSize": "1",
-        "duration": "6-12-months"
       }
     ]
   },
@@ -963,19 +952,10 @@
     "role": "fullstack",
     "teamSize": "2",
     "duration": "1-3-months",
-    "priority": 6,
+    "priority": 7,
     "skills": [],
     "body": [],
     "relatedProjects": [
-      {
-        "title": "Treepost AI",
-        "slug": "treepost-ai",
-        "mainImage": "/images/project-treepost-ai-main.png",
-        "description": "Treepost AI is a Canadian marketplace platform that connects homeowners with certified tree service contractors through AI-powered price estimates, real-time bidding, secure payments, and direct communication. The platform simplifies the process of finding trusted contractors by replacing manual quote requests with instant AI estimates, verified professionals, and a transparent bidding system.",
-        "role": "frontend",
-        "teamSize": "1",
-        "duration": "less-1-month"
-      },
       {
         "title": "Insight Carrier",
         "slug": "insight-carrier",
@@ -986,11 +966,20 @@
         "duration": "3-6-months"
       },
       {
-        "title": "DTF Printing Customer Portal",
-        "slug": "dtf-printing-customer-portal",
-        "mainImage": "/images/project-dtf-printing-customer-portal-main.png",
-        "description": "Urban DTF Customer Portal is a full-stack web application built for URBAN DTF & T-SHIRTS, a custom DTF printing business. The platform allows customers to upload designs, configure garment orders, make secure payments, and track production progress in real time. It helps streamline order management, reduce manual communication, and improve customer experience by transforming traditional printing operations into a fully digital workflow.",
-        "role": "fullstack",
+        "title": "Treepost AI",
+        "slug": "treepost-ai",
+        "mainImage": "/images/project-treepost-ai-main.png",
+        "description": "Treepost AI is a Canadian marketplace platform that connects homeowners with certified tree service contractors through AI-powered price estimates, real-time bidding, secure payments, and direct communication. The platform simplifies the process of finding trusted contractors by replacing manual quote requests with instant AI estimates, verified professionals, and a transparent bidding system.",
+        "role": "frontend",
+        "teamSize": "1",
+        "duration": "less-1-month"
+      },
+      {
+        "title": "Stackyard",
+        "slug": "stackyard",
+        "mainImage": "/images/project-stackyard-main.png",
+        "description": "Stackyard is a website-only, copy-paste UI component library built with Next.js and Tailwind CSS. Users browse categorized sections (hero, pricing, CTA, navbar, footer, FAQ, testimonials, and more), preview them live, and copy self-contained, dependency-free source code straight into their own projects — no CLI or npm install required. The library supports free and pro (paid) component tiers.",
+        "role": "frontend",
         "teamSize": "1",
         "duration": "1-3-months"
       }
@@ -1011,18 +1000,27 @@
     "role": "fullstack",
     "teamSize": "1",
     "duration": "1-3-months",
-    "priority": 7,
+    "priority": 8,
     "skills": [],
     "body": [],
     "relatedProjects": [
       {
-        "title": "Extra Scrub",
-        "slug": "extra-scrub",
-        "mainImage": "/images/project-extra-scrub-main.png",
-        "description": "Extra Scrub Cleaning Services Website is a professional multi-page business website built for a cleaning company based in London. The platform helps customers explore residential and commercial cleaning services, request custom quotes, book appointments online, and contact the team easily. The goal was to create a modern, mobile-friendly digital presence that improves customer trust, simplifies service discovery, and increases booking conversions.",
-        "role": "frontend",
+        "title": "Survey Management System",
+        "slug": "survey-management-system",
+        "mainImage": "/images/project-survey-management-system-main.png",
+        "description": "Feedback Hub is a full-stack SaaS platform for creating feedback forms, sharing them via public links, and analyzing responses in real-time. It replaces tools like Google Forms and Typeform with a modern, team-oriented experience featuring rich analytics, workspace management, and billing/subscription support.",
+        "role": "fullstack",
         "teamSize": "1",
-        "duration": "less-1-month"
+        "duration": "6-12-months"
+      },
+      {
+        "title": "Insight Carrier",
+        "slug": "insight-carrier",
+        "mainImage": "/images/project-insight-carrier-main.png",
+        "description": "Insight Carrier is a B2B SaaS platform built for insurance agents, brokers, and carriers to access qualified trucking leads, company safety profiles, and policy renewal opportunities. The platform helps insurance professionals reduce manual research time, identify high-value prospects faster, and improve client retention using real-time motor carrier data.",
+        "role": "backend",
+        "teamSize": "1",
+        "duration": "3-6-months"
       },
       {
         "title": "BRIEFS Coach",
@@ -1031,15 +1029,6 @@
         "description": "B.R.I.E.F.S. Coach is an AI-powered mental coaching platform that helps users record voice-based emotional “vents” and receive instant AI-generated coaching guidance with relevant YouTube video recommendations. The platform enables organizations and practitioners to provide scalable mental wellness support by combining voice recording, GPT-4 coaching responses, coach management, and subscription-based team access.",
         "role": "fullstack",
         "teamSize": "2",
-        "duration": "1-3-months"
-      },
-      {
-        "title": "DTF Printing Customer Portal",
-        "slug": "dtf-printing-customer-portal",
-        "mainImage": "/images/project-dtf-printing-customer-portal-main.png",
-        "description": "Urban DTF Customer Portal is a full-stack web application built for URBAN DTF & T-SHIRTS, a custom DTF printing business. The platform allows customers to upload designs, configure garment orders, make secure payments, and track production progress in real time. It helps streamline order management, reduce manual communication, and improve customer experience by transforming traditional printing operations into a fully digital workflow.",
-        "role": "fullstack",
-        "teamSize": "1",
         "duration": "1-3-months"
       }
     ]
@@ -1059,32 +1048,32 @@
     "role": "frontend",
     "teamSize": "1",
     "duration": "less-1-month",
-    "priority": 8,
+    "priority": 9,
     "skills": [],
     "body": [],
     "relatedProjects": [
       {
-        "title": "Treepost AI",
-        "slug": "treepost-ai",
-        "mainImage": "/images/project-treepost-ai-main.png",
-        "description": "Treepost AI is a Canadian marketplace platform that connects homeowners with certified tree service contractors through AI-powered price estimates, real-time bidding, secure payments, and direct communication. The platform simplifies the process of finding trusted contractors by replacing manual quote requests with instant AI estimates, verified professionals, and a transparent bidding system.",
-        "role": "frontend",
-        "teamSize": "1",
-        "duration": "less-1-month"
+        "title": "Nova Exordium",
+        "slug": "nova-exordium",
+        "mainImage": "/projects/nova/nova-exordium-main.png",
+        "description": "Nova Exordium is an all-in-one platform designed to streamline project management and accelerate customer onboarding. It offers real-time dashboards, customizable templates, smart notifications, and collaborative tools to enhance team productivity and client engagement.",
+        "role": "fullstack",
+        "teamSize": null,
+        "duration": "1-3-months"
       },
       {
-        "title": "BRIEFS Coach",
-        "slug": "briefs-coach",
-        "mainImage": "/images/project-briefs-coach-main.png",
-        "description": "B.R.I.E.F.S. Coach is an AI-powered mental coaching platform that helps users record voice-based emotional “vents” and receive instant AI-generated coaching guidance with relevant YouTube video recommendations. The platform enables organizations and practitioners to provide scalable mental wellness support by combining voice recording, GPT-4 coaching responses, coach management, and subscription-based team access.",
-        "role": "fullstack",
-        "teamSize": "2",
-        "duration": "1-3-months"
+        "title": "Insight Carrier",
+        "slug": "insight-carrier",
+        "mainImage": "/images/project-insight-carrier-main.png",
+        "description": "Insight Carrier is a B2B SaaS platform built for insurance agents, brokers, and carriers to access qualified trucking leads, company safety profiles, and policy renewal opportunities. The platform helps insurance professionals reduce manual research time, identify high-value prospects faster, and improve client retention using real-time motor carrier data.",
+        "role": "backend",
+        "teamSize": "1",
+        "duration": "3-6-months"
       },
       {
         "title": "DTF Printing Customer Portal",
         "slug": "dtf-printing-customer-portal",
-        "mainImage": "/images/project-dtf-printing-customer-portal-main.png",
+        "mainImage": "/projects/dtf/project-dtf-printing-customer-portal-main.png",
         "description": "Urban DTF Customer Portal is a full-stack web application built for URBAN DTF & T-SHIRTS, a custom DTF printing business. The platform allows customers to upload designs, configure garment orders, make secure payments, and track production progress in real time. It helps streamline order management, reduce manual communication, and improve customer experience by transforming traditional printing operations into a fully digital workflow.",
         "role": "fullstack",
         "teamSize": "1",
