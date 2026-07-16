@@ -43,7 +43,7 @@ export default function WhatIDo() {
       {/* Heading */}
       <div className="w-full container mx-auto md:px-6 px-3 mb-6 md:mb-12 z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:pb-8 pb-4">
-          <h2 className="text-5xl md:text-8xl font-medium tracking-tighter">What I Do
+          <h2 className="text-5xl md:text-8xl font-medium tracking-tighter">Tech Stack
 
             <span
               className="text-transparent"
@@ -53,8 +53,7 @@ export default function WhatIDo() {
             </span>
           </h2>
           <p className="hidden md:block text-base sm:text-lg md:text-xl text-muted-foreground md:max-w-xl leading-relaxed">
-            I specialize in building fast, reliable, and user-friendly full-stack web applications.
-            I help small businesses and startups turn ideas into high-quality products that scale.
+            The technologies I reach for across the frontend, backend, database, and deployment.
           </p>
         </div>
       </div>
@@ -65,14 +64,14 @@ export default function WhatIDo() {
           {categories.map((group) => (
             <div
               key={group.category}
-              className="rounded-3xl overflow-hidden backdrop-blur-[18px] shadow-card dark:shadow-card-dark p-6 md:p-7"
+              className="bg-card border rounded-2xl p-6 transition-all duration-300"
             >
               <h3 className="text-lg md:text-xl font-semibold mb-5">{group.label}</h3>
               <ul className="flex flex-wrap gap-3">
                 {group.skills.map((skill) => (
                   <li
                     key={skill.name}
-                    className="group relative flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white dark:bg-[#1b2030] border border-[#e7e9ef] dark:border-[#2b3142]"
+                    className="group relative flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-background border"
                   >
                     {skill.icon ? (
                       <Image
