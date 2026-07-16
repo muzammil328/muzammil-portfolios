@@ -11,7 +11,7 @@ function referenceDataBlock(sections: { label: string; content: string }[]): str
 }
 
 const READY_INSTRUCTION =
-  "I will now ask you to run ONE step at a time, in order (Step 1 through Step 4). Wait for each request below and output only that step's result — do not run ahead. Reply 'Ready' to confirm you understand before I send the first request.";
+  "I will now ask you to run ONE step at a time, in order (Step 1 through Step 4). Wait for each request below and output only that step's result — do not run ahead. Before I send the first request, reply with 'Ready' followed by a short bulleted echo of every field in the Personal Data section above (same labels and values) so I can confirm you received it correctly.";
 
 const PERSONAL_DATA = [
   '## Personal Data',
