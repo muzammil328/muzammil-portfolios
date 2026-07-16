@@ -105,8 +105,7 @@ to a real outcome.
 - List ONLY skills you have evidence for in the CV or Personal Data
 - Group by category if space allows: **Frontend** | **Backend** | **Database** |
   **Cloud**
-- **NO skill gaps.** If a required skill is missing, do NOT list it here. Step
-  5 flags it honestly.
+- **NO skill gaps.** If a required skill is missing, do NOT list it here.
 - 1-2 lines maximum. This section gets skimmed — bullets are what matter.
 
 ### Work Experience / Projects
@@ -170,7 +169,7 @@ Reuse the Match table from Step 1:
 | HAVE                         | Strengthen the bullet with a metric or live URL |
 | PARTIAL                      | Reword the bullet to use the exact required term |
 | MISSING (user has it elsewhere) | Add a new bullet or weave into an existing one |
-| MISSING (user lacks it)      | Do NOT mention it. Flag in Step 5 |
+| MISSING (user lacks it)      | Do NOT mention it |
 
 ### Education (brief)
 

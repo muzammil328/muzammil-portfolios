@@ -10,7 +10,6 @@ interface PromptDisplayProps {
   step2: string;
   step3: string;
   step4: string;
-  step5: string;
   profileContent: string;
   experiencesContent: string;
   projectsContent: string;
@@ -22,7 +21,6 @@ export default function PromptDisplay({
   step2,
   step3,
   step4,
-  step5,
   profileContent,
   experiencesContent,
   projectsContent,
@@ -46,7 +44,6 @@ export default function PromptDisplay({
         step2,
         step3,
         step4,
-        step5,
         jobDescription,
         cvText,
       }),
@@ -59,7 +56,6 @@ export default function PromptDisplay({
       step2,
       step3,
       step4,
-      step5,
       jobDescription,
       cvText,
     ]
@@ -89,8 +85,7 @@ export default function PromptDisplay({
             chunks. Copy the Setup chunk into a new AI chat first, wait for it to confirm
             it&apos;s ready, then copy each step chunk in order — Step 1 analyzes gaps against
             the job, Step 2 writes the email, Step 3 lists missing skills, Step 4 rewrites your
-            resume around the job&apos;s focus keywords for ATS, Step 5 outputs the final resume
-            plus an honest gap analysis.
+            resume around the job&apos;s focus keywords for ATS.
           </p>
         </div>
 

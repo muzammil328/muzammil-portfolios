@@ -11,7 +11,21 @@ function referenceDataBlock(sections: { label: string; content: string }[]): str
 }
 
 const READY_INSTRUCTION =
-  "I will now ask you to run ONE step at a time, in order (Step 1 through Step 5). Wait for each request below and output only that step's result — do not run ahead. Reply 'Ready' to confirm you understand before I send the first request.";
+  "I will now ask you to run ONE step at a time, in order (Step 1 through Step 4). Wait for each request below and output only that step's result — do not run ahead. Reply 'Ready' to confirm you understand before I send the first request.";
+
+const PERSONAL_DATA = [
+  '## Personal Data',
+  '',
+  '- Full Name: Muzammal Safdar',
+  '- Email Address: mmuzammilsafdar3@gmail.com',
+  '- Phone Number: +92 370 0810327',
+  '- Current Monthly Salary: PKR 55,000',
+  "- Desired Monthly Salary: PKR 90,000 (convert to the job posting's currency if it differs from PKR)",
+  '- Total Years of Professional Software Development Experience: 2+ years',
+  '- Remote Team Comfort (1-10 scale): 7',
+  '- Portfolio / GitHub / Work Samples: https://mmuzammil-portfolio.vercel.app · https://github.com/Muzammil327',
+  '- Notice Period With Current Employer: 30 days',
+].join('\n');
 
 export function buildJobApplyChunks(params: {
   mainPrompt: string;
@@ -22,7 +36,6 @@ export function buildJobApplyChunks(params: {
   step2: string;
   step3: string;
   step4: string;
-  step5: string;
   jobDescription: string;
   cvText: string;
 }): PromptChunk[] {
@@ -36,6 +49,10 @@ export function buildJobApplyChunks(params: {
       { label: 'Experience', content: params.experiencesContent },
       { label: 'Projects', content: params.projectsContent },
     ]),
+    '',
+    '---',
+    '',
+    PERSONAL_DATA,
     '',
     '---',
     '',
@@ -92,11 +109,6 @@ export function buildJobApplyChunks(params: {
       'Step 4 — Rewrite Resume for ATS',
       params.step4,
       "Output ONLY the rewritten resume now, using Step 1's analysis. Do not repeat Step 1-3's output."
-    ),
-    stepChunk(
-      'Step 5 — Resume Output & Gap Analysis',
-      params.step5,
-      'Output ONLY Sections A, B, and C now, per the format above.'
     ),
   ];
 }
