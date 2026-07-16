@@ -72,14 +72,12 @@
     "_id": "06c54daf-db7c-4a3f-ad09-bafc09cc6c5b",
     "title": "Survey Management System",
     "slug": "survey-management-system",
-    "mainImage": "/images/project-survey-management-system-main.png",
+    "mainImage": "/projects/feedback/dashboard.png",
     "sliderImages": [
-      "/images/project-survey-management-system-slide-1.png",
-      "/images/project-survey-management-system-slide-2.png",
-      "/images/project-survey-management-system-slide-3.png",
-      "/images/project-survey-management-system-slide-4.png",
-      "/images/project-survey-management-system-slide-5.heif",
-      "/images/project-survey-management-system-slide-6.png"
+      "/projects/feedback/dashboard.png",
+      "/projects/feedback/sign-in.png",
+      "/projects/feedback/signup.png",
+      "/projects/feedback/forgot-password.png"
     ],
     "description": "Feedback Hub is a full-stack SaaS platform for creating feedback forms, sharing them via public links, and analyzing responses in real-time. It replaces tools like Google Forms and Typeform with a modern, team-oriented experience featuring rich analytics, workspace management, and billing/subscription support.",
     "liveLink": "https://muzammil-feedback-frontend.vercel.app",
@@ -1007,7 +1005,7 @@
       {
         "title": "Survey Management System",
         "slug": "survey-management-system",
-        "mainImage": "/images/project-survey-management-system-main.png",
+        "mainImage": "/projects/feedback/dashboard.png",
         "description": "Feedback Hub is a full-stack SaaS platform for creating feedback forms, sharing them via public links, and analyzing responses in real-time. It replaces tools like Google Forms and Typeform with a modern, team-oriented experience featuring rich analytics, workspace management, and billing/subscription support.",
         "role": "fullstack",
         "teamSize": "1",
