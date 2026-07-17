@@ -1,7 +1,7 @@
 {
   "name": "Muzammal Safdar",
   "label": "Full Stack Developer",
-  "summary": "Software Engineer with 2 years of experience developing web applications across the frontend and backend using React.js, Next.js, Node.js, Express.js, MongoDB, SQL, and TypeScript. Worked on CRM systems, order management platforms, SaaS products, and AI-powered marketplaces, building frontend features, REST APIs, database queries, and deployment workflows.",
+  "summary": "Full Stack Developer building SaaS platforms, marketplaces, and real-time web apps. 8+ projects shipped across insurance, e-commerce, AI, and printing.",
   "image": "/images/profile-muzammal-safdar.jpg",
   "email": "mmuzammilsafdar3@gmail.com",
   "phone": "+92 370 0810327",
@@ -22,27 +22,5 @@
     "city": "Lahore",
     "country": "Punjab",
     "region": "Pakistan"
-  },
-  "stats": [
-    {
-      "value": "2+",
-      "label": "Years of Experience",
-      "color": "from-emerald-500 to-teal-500"
-    },
-    {
-      "value": "14+",
-      "label": "Completed Projects",
-      "color": "from-blue-500 to-cyan-500"
-    },
-    {
-      "value": "2+",
-      "label": "Happy Clients",
-      "color": "from-violet-500 to-purple-500"
-    },
-    {
-      "value": "20+",
-      "label": "Reusable Components",
-      "color": "from-amber-500 to-orange-500"
-    }
-  ]
+  }
 }

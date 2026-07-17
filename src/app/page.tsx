@@ -14,10 +14,10 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Muzammil Safdar | Full Stack Developer',
   description:
-    'Full Stack Developer building Scalable MVPs, SAAS & Real Time Web Applications. Turning complex problems into elegant solutions.',
+    'Full Stack Developer. 8+ production apps shipped. SaaS, marketplaces, and real-time web platforms.',
   openGraph: {
     title: 'Muzammil Safdar | Full Stack Developer',
-    description: 'Full Stack Developer building Scalable MVPs, SAAS & Real Time Web Applications.',
+    description: 'Full Stack Developer. 8+ production apps shipped. SaaS, marketplaces, and real-time web platforms.',
     url: 'https://muzammilsafdar.com',
     siteName: 'Muzammil Safdar',
     locale: 'en_US',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Muzammil Safdar | Full Stack Developer',
-    description: 'Full Stack Developer building Scalable MVPs, SAAS & Real Time Web Applications.',
+    description: 'Full Stack Developer. 8+ production apps shipped. SaaS, marketplaces, and real-time web platforms.',
   },
 };
 

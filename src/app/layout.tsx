@@ -8,7 +8,7 @@ export const metadata = {
     template: '%s | Muzammil Safdar',
   },
   description:
-    'Full Stack Developer building scalable MVPs, SaaS products, and real-time web applications.',
+    'Full Stack Developer. 8+ production apps shipped. SaaS, marketplaces, and real-time web platforms.',
   alternates: {
     canonical: '/',
   },
@@ -17,14 +17,14 @@ export const metadata = {
     url: 'https://mmuzammil-portfolio.vercel.app',
     title: 'Muzammil Safdar | Full Stack Developer',
     description:
-      'Full Stack Developer building scalable MVPs, SaaS products, and real-time web applications.',
+      'Full Stack Developer. 8+ production apps shipped. SaaS, marketplaces, and real-time web platforms.',
     siteName: 'Muzammil Safdar',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Muzammil Safdar | Full Stack Developer',
     description:
-      'Full Stack Developer building scalable MVPs, SaaS products, and real-time web applications.',
+      'Full Stack Developer. 8+ production apps shipped. SaaS, marketplaces, and real-time web platforms.',
   },
   verification: {
     google: 'XY95-FqUPkQ1rH0UOK046mTLJkhaqmEtIp--2ScaXhc',

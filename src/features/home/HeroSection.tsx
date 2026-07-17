@@ -10,9 +10,9 @@ import { GitHubIcon, LinkedInIcon } from '@/components/ui';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const TAGLINES = [
-  'Building Digital Experiences',
-  'Crafting Scalable Solutions',
-  'Transforming Ideas into Code',
+  'Ship MVPs in Weeks',
+  'Full Stack. Full Ownership.',
+  'From Database to Deployment',
 ];
 
 interface HeroSectionProps {
@@ -65,7 +65,7 @@ export default function HeroSection({ profile }: HeroSectionProps) {
     name: 'Muzammil Safdar',
     label: 'Full Stack Developer',
     summary:
-      'With over a year of hands-on experience, I have honed my skills in developing dynamic and responsive web applications. My journey as a developer has been driven by a passion for crafting efficient and scalable solutions.',
+      "2+ years building production apps that handle real users.",
     profiles: [
       {
         network: 'GitHub',
@@ -98,17 +98,18 @@ export default function HeroSection({ profile }: HeroSectionProps) {
 
           <h1 className="text-5xl sm:text-6xl md:text-[5rem] leading-tight font-bold">
             {displayProfile.label}
-            <br />
-            in Pakistan
           </h1>
+
+          <p className="mt-2 text-primary/80 text-sm sm:text-base font-medium">
+            Open to full-time roles — Remote (Global) &amp; Onsite in Lahore / Faisalabad
+          </p>
 
           <div className="mt-4 h-8">
             <Typewriter key={taglineIndex} text={TAGLINES[taglineIndex]} />
           </div>
 
           <p className="mt-6 text-muted-foreground md:text-lg text-base inline-block">
-            Building Scalable MVPs, SAAS & Real Time Web Applications. Turning complex problems into
-            elegant solutions.
+            Full Stack Developer at Axtra Studios. 8+ production apps. CRM, marketplaces, and SaaS platforms from database to deployment.
           </p>
 
           <div className="mt-8 flex flex-col gap-6">

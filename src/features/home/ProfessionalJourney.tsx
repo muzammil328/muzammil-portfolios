@@ -52,7 +52,7 @@ export default function ProfessionalJourney() {
             Professional Journey
           </h3>
           <p className="text-base md:text-lg text-muted-foreground">
-            My career path and the impact I&apos;ve made along the way.
+            Roles, results, and what I shipped at each stop.
           </p>
         </div>
 

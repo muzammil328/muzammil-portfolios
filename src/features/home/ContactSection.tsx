@@ -137,7 +137,7 @@ export default function ContactSection({
             Get In Touch
           </TitleTag>
           <p className="text-lg text-muted-foreground">
-            Have a project in mind? Let&apos;s discuss how we can bring your ideas to life.
+            Need a developer who ships? Let&apos;s talk.
           </p>
         </div>
 

@@ -29,15 +29,12 @@ export default function AboutMe() {
     >
       <div className="flex flex-col gap-8">
         <h2 className="text-4xl md:text-6xl font-semibold leading-tight text-foreground">
-          Building the bridge between ideas and{' '}
-          <span className="italic text-primary/70">experiences</span>
+          Full Stack Developer who{' '}
+          <span className="italic text-primary/70">ships</span>
         </h2>
 
         <p className="text-base md:text-[1.05rem] text-foreground/85 leading-8 max-w-2xl">
-          I partner with founders and teams to turn ambitious product ideas into production-ready
-          digital experiences. As a full stack developer, I handle everything from polished frontend
-          interactions to reliable backend systems, with a strong focus on speed, quality, and
-          maintainability.
+          I build SaaS platforms, CRM systems, and real-time web apps — from database design to deployment. 40+ reusable components. API response times cut in half.
         </p>
       </div>
 

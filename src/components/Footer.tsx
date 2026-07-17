@@ -44,8 +44,7 @@ function FooterContent() {
         </h2>
 
         <p className="text-white/50 max-w-sm text-base leading-relaxed mb-10">
-          I craft fast, accessible, and beautiful web products. If you have a project in mind —
-          let&apos;s talk.
+          I build full-stack web apps that handle real users. SaaS, marketplaces, real-time platforms.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
