@@ -16,7 +16,7 @@ const TAGLINES = [
 ];
 
 interface HeroSectionProps {
-  profile: ProfileTypes | null;
+  profile: ProfileTypes;
 }
 
 function Typewriter({ text }: { text: string }) {
@@ -61,27 +61,6 @@ export default function HeroSection({ profile }: HeroSectionProps) {
     return () => clearInterval(interval);
   }, []);
 
-  const defaultProfile = {
-    name: 'Muzammil Safdar',
-    label: 'Full Stack Developer',
-    summary:
-      "2+ years building production apps that handle real users.",
-    profiles: [
-      {
-        network: 'GitHub',
-        username: 'Muzammil327',
-        url: 'https://github.com/Muzammil327',
-      },
-      {
-        network: 'LinkedIn',
-        username: 'mmuzammilsafdar',
-        url: 'https://www.linkedin.com/in/mmuzammilsafdar/',
-      },
-    ],
-  };
-
-  const displayProfile = profile || defaultProfile;
-
   return (
     <header
       ref={containerRef}
@@ -93,11 +72,11 @@ export default function HeroSection({ profile }: HeroSectionProps) {
       <div className="flex flex-col lg:flex-row items-center lg:gap-24 gap-12">
         <motion.div style={{ y: textY }} className="w-full lg:w-2/3 md:mt-12 sm:mt-8 mt-4 z-10">
           <span className="inline-block text-foreground text-3xl sm:text-4xl">
-            I&apos;m {displayProfile.name}
+            I&apos;m {profile.name}
           </span>
 
           <h1 className="text-5xl sm:text-6xl md:text-[5rem] leading-tight font-bold">
-            {displayProfile.label}
+            {profile.label}
           </h1>
 
           <p className="mt-2 text-primary/80 text-sm sm:text-base font-medium">
@@ -124,7 +103,7 @@ export default function HeroSection({ profile }: HeroSectionProps) {
               <span className="text-base font-semibold flex flex-col gap-1">Follow Me</span>
 
               <div className="flex items-center gap-3 my-2">
-                {displayProfile.profiles?.map((social, i) => {
+                {profile.profiles?.map((social, i) => {
                   const lower = social.network?.toLowerCase() || '';
                   return (
                     <Link
@@ -151,22 +130,10 @@ export default function HeroSection({ profile }: HeroSectionProps) {
           style={{ y: imageY }}
           className="w-full lg:w-1/3 flex justify-center lg:justify-end z-0"
         >
-          {profile?.image && (
+          {profile.image && (
             <Image
               src={profile.image}
-              alt={displayProfile.name}
-              width={480}
-              height={480}
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 360px, 480px"
-              className="w-full max-w-md sm:max-w-90 lg:max-w-120 h-auto aspect-square object-cover rounded-2xl"
-              priority
-              fetchPriority="high"
-            />
-          )}
-          {!profile?.image && (
-            <Image
-              src="/Muhammad-Muzammil-Safdar.jpeg"
-              alt="Portrait"
+              alt={profile.name}
               width={480}
               height={480}
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 360px, 480px"

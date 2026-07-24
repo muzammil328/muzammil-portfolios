@@ -31,13 +31,7 @@ export const metadata: Metadata = {
 };
 
 export default async function page() {
-  let profile = null;
-
-  try {
-    profile = await fetchProfile();
-  } catch (error) {
-    console.error('Error fetching profile:', error);
-  }
+  const profile = await fetchProfile();
 
   return (
     <div>
@@ -47,7 +41,6 @@ export default async function page() {
         <FollowMeBox />
       </div>
       <main>
-        {/* <AboutMe /> */}
         <div className="grid lg:grid-cols-2 gap-4 items-start">
           <ProfessionalJourney />
           <Education />

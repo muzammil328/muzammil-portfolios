@@ -37,8 +37,6 @@ export default function ProfessionalJourney() {
     fetchData();
   }, []);
 
-  const displayExperiences = experiences.length > 0 ? experiences : [];
-
   return (
     <section id="about" className="lg:py-16 md:py-12 sm:py-8 py-4 container mx-auto md:px-6 px-3">
       <div className="max-w-4xl mx-auto">
@@ -74,7 +72,7 @@ export default function ProfessionalJourney() {
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block"></div>
 
             <div className="space-y-12">
-              {displayExperiences.map((exp, index) => {
+              {experiences.map((exp, index) => {
                 const startDateText = formatYearMonth(exp.startDate);
                 const endDateText = formatYearMonth(exp.endDate);
                 return (

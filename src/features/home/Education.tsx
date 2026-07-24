@@ -66,12 +66,7 @@ export default function Education() {
             ))}
           </div>
         ) : (
-          <>
-            {education.length === 0 ? (
-              <div className="bg-card border rounded-2xl p-6 text-center text-muted-foreground">
-                No education records found.
-              </div>
-            ) : (
+          education.length > 0 && (
               <div className="relative">
                 <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-border hidden md:block"></div>
 
@@ -119,8 +114,7 @@ export default function Education() {
                   })}
                 </div>
               </div>
-            )}
-          </>
+            )
         )}
       </div>
     </section>

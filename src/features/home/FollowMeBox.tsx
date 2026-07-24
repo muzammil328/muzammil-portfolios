@@ -44,8 +44,6 @@ export default function FollowMeBox() {
     fetchData();
   }, []);
 
-  const displayProfiles = profiles.length > 0 ? profiles : [];
-
   return (
     <div className="max-w-md lg:flex hidden flex-col items-center gap-6 absolute left-4 top-[20%] transform -translate-y-1/2">
       <span className="text-base font-semibold rotate-90">Follow</span>
@@ -70,11 +68,9 @@ export default function FollowMeBox() {
             <div key={i} className="w-9 h-9 rounded-full bg-muted animate-pulse" />
           ))}
         </div>
-      ) : displayProfiles.length === 0 ? (
-        <p className="text-sm text-muted-foreground">No profiles found.</p>
-      ) : (
+      ) : profiles.length === 0 ? null : (
         <div className="flex flex-col items-center gap-3">
-          {displayProfiles.slice(0, 4).map((social, i) => (
+          {profiles.slice(0, 4).map((social, i) => (
             <Link
               key={i}
               href={social.url || '#'}
