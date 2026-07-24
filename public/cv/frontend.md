@@ -17,17 +17,12 @@ Frontend Engineer with 2+ years of experience building production-grade React an
 
 ## Technical Skills
 
-**Languages:** JavaScript, TypeScript, HTML5, CSS3, SCSS
-
-**Frontend:** React.js, Next.js (App Router), Redux, Tailwind CSS, Shadcn UI, Framer Motion, Axios, React Hook Form, TanStack React Query
-
-**UI/Theming:** Dark/Light mode (next-themes), Responsive Design, Component Architecture, Recharts, React Simple Maps
-
-**Backend (Working Knowledge):** Node.js, Express.js, MongoDB, Socket.IO, PostgreSQL, Prisma, Stripe
-
-**Deployment:** Vercel, Netlify, Heroku, AWS Amplify, Azure, Google Cloud Platform
-
-**DevOps & Tools:** Git, GitHub, Docker, NPM, PNPM, Yarn, Postman, VS Code
+Languages: JavaScript, TypeScript
+Frontend: HTML5, CSS3, SCSS, React.js, Next.js (App Router), Redux, Tailwind CSS, Shadcn UI, Framer Motion, Axios, React Hook Form, TanStack React Query
+UI/Theming: Dark/Light mode (next-themes), Responsive Design, Component Architecture, Recharts, React Simple Maps
+Deployment: Vercel, Netlify, Heroku, AWS Amplify
+DevOps & Tools: Git, GitHub, Docker, NPM, PNPM, Yarn, Postman, VS Code
+Backend (Working Knowledge): Node.js, Express.js, MongoDB
 
 ---
 
@@ -73,7 +68,7 @@ Built a copy-paste UI component library with Next.js and Tailwind CSS, letting d
 Shipped a premium admin dashboard UI kit built with Next.js App Router, TypeScript, and Tailwind CSS. Delivered pre-built analytics, CRM, e-commerce, and settings modules on a shared layout system with reusable Recharts-based charts, react-simple-maps geographic views, and a full authentication flow. Packaged as a standalone template for reuse across client projects, maintaining visual consistency across 8+ dashboard sections.
 
 ### Treepost AI
-[treepost.ca](https://treepost.ca/) | Frontend | Solo
+[treepost.ca](https://www.treepost.axtrastudios.com) | Frontend | Solo
 
 Developed the frontend for a Canadian marketplace connecting homeowners with certified tree service contractors. Built AI-powered price estimation UI, job posting flows, contractor verification dashboards, competitive bidding interfaces, real-time messaging with Socket.IO, and a secure payment experience. Delivered Framer Motion animations and responsive layouts supporting 15,000+ community members.
 
