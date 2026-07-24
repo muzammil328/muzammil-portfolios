@@ -17,17 +17,17 @@ MERN Stack Developer with 2+ years of experience building and shipping productio
 
 ## Technical Skills
 
-**Languages:** JavaScript, TypeScript, HTML5, CSS3, SCSS, Dart
+Languages: JavaScript, TypeScript
 
-**Frontend:** React.js, Next.js, Redux, Tailwind CSS, Shadcn UI, Framer Motion, Axios, React Hook Form, TanStack React Query
+Frontend: HTML5, CSS3, SCSS, React.js, Next.js, Redux, Tailwind CSS, Shadcn UI, Framer Motion, Axios, React Hook Form, TanStack React Query
 
-**Backend:** Node.js, Express.js, Socket.IO, Stripe, Cloudinary, Clerk
+Backend: Node.js, Express.js, Socket.IO, Stripe, Cloudinary, Clerk
 
-**Databases:** MongoDB, Mongoose, PostgreSQL, Prisma, Redis, Firebase, Supabase
+Databases: MongoDB, Mongoose, PostgreSQL, Prisma, Redis, Firebase, Supabase
 
-**Cloud & Deployment:** Vercel, Heroku, Netlify, AWS Amplify, AWS EC2, Azure, Google Cloud Platform, Railway
+Cloud & Deployment: Vercel, Heroku, Netlify, AWS Amplify, AWS EC2, Azure, Google Cloud Platform, Railway
 
-**DevOps & Tools:** Git, GitHub, Docker, NPM, PNPM, Yarn, Postman, VS Code
+DevOps & Tools: Git, GitHub, Docker, NPM, PNPM, Yarn, Postman, VS Code
 
 ---
 
@@ -37,10 +37,8 @@ MERN Stack Developer with 2+ years of experience building and shipping productio
 **Axtra Studios** | Lahore, Pakistan | Dec 2024 — Present
 
 - Built full-stack features using React, Next.js, Node.js, Express.js, MongoDB, and SQL across frontend, backend, and database layers.
-- Engineered REST API endpoints and reduced response time from 900 ms to 450 ms through query optimization and cleaner request handling.
+- REST API endpoints and reduced response time from 900 ms to 450 ms through query optimization and cleaner request handling.
 - Created 40 reusable React components for repeated UI patterns, eliminating duplicate code and simplifying frontend updates.
-- Delivered 4 key modules including user management, authentication, dashboard pages, and data-driven application workflows.
-- Implemented secure login, authorization, and role-based access control supporting 3 user roles with protected routes.
 - Leveraged SSR and SSG in Next.js to improve page load time by 30% for server-rendered and pre-rendered pages.
 - Optimized MongoDB and SQL queries and resolved frontend-to-backend issues by tracing API requests and validating database responses.
 
