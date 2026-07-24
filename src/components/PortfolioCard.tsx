@@ -161,18 +161,18 @@ export default function PortfolioCard({ data, index = 0 }: { data: ProjectCard; 
           </div>
 
           <div className="mt-auto pt-4 border-t border-border/50">
-            <div className="flex flex-wrap gap-2">
-              {tags.slice(0, 6).map((tag: string, i: number) => (
+            <div className="flex flex-nowrap gap-2 overflow-hidden">
+              {tags.slice(0, 3).map((tag: string, i: number) => (
                 <span
                   key={i}
-                  className="text-xs font-medium px-2 py-1 rounded-md bg-secondary text-secondary-foreground"
+                  className="shrink-0 text-xs font-medium px-2 py-1 rounded-md bg-secondary text-secondary-foreground"
                 >
                   {tag}
                 </span>
               ))}
-              {tags.length > 6 && (
-                <span className="text-xs font-medium px-2 py-1 rounded-md bg-secondary/50 text-secondary-foreground">
-                  +{tags.length - 6}
+              {tags.length > 3 && (
+                <span className="shrink-0 text-xs font-medium px-2 py-1 rounded-md bg-secondary/50 text-secondary-foreground">
+                  +{tags.length - 3}
                 </span>
               )}
             </div>

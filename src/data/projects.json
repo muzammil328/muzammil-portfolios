@@ -161,6 +161,7 @@
     "mainImage": "/projects/feedback/dashboard.png",
     "sliderImages": [
       "/projects/feedback/dashboard.png",
+      "/projects/feedback/dashboard2.png",
       "/projects/feedback/sign-in.png",
       "/projects/feedback/signup.png",
       "/projects/feedback/forgot-password.png"
@@ -231,7 +232,7 @@
     "mainImage": "/images/project-education-website-main.png",
     "sliderImages": [],
     "description": "Education Website is a full-stack education platform for classes 9–12 and Virtual University students, providing books, notes, MCQs, past papers, pairing schemes, and online tests. It runs as a monorepo of 7 Next.js portals (auth, public site, super-admin, admin, student, teacher, parent) backed by a single Express/tRPC API, with strict role-based access control and real-time features via Socket.IO.",
-    "liveLink": null,
+    "liveLink": "https://education-website-web.vercel.app/",
     "githubLink": null,
     "figmaDesign": null,
     "company": "Side Project",
@@ -345,7 +346,36 @@
     "teamSize": "1",
     "duration": "less-1-month",
     "priority": 5,
-    "skills": [],
+    "skills": [
+      {
+        "name": "Typescript",
+        "icon": "/skills/frontend/typescript.svg"
+      },
+      {
+        "name": "React JS",
+        "icon": "/skills/frontend/react-js.svg"
+      },
+      {
+        "name": "Next JS",
+        "icon": "/skills/frontend/next-js.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "/skills/frontend/tailwind-css.png"
+      },
+      {
+        "name": "Framer Motion",
+        "icon": "/skills/frontend/framer-motion.svg"
+      },
+      {
+        "name": "Socket.io",
+        "icon": "/skills/backend/socket-io.svg"
+      },
+      {
+        "name": "Axios",
+        "icon": "/skills/frontend/axios.svg"
+      }
+    ],
     "body": "## Problem\n\nHomeowners struggled to find trusted tree contractors and had no way to compare fair pricing before hiring. Getting quotes meant contacting multiple contractors manually — slow, inconsistent, and unreliable. Unverified contractors, payment disputes, and zero transparency made the whole experience frustrating for both sides.\n\n## Solution\n\nTreepost AI built a digital marketplace that replaces the entire offline process. Homeowners post once and get instant AI-powered price estimates, browse verified contractors, and pay securely — all in one place. Contractors get qualified local leads, a bidding system, and real-time messaging without chasing clients.\n\n## Key Features\n\n- **AI-Powered Price Estimates: **Homeowners receive instant project estimates using AI with up to 95% pricing accuracy before reviewing contractor bids.\n- **Job Posting System: **Users can post jobs with detailed descriptions, photos, and videos to help contractors assess project scope accurately.\n- **Contractor Verification: **Contractors must submit licenses, insurance, and WSIB documentation before approval, ensuring a trusted service network.\n- **Competitive Bidding Platform: **Verified contractors browse available jobs and submit bids, allowing homeowners to compare pricing and choose the best fit.\n- **Real-Time Messaging:** Built-in messaging enables direct communication between homeowners and contractors for faster decisions and better coordination.\n- **Protected Payment System: **Secure payment handling protects both parties by ensuring safe transactions throughout the project lifecycle.\n- **Admin Dashboard: **Admins manage users, contractor approvals, analytics, platform reports, and AI feedback improvements from a centralized dashboard.\n\n## Outcome / Results\n\n- **95% AI Estimate Accuracy: **The pricing engine provided highly accurate instant estimates, reducing uncertainty before contractor selection.\n- **15,000+ Community Members: **The platform successfully built a strong network of homeowners and verified contractors across the Canadian market.\n- **98% Customer Satisfaction Rate: **Transparent pricing, verified professionals, and secure workflows significantly improved user trust and satisfaction.\n- **100% Verified Contractor Network: **Strict contractor verification ensured all service providers met professional and legal compliance standards.\n- **Faster Hiring Workflow:** AI estimates and bidding reduced the time required to find and hire trusted contractors compared to traditional manual processes.\n\n## Key Takeaways / Learnings\n\n- **Advanced React Architecture: **Improved frontend scalability by managing complex multi-role dashboards and reusable component systems.\n- **Pixel-Perfect UI Development: **Strengthened expertise in building highly polished responsive interfaces across all device sizes.\n- **Real-Time System Design: **Learned how to structure real-time messaging and notifications for seamless user communication.\n- **Complex State Management: **Handled bidding workflows, contractor verification states, and AI estimate feedback flows efficiently.\n- **AI + User Feedback Loops: **Gained experience integrating AI-generated estimates with user feedback systems for continuous platform improvement.\n- **Role-Based Frontend Access: **Built secure and intuitive interfaces for homeowners, contractors, and admins with different access levels.",
     "relatedProjects": [
       {
@@ -647,7 +677,40 @@
     "teamSize": "2",
     "duration": "1-3-months",
     "priority": 9,
-    "skills": [],
+    "skills": [
+      {
+        "name": "Typescript",
+        "icon": "/skills/frontend/typescript.svg"
+      },
+      {
+        "name": "React JS",
+        "icon": "/skills/frontend/react-js.svg"
+      },
+      {
+        "name": "Next JS",
+        "icon": "/skills/frontend/next-js.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "/skills/frontend/tailwind-css.png"
+      },
+      {
+        "name": "Node JS",
+        "icon": "/skills/backend/node-js.svg"
+      },
+      {
+        "name": "Express JS",
+        "icon": "/skills/backend/express-js.svg"
+      },
+      {
+        "name": "MongoDB",
+        "icon": "/skills/database/mongodb.svg"
+      },
+      {
+        "name": "Stripe",
+        "icon": "/skills/backend/stripe.webp"
+      }
+    ],
     "body": "## Problem\n\nPeople experiencing emotional stress often don’t have immediate access to a coach or therapist, and typing out feelings during a difficult moment can be harder than simply speaking them — leaving a gap between needing support and being able to express it.\n\n## Solution\n\nB.R.I.E.F.S. Coach is an AI-powered mental coaching platform that lets users record voice-based emotional \"vents\" and receive instant AI-generated coaching guidance, paired with relevant YouTube video recommendations, enabling organizations to offer scalable mental wellness support.\n\n## Key Features\n\n- **Voice-Based Venting: **Users record how they’re feeling by voice instead of typing, lowering the barrier to expressing emotion.\n- **AI Coaching Responses: **GPT-4 generates instant, relevant coaching guidance based on the recorded vent.\n- **Curated Video Recommendations: **Relevant YouTube videos are recommended alongside AI guidance for further support.\n- **Coach & Subscription Management: **Organizations and practitioners manage coaches and offer the platform via subscription-based team access.\n\n## Outcome / Results\n\n- **Scalable Wellness Support: **Enabled organizations to offer mental wellness support without needing a 1:1 coach available at all times.\n- **Lower Barrier to Support: **Voice-based input made it easier for users to express emotions compared to text-only journaling tools.\n\n## Key Takeaways / Learnings\n\n- **AI Prompt & Response Design: **Learned to design GPT-4 prompts that produce empathetic, actionable coaching responses from raw voice input.\n- **Voice-to-Insight Pipelines: **Gained experience building a pipeline from voice recording to transcription to AI-generated guidance.",
     "relatedProjects": [
       {
@@ -695,7 +758,32 @@
     "teamSize": "1",
     "duration": "1-3-months",
     "priority": 10,
-    "skills": [],
+    "skills": [
+      {
+        "name": "Typescript",
+        "icon": "/skills/frontend/typescript.svg"
+      },
+      {
+        "name": "React JS",
+        "icon": "/skills/frontend/react-js.svg"
+      },
+      {
+        "name": "Next JS",
+        "icon": "/skills/frontend/next-js.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "/skills/frontend/tailwind-css.png"
+      },
+      {
+        "name": "Node JS",
+        "icon": "/skills/backend/node-js.svg"
+      },
+      {
+        "name": "Postgresql",
+        "icon": "/skills/database/postgresql.svg"
+      }
+    ],
     "body": "## Problem\n\nReal estate media professionals — photographers, videographers, drone operators — often price their services by guesswork or outdated rate cards, making it hard to stay competitive without either undercharging or losing bids on price.\n\n## Solution\n\nReal Estate Media Pricing Calculator is a web-based pricing platform that generates accurate, market-based pricing recommendations for photography, videography, drone services, floor plans, virtual staging, and twilight photography, using verified market data from 2,695 real estate media businesses across the United States.\n\n## Key Features\n\n- **Location-Specific Pricing: **Generates pricing ranges tailored to the professional’s specific market location.\n- **Multi-Service Coverage: **Covers photography, videography, drone services, floor plans, virtual staging, and twilight photography in one calculator.\n- **Confidence Ratings: **Each pricing recommendation includes a confidence rating based on the underlying market data.\n- **Verified Market Dataset: **Built on market data from 2,695 real estate media businesses rather than static or self-reported rate cards.\n\n## Outcome / Results\n\n- **More Competitive Pricing: **Helped professionals price services with market-backed confidence instead of guesswork.\n- **Reduced Under/Overpricing: **Location-specific ranges reduced the risk of pricing too high to win bids or too low to be profitable.\n\n## Key Takeaways / Learnings\n\n- **Data-Driven Pricing Models: **Learned to translate a large verified dataset into simple, actionable pricing ranges for end users.\n- **Confidence-Rated Recommendations: **Gained experience presenting statistical confidence in a way non-technical users can trust and act on.",
     "relatedProjects": [
       {
@@ -743,7 +831,32 @@
     "teamSize": "1",
     "duration": "less-1-month",
     "priority": 11,
-    "skills": [],
+    "skills": [
+      {
+        "name": "HTML5",
+        "icon": "/skills/frontend/html5.svg"
+      },
+      {
+        "name": "CSS3",
+        "icon": "/skills/frontend/css3.svg"
+      },
+      {
+        "name": "Typescript",
+        "icon": "/skills/frontend/typescript.svg"
+      },
+      {
+        "name": "React JS",
+        "icon": "/skills/frontend/react-js.svg"
+      },
+      {
+        "name": "Next JS",
+        "icon": "/skills/frontend/next-js.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "/skills/frontend/tailwind-css.png"
+      }
+    ],
     "body": "## Problem\n\nExtra Scrub, a cleaning company based in London, needed a professional online presence — without one, customers had no easy way to explore services, request quotes, or book appointments, which limited trust and booking conversions.\n\n## Solution\n\nExtra Scrub Cleaning Services Website is a professional multi-page business website that lets customers explore residential and commercial cleaning services, request custom quotes, book appointments online, and contact the team easily, all through a modern, mobile-friendly design.\n\n## Key Features\n\n- **Service Exploration: **Customers browse residential and commercial cleaning services in a clear, organized layout.\n- **Custom Quote Requests: **A quote request flow lets customers describe their needs and get a tailored response.\n- **Online Appointment Booking: **Customers book appointments directly through the site instead of calling or emailing.\n- **Mobile-Friendly Design: **The site is fully responsive, built for customers browsing and booking from their phones.\n\n## Outcome / Results\n\n- **Increased Booking Conversions: **A modern, trustworthy digital presence made it easier for visitors to convert into booked appointments.\n- **Simplified Service Discovery: **Clear service categorization reduced confusion about what Extra Scrub offers.\n\n## Key Takeaways / Learnings\n\n- **Conversion-Focused Web Design: **Learned to structure a small business site around clear calls-to-action for quotes and bookings.\n- **Mobile-First Development: **Reinforced building fully responsive layouts for a primarily mobile customer base.",
     "relatedProjects": [
       {
