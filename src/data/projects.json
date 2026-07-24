@@ -13,7 +13,7 @@
       "/projects/dashboard-ui-kit/Dashboard-ui-kit-icons.png"
     ],
     "description": "Next.js Dashboard Template is a premium admin dashboard UI kit built with Next.js, TypeScript, and Tailwind CSS. It ships pre-built analytics, CRM, e-commerce, and settings modules on top of a shared layout system, reusable charts (Recharts), interactive maps, and a full authentication flow - designed to be sold as a ready-to-use dashboard template.",
-    "liveLink": null,
+    "liveLink": "https://kestrel-next-js-dashboard-template.vercel.app",
     "githubLink": null,
     "figmaDesign": null,
     "company": "Side Project",
@@ -21,7 +21,7 @@
     "role": "frontend",
     "teamSize": "1",
     "duration": "1-3-months",
-    "priority": 1,
+    "priority": 2,
     "skills": [
       {
         "name": "Typescript",
@@ -49,16 +49,50 @@
       }
     ],
     "body": "## Problem\n\nTeams building internal tools or SaaS admin panels spend weeks assembling the same pieces from scratch - layout shell, navigation, charts, tables, forms, auth screens - before they can start on actual product features.\n\n## Solution\n\nNext.js Dashboard Template is a complete admin dashboard UI kit built with Next.js (App Router), TypeScript, and Tailwind CSS. It provides a shared layout system with pre-built dashboard, analytics, CRM, e-commerce, forms, tables, widgets, and settings modules, plus a full authentication flow - ready to drop into a new product and customize.\n\n## Key Features\n\n- **Multiple Dashboard Modules: **Dashboard, analytics, CRM, e-commerce, admin, forms, tables, and widgets pages ship out of the box, each following a consistent design language.\n- **Data Visualization: **Recharts-based charts and react-simple-maps power analytics widgets and geographic data views.\n- **Reusable Component System: **Layout, shared, and UI component folders are cleanly separated so new pages can be assembled from existing building blocks.\n- **Authentication Screens: **Login, register, and account-flow pages are included as a ready-to-wire auth module.\n- **Dark/Light Theming: **Built on next-themes with Tailwind CSS v4 tokens for consistent theming across every module.\n\n## Outcome / Results\n\n- **Reusable Product: **Packaged as a standalone template that can be licensed and reused across multiple client/admin-panel projects instead of being rebuilt each time.\n- **Consistent UX Across Modules: **A shared layout and component system keeps 8+ distinct dashboard sections visually and behaviorally consistent.\n\n## Key Takeaways / Learnings\n\n- **Template Architecture: **Learned to structure a component library generically enough to support many different dashboard domains (CRM, e-commerce, analytics) without forking code per module.\n- **Chart/Map Integration: **Gained experience wiring Recharts and react-simple-maps into a reusable, theme-aware widget system.",
-    "relatedProjects": []
+    "relatedProjects": [
+      {
+        "title": "UI Component Library",
+        "slug": "ui-component-library",
+        "mainImage": "/projects/ui-components/ui-components.png",
+        "description": "UI Component Library is a website-only, copy-paste UI component library built with Next.js and Tailwind CSS. Users browse categorized sections (hero, pricing, CTA, navbar, footer, FAQ, testimonials, and more), preview them live, and copy self-contained, dependency-free source code straight into their own projects — no CLI or npm install required. The library supports free and pro (paid) component tiers.",
+        "role": "frontend",
+        "teamSize": "1",
+        "duration": "1-3-months"
+      },
+      {
+        "title": "Survey Management System",
+        "slug": "survey-management-system",
+        "mainImage": "/projects/feedback/dashboard.png",
+        "description": "Feedback Hub is a full-stack SaaS platform for creating feedback forms, sharing them via public links, and analyzing responses in real-time. It replaces tools like Google Forms and Typeform with a modern, team-oriented experience featuring rich analytics, workspace management, and billing/subscription support.",
+        "role": "fullstack",
+        "teamSize": "1",
+        "duration": "6-12-months"
+      },
+      {
+        "title": "Education Website",
+        "slug": "education-website",
+        "mainImage": "/images/project-education-website-main.png",
+        "description": "Education Website is a full-stack education platform for classes 9–12 and Virtual University students, providing books, notes, MCQs, past papers, pairing schemes, and online tests. It runs as a monorepo of 7 Next.js portals (auth, public site, super-admin, admin, student, teacher, parent) backed by a single Express/tRPC API, with strict role-based access control and real-time features via Socket.IO.",
+        "role": "fullstack",
+        "teamSize": "1",
+        "duration": "6-12-months"
+      }
+    ]
   },
   {
     "_id": "da44bed7-d38a-4836-8e8c-a3237a3ba315",
     "title": "UI Component Library",
     "slug": "ui-component-library",
-    "mainImage": "/images/project-stackyard-main.png",
-    "sliderImages": [],
+    "mainImage": "/projects/ui-components/ui-components.png",
+    "sliderImages": [
+      "/projects/ui-components/ui-components.png",
+      "/projects/ui-components/ui-components-preview.png",
+      "/projects/ui-components/ui-components-pricing.png",
+      "/projects/ui-components/ui-components-resposive-check.png",
+      "/projects/ui-components/ui-components-full-page-template.png"
+    ],
     "description": "UI Component Library is a website-only, copy-paste UI component library built with Next.js and Tailwind CSS. Users browse categorized sections (hero, pricing, CTA, navbar, footer, FAQ, testimonials, and more), preview them live, and copy self-contained, dependency-free source code straight into their own projects — no CLI or npm install required. The library supports free and pro (paid) component tiers.",
-    "liveLink": "https://ui-components-eosin.vercel.app",
+    "liveLink": "https://section-stash-web.vercel.app",
     "githubLink": null,
     "figmaDesign": null,
     "company": "Side Project",
@@ -66,7 +100,7 @@
     "role": "frontend",
     "teamSize": "1",
     "duration": "1-3-months",
-    "priority": 2,
+    "priority": 1,
     "skills": [
       {
         "name": "Typescript",
@@ -265,7 +299,35 @@
       }
     ],
     "body": "## Problem\n\nStudents preparing for classes 9-12 board exams and Virtual University coursework rely on scattered resources - photocopied notes, disconnected MCQ banks, and separate portals for teachers, parents, and administrators - with no single platform tying content, testing, and role-based access together.\n\n## Solution\n\nEducation Website is a monorepo education platform built around a strict content hierarchy (Class -> Book -> Chapter -> Heading -> SubHeading -> MCQ). It ships 7 role-locked Next.js portals - auth, public web, super-admin, admin, student, teacher, and parent - all served by a single Express 5 + tRPC monolith API, so every portal shares one type-safe backend, one MongoDB database, and one Redis cache.\n\n## Key Features\n\n- **Role-Based Portals: **Each of the 7 portals is locked to a specific role (SuperAdmin, Admin, Teacher, Student, Parent), with server-verified redirects if a user tries to access the wrong portal.\n- **End-to-End Type Safety: **tRPC over HTTP connects every frontend to the API with fully typed queries and mutations, eliminating REST contract drift.\n- **Structured Content Model: **Books, chapters, headings, MCQs, past papers, pairing schemes, and date sheets are organized in a consistent hierarchy across Boards and Institutions.\n- **Real-Time Features: **Socket.IO powers live updates across portals (e.g. test/session state) without polling.\n- **Shared Design System: **A custom internal component library (built via Rollup) keeps all 7 apps visually and behaviorally consistent.\n\n## Outcome / Results\n\n- **Unified Platform: **Replaced the need for separate tools/spreadsheets per role with one coherent system covering content delivery, testing, and administration.\n- **Maintainable Monolith: **A single Express process with one MongoDB/Redis pair kept development and deployment simple while still serving 7 independent frontends.\n\n## Key Takeaways / Learnings\n\n- **Nx Monorepo at Scale: **Learned to structure and cache builds for a large multi-app, multi-package Nx workspace without cross-app coupling.\n- **Role-Based Access Control: **Designed port/portal-level RBAC with server-side verification on every request rather than trusting client-side route guards.",
-    "relatedProjects": []
+    "relatedProjects": [
+      {
+        "title": "Next.js Dashboard Template",
+        "slug": "nextjs-dashboard-template",
+        "mainImage": "/projects/dashboard-ui-kit/Dashboard-ui-kit.png",
+        "description": "Next.js Dashboard Template is a premium admin dashboard UI kit built with Next.js, TypeScript, and Tailwind CSS. It ships pre-built analytics, CRM, e-commerce, and settings modules on top of a shared layout system, reusable charts (Recharts), interactive maps, and a full authentication flow - designed to be sold as a ready-to-use dashboard template.",
+        "role": "frontend",
+        "teamSize": "1",
+        "duration": "1-3-months"
+      },
+      {
+        "title": "UI Component Library",
+        "slug": "ui-component-library",
+        "mainImage": "/projects/ui-components/ui-components.png",
+        "description": "UI Component Library is a website-only, copy-paste UI component library built with Next.js and Tailwind CSS. Users browse categorized sections (hero, pricing, CTA, navbar, footer, FAQ, testimonials, and more), preview them live, and copy self-contained, dependency-free source code straight into their own projects — no CLI or npm install required. The library supports free and pro (paid) component tiers.",
+        "role": "frontend",
+        "teamSize": "1",
+        "duration": "1-3-months"
+      },
+      {
+        "title": "Survey Management System",
+        "slug": "survey-management-system",
+        "mainImage": "/projects/feedback/dashboard.png",
+        "description": "Feedback Hub is a full-stack SaaS platform for creating feedback forms, sharing them via public links, and analyzing responses in real-time. It replaces tools like Google Forms and Typeform with a modern, team-oriented experience featuring rich analytics, workspace management, and billing/subscription support.",
+        "role": "fullstack",
+        "teamSize": "1",
+        "duration": "6-12-months"
+      }
+    ]
   },
   {
     "_id": "45a6b924-8342-4aab-8a54-af207f6e228d",
