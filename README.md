@@ -2,6 +2,9 @@
 
 Full-stack portfolio built with Next.js 16, Sanity CMS, and MongoDB. Features a blog, project showcase, resume builder with AI job matching, and a task/daily-report dashboard.
 
+
+
+
 ## Tech Stack
 
 | Layer | Technology |
