@@ -1,5 +1,57 @@
 [
   {
+    "_id": "7274eaf2-3fbd-4251-8b52-320f86134272",
+    "title": "Next.js Dashboard Template",
+    "slug": "nextjs-dashboard-template",
+    "mainImage": "/projects/dashboard-ui-kit/Dashboard-ui-kit.png",
+    "sliderImages": [
+      "/projects/dashboard-ui-kit/Dashboard-ui-kit.png",
+      "/projects/dashboard-ui-kit/Dashboard-ui-kit-charts.png",
+      "/projects/dashboard-ui-kit/Dashboard-ui-kit-activity-feed.png",
+      "/projects/dashboard-ui-kit/Dashboard-ui-kit-maps.png",
+      "/projects/dashboard-ui-kit/Dashboard-ui-kit-timeline.png",
+      "/projects/dashboard-ui-kit/Dashboard-ui-kit-icons.png"
+    ],
+    "description": "Next.js Dashboard Template is a premium admin dashboard UI kit built with Next.js, TypeScript, and Tailwind CSS. It ships pre-built analytics, CRM, e-commerce, and settings modules on top of a shared layout system, reusable charts (Recharts), interactive maps, and a full authentication flow - designed to be sold as a ready-to-use dashboard template.",
+    "liveLink": null,
+    "githubLink": null,
+    "figmaDesign": null,
+    "company": "Side Project",
+    "companySlug": "side-project",
+    "role": "frontend",
+    "teamSize": "1",
+    "duration": "1-3-months",
+    "priority": 1,
+    "skills": [
+      {
+        "name": "Typescript",
+        "icon": "/skills/frontend/typescript.svg"
+      },
+      {
+        "name": "React JS",
+        "icon": "/skills/frontend/react-js.svg"
+      },
+      {
+        "name": "Next JS",
+        "icon": "/skills/frontend/next-js.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "/skills/frontend/tailwind-css.png"
+      },
+      {
+        "name": "Shadcn UI",
+        "icon": "/skills/frontend/shadcn-ui.svg"
+      },
+      {
+        "name": "Pnpm",
+        "icon": "/skills/tools/pnpm.svg"
+      }
+    ],
+    "body": "## Problem\n\nTeams building internal tools or SaaS admin panels spend weeks assembling the same pieces from scratch - layout shell, navigation, charts, tables, forms, auth screens - before they can start on actual product features.\n\n## Solution\n\nNext.js Dashboard Template is a complete admin dashboard UI kit built with Next.js (App Router), TypeScript, and Tailwind CSS. It provides a shared layout system with pre-built dashboard, analytics, CRM, e-commerce, forms, tables, widgets, and settings modules, plus a full authentication flow - ready to drop into a new product and customize.\n\n## Key Features\n\n- **Multiple Dashboard Modules: **Dashboard, analytics, CRM, e-commerce, admin, forms, tables, and widgets pages ship out of the box, each following a consistent design language.\n- **Data Visualization: **Recharts-based charts and react-simple-maps power analytics widgets and geographic data views.\n- **Reusable Component System: **Layout, shared, and UI component folders are cleanly separated so new pages can be assembled from existing building blocks.\n- **Authentication Screens: **Login, register, and account-flow pages are included as a ready-to-wire auth module.\n- **Dark/Light Theming: **Built on next-themes with Tailwind CSS v4 tokens for consistent theming across every module.\n\n## Outcome / Results\n\n- **Reusable Product: **Packaged as a standalone template that can be licensed and reused across multiple client/admin-panel projects instead of being rebuilt each time.\n- **Consistent UX Across Modules: **A shared layout and component system keeps 8+ distinct dashboard sections visually and behaviorally consistent.\n\n## Key Takeaways / Learnings\n\n- **Template Architecture: **Learned to structure a component library generically enough to support many different dashboard domains (CRM, e-commerce, analytics) without forking code per module.\n- **Chart/Map Integration: **Gained experience wiring Recharts and react-simple-maps into a reusable, theme-aware widget system.",
+    "relatedProjects": []
+  },
+  {
     "_id": "da44bed7-d38a-4836-8e8c-a3237a3ba315",
     "title": "UI Component Library",
     "slug": "ui-component-library",
@@ -14,7 +66,7 @@
     "role": "frontend",
     "teamSize": "1",
     "duration": "1-3-months",
-    "priority": 1,
+    "priority": 2,
     "skills": [
       {
         "name": "Typescript",
@@ -139,6 +191,83 @@
     ]
   },
   {
+    "_id": "03a6d9a3-123a-4727-a6d8-914eba40c81d",
+    "title": "Education Website",
+    "slug": "education-website",
+    "mainImage": "/images/project-education-website-main.png",
+    "sliderImages": [],
+    "description": "Education Website is a full-stack education platform for classes 9–12 and Virtual University students, providing books, notes, MCQs, past papers, pairing schemes, and online tests. It runs as a monorepo of 7 Next.js portals (auth, public site, super-admin, admin, student, teacher, parent) backed by a single Express/tRPC API, with strict role-based access control and real-time features via Socket.IO.",
+    "liveLink": null,
+    "githubLink": null,
+    "figmaDesign": null,
+    "company": "Side Project",
+    "companySlug": "side-project",
+    "role": "fullstack",
+    "teamSize": "1",
+    "duration": "6-12-months",
+    "priority": 4,
+    "skills": [
+      {
+        "name": "Typescript",
+        "icon": "/skills/frontend/typescript.svg"
+      },
+      {
+        "name": "React JS",
+        "icon": "/skills/frontend/react-js.svg"
+      },
+      {
+        "name": "Next JS",
+        "icon": "/skills/frontend/next-js.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "/skills/frontend/tailwind-css.png"
+      },
+      {
+        "name": "Tanstack React Query",
+        "icon": "/skills/frontend/tanstack-react-query.svg"
+      },
+      {
+        "name": "React Hook Form",
+        "icon": "/skills/frontend/react-hook-form.svg"
+      },
+      {
+        "name": "Framer Motion",
+        "icon": "/skills/frontend/framer-motion.svg"
+      },
+      {
+        "name": "Node JS",
+        "icon": "/skills/backend/node-js.svg"
+      },
+      {
+        "name": "Express JS",
+        "icon": "/skills/backend/express-js.svg"
+      },
+      {
+        "name": "Socket.io",
+        "icon": "/skills/backend/socket-io.svg"
+      },
+      {
+        "name": "MongoDB",
+        "icon": "/skills/database/mongodb.svg"
+      },
+      {
+        "name": "Mongoose",
+        "icon": "/skills/database/mongoose.svg"
+      },
+      {
+        "name": "Redis",
+        "icon": "/skills/database/redis.svg"
+      },
+      {
+        "name": "Pnpm",
+        "icon": "/skills/tools/pnpm.svg"
+      }
+    ],
+    "body": "## Problem\n\nStudents preparing for classes 9-12 board exams and Virtual University coursework rely on scattered resources - photocopied notes, disconnected MCQ banks, and separate portals for teachers, parents, and administrators - with no single platform tying content, testing, and role-based access together.\n\n## Solution\n\nEducation Website is a monorepo education platform built around a strict content hierarchy (Class -> Book -> Chapter -> Heading -> SubHeading -> MCQ). It ships 7 role-locked Next.js portals - auth, public web, super-admin, admin, student, teacher, and parent - all served by a single Express 5 + tRPC monolith API, so every portal shares one type-safe backend, one MongoDB database, and one Redis cache.\n\n## Key Features\n\n- **Role-Based Portals: **Each of the 7 portals is locked to a specific role (SuperAdmin, Admin, Teacher, Student, Parent), with server-verified redirects if a user tries to access the wrong portal.\n- **End-to-End Type Safety: **tRPC over HTTP connects every frontend to the API with fully typed queries and mutations, eliminating REST contract drift.\n- **Structured Content Model: **Books, chapters, headings, MCQs, past papers, pairing schemes, and date sheets are organized in a consistent hierarchy across Boards and Institutions.\n- **Real-Time Features: **Socket.IO powers live updates across portals (e.g. test/session state) without polling.\n- **Shared Design System: **A custom internal component library (built via Rollup) keeps all 7 apps visually and behaviorally consistent.\n\n## Outcome / Results\n\n- **Unified Platform: **Replaced the need for separate tools/spreadsheets per role with one coherent system covering content delivery, testing, and administration.\n- **Maintainable Monolith: **A single Express process with one MongoDB/Redis pair kept development and deployment simple while still serving 7 independent frontends.\n\n## Key Takeaways / Learnings\n\n- **Nx Monorepo at Scale: **Learned to structure and cache builds for a large multi-app, multi-package Nx workspace without cross-app coupling.\n- **Role-Based Access Control: **Designed port/portal-level RBAC with server-side verification on every request rather than trusting client-side route guards.",
+    "relatedProjects": []
+  },
+  {
     "_id": "45a6b924-8342-4aab-8a54-af207f6e228d",
     "title": "Treepost AI",
     "slug": "treepost-ai",
@@ -153,7 +282,7 @@
     "role": "frontend",
     "teamSize": "1",
     "duration": "less-1-month",
-    "priority": 2,
+    "priority": 5,
     "skills": [],
     "body": "## Problem\n\nHomeowners struggled to find trusted tree contractors and had no way to compare fair pricing before hiring. Getting quotes meant contacting multiple contractors manually — slow, inconsistent, and unreliable. Unverified contractors, payment disputes, and zero transparency made the whole experience frustrating for both sides.\n\n## Solution\n\nTreepost AI built a digital marketplace that replaces the entire offline process. Homeowners post once and get instant AI-powered price estimates, browse verified contractors, and pay securely — all in one place. Contractors get qualified local leads, a bidding system, and real-time messaging without chasing clients.\n\n## Key Features\n\n- **AI-Powered Price Estimates: **Homeowners receive instant project estimates using AI with up to 95% pricing accuracy before reviewing contractor bids.\n- **Job Posting System: **Users can post jobs with detailed descriptions, photos, and videos to help contractors assess project scope accurately.\n- **Contractor Verification: **Contractors must submit licenses, insurance, and WSIB documentation before approval, ensuring a trusted service network.\n- **Competitive Bidding Platform: **Verified contractors browse available jobs and submit bids, allowing homeowners to compare pricing and choose the best fit.\n- **Real-Time Messaging:** Built-in messaging enables direct communication between homeowners and contractors for faster decisions and better coordination.\n- **Protected Payment System: **Secure payment handling protects both parties by ensuring safe transactions throughout the project lifecycle.\n- **Admin Dashboard: **Admins manage users, contractor approvals, analytics, platform reports, and AI feedback improvements from a centralized dashboard.\n\n## Outcome / Results\n\n- **95% AI Estimate Accuracy: **The pricing engine provided highly accurate instant estimates, reducing uncertainty before contractor selection.\n- **15,000+ Community Members: **The platform successfully built a strong network of homeowners and verified contractors across the Canadian market.\n- **98% Customer Satisfaction Rate: **Transparent pricing, verified professionals, and secure workflows significantly improved user trust and satisfaction.\n- **100% Verified Contractor Network: **Strict contractor verification ensured all service providers met professional and legal compliance standards.\n- **Faster Hiring Workflow:** AI estimates and bidding reduced the time required to find and hire trusted contractors compared to traditional manual processes.\n\n## Key Takeaways / Learnings\n\n- **Advanced React Architecture: **Improved frontend scalability by managing complex multi-role dashboards and reusable component systems.\n- **Pixel-Perfect UI Development: **Strengthened expertise in building highly polished responsive interfaces across all device sizes.\n- **Real-Time System Design: **Learned how to structure real-time messaging and notifications for seamless user communication.\n- **Complex State Management: **Handled bidding workflows, contractor verification states, and AI estimate feedback flows efficiently.\n- **AI + User Feedback Loops: **Gained experience integrating AI-generated estimates with user feedback systems for continuous platform improvement.\n- **Role-Based Frontend Access: **Built secure and intuitive interfaces for homeowners, contractors, and admins with different access levels.",
     "relatedProjects": [
@@ -206,7 +335,7 @@
     "role": "fullstack",
     "teamSize": null,
     "duration": "1-3-months",
-    "priority": 4,
+    "priority": 6,
     "skills": [
       {
         "name": "React JS",
@@ -281,7 +410,7 @@
     "role": "fullstack",
     "teamSize": "1",
     "duration": "1-3-months",
-    "priority": 5,
+    "priority": 7,
     "skills": [
       {
         "name": "HTML5",
@@ -386,7 +515,7 @@
     "role": "backend",
     "teamSize": "1",
     "duration": "3-6-months",
-    "priority": 6,
+    "priority": 8,
     "skills": [
       {
         "name": "React JS",
@@ -455,7 +584,7 @@
     "role": "fullstack",
     "teamSize": "2",
     "duration": "1-3-months",
-    "priority": 7,
+    "priority": 9,
     "skills": [],
     "body": "## Problem\n\nPeople experiencing emotional stress often don’t have immediate access to a coach or therapist, and typing out feelings during a difficult moment can be harder than simply speaking them — leaving a gap between needing support and being able to express it.\n\n## Solution\n\nB.R.I.E.F.S. Coach is an AI-powered mental coaching platform that lets users record voice-based emotional \"vents\" and receive instant AI-generated coaching guidance, paired with relevant YouTube video recommendations, enabling organizations to offer scalable mental wellness support.\n\n## Key Features\n\n- **Voice-Based Venting: **Users record how they’re feeling by voice instead of typing, lowering the barrier to expressing emotion.\n- **AI Coaching Responses: **GPT-4 generates instant, relevant coaching guidance based on the recorded vent.\n- **Curated Video Recommendations: **Relevant YouTube videos are recommended alongside AI guidance for further support.\n- **Coach & Subscription Management: **Organizations and practitioners manage coaches and offer the platform via subscription-based team access.\n\n## Outcome / Results\n\n- **Scalable Wellness Support: **Enabled organizations to offer mental wellness support without needing a 1:1 coach available at all times.\n- **Lower Barrier to Support: **Voice-based input made it easier for users to express emotions compared to text-only journaling tools.\n\n## Key Takeaways / Learnings\n\n- **AI Prompt & Response Design: **Learned to design GPT-4 prompts that produce empathetic, actionable coaching responses from raw voice input.\n- **Voice-to-Insight Pipelines: **Gained experience building a pipeline from voice recording to transcription to AI-generated guidance.",
     "relatedProjects": [
@@ -503,7 +632,7 @@
     "role": "fullstack",
     "teamSize": "1",
     "duration": "1-3-months",
-    "priority": 8,
+    "priority": 10,
     "skills": [],
     "body": "## Problem\n\nReal estate media professionals — photographers, videographers, drone operators — often price their services by guesswork or outdated rate cards, making it hard to stay competitive without either undercharging or losing bids on price.\n\n## Solution\n\nReal Estate Media Pricing Calculator is a web-based pricing platform that generates accurate, market-based pricing recommendations for photography, videography, drone services, floor plans, virtual staging, and twilight photography, using verified market data from 2,695 real estate media businesses across the United States.\n\n## Key Features\n\n- **Location-Specific Pricing: **Generates pricing ranges tailored to the professional’s specific market location.\n- **Multi-Service Coverage: **Covers photography, videography, drone services, floor plans, virtual staging, and twilight photography in one calculator.\n- **Confidence Ratings: **Each pricing recommendation includes a confidence rating based on the underlying market data.\n- **Verified Market Dataset: **Built on market data from 2,695 real estate media businesses rather than static or self-reported rate cards.\n\n## Outcome / Results\n\n- **More Competitive Pricing: **Helped professionals price services with market-backed confidence instead of guesswork.\n- **Reduced Under/Overpricing: **Location-specific ranges reduced the risk of pricing too high to win bids or too low to be profitable.\n\n## Key Takeaways / Learnings\n\n- **Data-Driven Pricing Models: **Learned to translate a large verified dataset into simple, actionable pricing ranges for end users.\n- **Confidence-Rated Recommendations: **Gained experience presenting statistical confidence in a way non-technical users can trust and act on.",
     "relatedProjects": [
@@ -551,7 +680,7 @@
     "role": "frontend",
     "teamSize": "1",
     "duration": "less-1-month",
-    "priority": 9,
+    "priority": 11,
     "skills": [],
     "body": "## Problem\n\nExtra Scrub, a cleaning company based in London, needed a professional online presence — without one, customers had no easy way to explore services, request quotes, or book appointments, which limited trust and booking conversions.\n\n## Solution\n\nExtra Scrub Cleaning Services Website is a professional multi-page business website that lets customers explore residential and commercial cleaning services, request custom quotes, book appointments online, and contact the team easily, all through a modern, mobile-friendly design.\n\n## Key Features\n\n- **Service Exploration: **Customers browse residential and commercial cleaning services in a clear, organized layout.\n- **Custom Quote Requests: **A quote request flow lets customers describe their needs and get a tailored response.\n- **Online Appointment Booking: **Customers book appointments directly through the site instead of calling or emailing.\n- **Mobile-Friendly Design: **The site is fully responsive, built for customers browsing and booking from their phones.\n\n## Outcome / Results\n\n- **Increased Booking Conversions: **A modern, trustworthy digital presence made it easier for visitors to convert into booked appointments.\n- **Simplified Service Discovery: **Clear service categorization reduced confusion about what Extra Scrub offers.\n\n## Key Takeaways / Learnings\n\n- **Conversion-Focused Web Design: **Learned to structure a small business site around clear calls-to-action for quotes and bookings.\n- **Mobile-First Development: **Reinforced building fully responsive layouts for a primarily mobile customer base.",
     "relatedProjects": [
@@ -583,103 +712,5 @@
         "duration": "1-3-months"
       }
     ]
-  },
-  {
-    "_id": "03a6d9a3-123a-4727-a6d8-914eba40c81d",
-    "title": "Education Website",
-    "slug": "education-website",
-    "mainImage": "/images/project-education-website-main.png",
-    "sliderImages": [],
-    "description": "Education Website is a full-stack education platform for classes 9–12 and Virtual University students, providing books, notes, MCQs, past papers, pairing schemes, and online tests. It runs as a monorepo of 7 Next.js portals (auth, public site, super-admin, admin, student, teacher, parent) backed by a single Express/tRPC API, with strict role-based access control and real-time features via Socket.IO.",
-    "liveLink": null,
-    "githubLink": null,
-    "figmaDesign": null,
-    "company": "Side Project",
-    "companySlug": "side-project",
-    "role": "fullstack",
-    "teamSize": "1",
-    "duration": "6-12-months",
-    "priority": 10,
-    "skills": [
-      {
-        "name": "Typescript",
-        "icon": "/skills/frontend/typescript.svg"
-      },
-      {
-        "name": "React JS",
-        "icon": "/skills/frontend/react-js.svg"
-      },
-      {
-        "name": "Next JS",
-        "icon": "/skills/frontend/next-js.svg"
-      },
-      {
-        "name": "Tailwind CSS",
-        "icon": "/skills/frontend/tailwind-css.png"
-      },
-      {
-        "name": "Node JS",
-        "icon": "/skills/backend/node-js.svg"
-      },
-      {
-        "name": "Express JS",
-        "icon": "/skills/backend/express-js.svg"
-      },
-      {
-        "name": "Socket.io",
-        "icon": "/skills/backend/socket-io.svg"
-      },
-      {
-        "name": "MongoDB",
-        "icon": "/skills/database/mongodb.svg"
-      },
-      {
-        "name": "Mongoose",
-        "icon": "/skills/database/mongoose.svg"
-      },
-      {
-        "name": "Redis",
-        "icon": "/skills/database/redis.svg"
-      }
-    ],
-    "body": "## Problem\n\nStudents preparing for classes 9-12 board exams and Virtual University coursework rely on scattered resources - photocopied notes, disconnected MCQ banks, and separate portals for teachers, parents, and administrators - with no single platform tying content, testing, and role-based access together.\n\n## Solution\n\nEducation Website is a monorepo education platform built around a strict content hierarchy (Class -> Book -> Chapter -> Heading -> SubHeading -> MCQ). It ships 7 role-locked Next.js portals - auth, public web, super-admin, admin, student, teacher, and parent - all served by a single Express 5 + tRPC monolith API, so every portal shares one type-safe backend, one MongoDB database, and one Redis cache.\n\n## Key Features\n\n- **Role-Based Portals: **Each of the 7 portals is locked to a specific role (SuperAdmin, Admin, Teacher, Student, Parent), with server-verified redirects if a user tries to access the wrong portal.\n- **End-to-End Type Safety: **tRPC over HTTP connects every frontend to the API with fully typed queries and mutations, eliminating REST contract drift.\n- **Structured Content Model: **Books, chapters, headings, MCQs, past papers, pairing schemes, and date sheets are organized in a consistent hierarchy across Boards and Institutions.\n- **Real-Time Features: **Socket.IO powers live updates across portals (e.g. test/session state) without polling.\n- **Shared Design System: **A custom internal component library (built via Rollup) keeps all 7 apps visually and behaviorally consistent.\n\n## Outcome / Results\n\n- **Unified Platform: **Replaced the need for separate tools/spreadsheets per role with one coherent system covering content delivery, testing, and administration.\n- **Maintainable Monolith: **A single Express process with one MongoDB/Redis pair kept development and deployment simple while still serving 7 independent frontends.\n\n## Key Takeaways / Learnings\n\n- **Nx Monorepo at Scale: **Learned to structure and cache builds for a large multi-app, multi-package Nx workspace without cross-app coupling.\n- **Role-Based Access Control: **Designed port/portal-level RBAC with server-side verification on every request rather than trusting client-side route guards.",
-    "relatedProjects": []
-  },
-  {
-    "_id": "7274eaf2-3fbd-4251-8b52-320f86134272",
-    "title": "Next.js Dashboard Template",
-    "slug": "nextjs-dashboard-template",
-    "mainImage": "/images/project-nextjs-dashboard-template-main.png",
-    "sliderImages": [],
-    "description": "Next.js Dashboard Template is a premium admin dashboard UI kit built with Next.js, TypeScript, and Tailwind CSS. It ships pre-built analytics, CRM, e-commerce, and settings modules on top of a shared layout system, reusable charts (Recharts), interactive maps, and a full authentication flow - designed to be sold as a ready-to-use dashboard template.",
-    "liveLink": null,
-    "githubLink": null,
-    "figmaDesign": null,
-    "company": "Side Project",
-    "companySlug": "side-project",
-    "role": "frontend",
-    "teamSize": "1",
-    "duration": "1-3-months",
-    "priority": 11,
-    "skills": [
-      {
-        "name": "Typescript",
-        "icon": "/skills/frontend/typescript.svg"
-      },
-      {
-        "name": "React JS",
-        "icon": "/skills/frontend/react-js.svg"
-      },
-      {
-        "name": "Next JS",
-        "icon": "/skills/frontend/next-js.svg"
-      },
-      {
-        "name": "Tailwind CSS",
-        "icon": "/skills/frontend/tailwind-css.png"
-      }
-    ],
-    "body": "## Problem\n\nTeams building internal tools or SaaS admin panels spend weeks assembling the same pieces from scratch - layout shell, navigation, charts, tables, forms, auth screens - before they can start on actual product features.\n\n## Solution\n\nNext.js Dashboard Template is a complete admin dashboard UI kit built with Next.js (App Router), TypeScript, and Tailwind CSS. It provides a shared layout system with pre-built dashboard, analytics, CRM, e-commerce, forms, tables, widgets, and settings modules, plus a full authentication flow - ready to drop into a new product and customize.\n\n## Key Features\n\n- **Multiple Dashboard Modules: **Dashboard, analytics, CRM, e-commerce, admin, forms, tables, and widgets pages ship out of the box, each following a consistent design language.\n- **Data Visualization: **Recharts-based charts and react-simple-maps power analytics widgets and geographic data views.\n- **Reusable Component System: **Layout, shared, and UI component folders are cleanly separated so new pages can be assembled from existing building blocks.\n- **Authentication Screens: **Login, register, and account-flow pages are included as a ready-to-wire auth module.\n- **Dark/Light Theming: **Built on next-themes with Tailwind CSS v4 tokens for consistent theming across every module.\n\n## Outcome / Results\n\n- **Reusable Product: **Packaged as a standalone template that can be licensed and reused across multiple client/admin-panel projects instead of being rebuilt each time.\n- **Consistent UX Across Modules: **A shared layout and component system keeps 8+ distinct dashboard sections visually and behaviorally consistent.\n\n## Key Takeaways / Learnings\n\n- **Template Architecture: **Learned to structure a component library generically enough to support many different dashboard domains (CRM, e-commerce, analytics) without forking code per module.\n- **Chart/Map Integration: **Gained experience wiring Recharts and react-simple-maps into a reusable, theme-aware widget system.",
-    "relatedProjects": []
   }
 ]
